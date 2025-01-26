@@ -19,7 +19,7 @@ const Index = () => {
       <main className="container mx-auto px-4">
         <Hero />
         
-        <section className="py-12">
+        <section className="py-6">
           <Tabs defaultValue="all" onValueChange={setSelectedCategory}>
             <TabsList className="w-full flex-wrap justify-start h-auto gap-2 bg-transparent">
               <TabsTrigger 
@@ -39,7 +39,7 @@ const Index = () => {
               ))}
             </TabsList>
 
-            <div className="mt-8">
+            <div className="mt-6">
               {filteredMyths.length > 0 ? (
                 filteredMyths.map((myth) => (
                   <MythArticle key={myth.id} myth={myth} />
