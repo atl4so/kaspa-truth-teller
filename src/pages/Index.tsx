@@ -14,16 +14,16 @@ const Index = () => {
   });
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-b from-white to-primary/5">
       <main className="container mx-auto px-4">
         <Hero />
         
         <section className="py-1">
           <Tabs defaultValue="all" onValueChange={setSelectedCategory} className="flex flex-col items-center">
-            <TabsList className="flex flex-wrap justify-center h-auto gap-2 bg-secondary">
+            <TabsList className="flex flex-wrap justify-center h-auto gap-2 bg-transparent">
               <TabsTrigger 
                 value="all"
-                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                className="data-[state=active]:bg-primary data-[state=active]:text-white"
               >
                 All Categories
               </TabsTrigger>
@@ -31,7 +31,7 @@ const Index = () => {
                 <TabsTrigger
                   key={category}
                   value={category}
-                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-white"
                 >
                   {category}
                 </TabsTrigger>
@@ -44,7 +44,7 @@ const Index = () => {
                   <MythArticle key={myth.id} myth={myth} />
                 ))
               ) : (
-                <p className="text-center text-muted-foreground">
+                <p className="text-center text-gray-500">
                   No myths found for the selected category.
                 </p>
               )}
