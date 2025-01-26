@@ -3,16 +3,21 @@ import { Hero } from "@/components/Hero";
 import { Search } from "@/components/Search";
 import { MythArticle } from "@/components/MythArticle";
 import { myths, categories } from "@/data/myths";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  const filteredMyths = myths.filter((item) => {
-    const matchesSearch = `${item.category} ${item.title} ${item.claim} ${item.facts.join(" ")}`.toLowerCase()
+  const filteredMyths = myths.filter((myth) => {
+    const matchesSearch = 
+      `${myth.title} ${myth.category} ${myth.claim} ${myth.facts.join(" ")}`
+      .toLowerCase()
       .includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "all" ? true : item.category === selectedCategory;
+    
+    const matchesCategory = 
+      selectedCategory === "all" || myth.category === selectedCategory;
+
     return matchesSearch && matchesCategory;
   });
 
@@ -23,7 +28,7 @@ const Index = () => {
         <Search onSearch={setSearchTerm} />
         
         <section className="py-12">
-          <Tabs defaultValue="all" onValueChange={(value) => setSelectedCategory(value)}>
+          <Tabs defaultValue="all" onValueChange={setSelectedCategory}>
             <TabsList className="w-full flex-wrap justify-start h-auto gap-2 bg-transparent">
               <TabsTrigger 
                 value="all"
@@ -41,13 +46,19 @@ const Index = () => {
                 </TabsTrigger>
               ))}
             </TabsList>
+
+            <div className="mt-8">
+              {filteredMyths.length > 0 ? (
+                filteredMyths.map((myth) => (
+                  <MythArticle key={myth.id} myth={myth} />
+                ))
+              ) : (
+                <p className="text-center text-gray-500">
+                  No myths found for the selected category or search term.
+                </p>
+              )}
+            </div>
           </Tabs>
-          
-          <div className="max-w-4xl mx-auto mt-8">
-            {filteredMyths.map((item) => (
-              <MythArticle key={item.id} myth={item} />
-            ))}
-          </div>
         </section>
       </main>
     </div>
