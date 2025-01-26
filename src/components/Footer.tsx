@@ -8,7 +8,17 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-muted-foreground text-sm">
-            © {currentYear} KaspArchive. All rights reserved.
+            © {currentYear} {" "}
+            <a
+              href="https://kasparchive.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 inline-flex items-center gap-1"
+            >
+              KaspArchive.com
+              <ExternalLink className="h-3 w-3" />
+            </a>
+            . All rights reserved.
           </div>
           <div className="flex flex-wrap gap-4 items-center justify-center">
             <a
