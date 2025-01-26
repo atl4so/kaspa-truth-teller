@@ -3,20 +3,6 @@ import { MythData } from "./types";
 export const technologyMyths: MythData[] = [
   {
     id: "technology-1",
-    title: "Scalability Limitations",
-    category: "Technology",
-    claim: "Kaspa cannot scale effectively.",
-    facts: [
-      "Kaspa's GHOSTDAG protocol is specifically designed for high scalability.",
-      "The blockDAG structure allows for parallel block processing, enabling significant throughput.",
-      "Network throughput increases with more participants, unlike traditional blockchain designs.",
-      "The architecture supports future scaling solutions and improvements.",
-      "Current performance metrics demonstrate substantial scalability advantages.",
-      "The design allows for continued scaling without compromising decentralization."
-    ]
-  },
-  {
-    id: "technology-2",
     title: "Network Security",
     category: "Technology",
     claim: "Kaspa's 10-second finalization is outdated and uncompetitive compared to faster blockchains.",
@@ -30,7 +16,7 @@ export const technologyMyths: MythData[] = [
     ]
   },
   {
-    id: "technology-3",
+    id: "technology-2",
     title: "Development Progress",
     category: "Technology",
     claim: "Kaspa offers nothing truly new or groundbreaking, simply repackaging existing ideas.",

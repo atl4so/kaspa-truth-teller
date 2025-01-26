@@ -3,7 +3,7 @@ import { MythData } from "./types";
 export const powMyths: MythData[] = [
   {
     id: "pow-1",
-    title: "Energy Consumption Concerns",
+    title: "PoW vs PoS Comparison",
     category: "Proof-of-Work (PoW)",
     claim: "Proof-of-Stake (PoS) is unequivocally superior to Proof-of-Work (PoW) in every meaningful way.",
     facts: [
@@ -17,7 +17,7 @@ export const powMyths: MythData[] = [
   },
   {
     id: "pow-2",
-    title: "Mining Centralization",
+    title: "Mining Accessibility",
     category: "Proof-of-Work (PoW)",
     claim: "PoW mining is only for wealthy corporations and specialized entities, excluding ordinary individuals.",
     facts: [

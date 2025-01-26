@@ -16,33 +16,5 @@ export const fairLaunchMyths: MythData[] = [
       "The mined coins were distributed proportionally to investors and former DAGLabs contributors as part of their wind-down process.",
       "DAGLabs officially ceased operations and dissolved after this period, definitively ending any operational control or involvement with Kaspa."
     ]
-  },
-  {
-    id: "fair-launch-2",
-    title: "DAGLabs Control Over Network",
-    category: "Fair Launch and DAGLabs",
-    claim: "DAGLabs controls the Kaspa network.",
-    facts: [
-      "Kaspa is a decentralized network with no central authority.",
-      "DAGLabs is just one of many contributors to the Kaspa ecosystem.",
-      "The network is maintained by a diverse group of miners, node operators, and developers.",
-      "Protocol changes require community consensus.",
-      "DAGLabs has no special privileges or control over the network.",
-      "The project's development is driven by community contributions and consensus."
-    ]
-  },
-  {
-    id: "fair-launch-3",
-    title: "Initial Distribution Fairness",
-    category: "Fair Launch and DAGLabs",
-    claim: "The initial distribution of KAS tokens was not fair.",
-    facts: [
-      "Kaspa had no ICO, IEO, or token sale of any kind.",
-      "All tokens in circulation come from mining rewards.",
-      "Mining has been open to the public since block 1.",
-      "The distribution mechanism is purely based on proof-of-work mining.",
-      "There was no pre-mine or special allocation for any party.",
-      "Anyone could participate in mining from the very beginning."
-    ]
   }
 ];
