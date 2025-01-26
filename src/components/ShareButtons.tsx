@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Share2, Link } from "lucide-react";
+import { Share2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface ShareButtonsProps {
@@ -27,18 +27,14 @@ export const ShareButtons = ({ title, url }: ShareButtonsProps) => {
   };
 
   return (
-    <div className="flex gap-2 items-center mt-4">
-      <span className="text-sm text-gray-500 flex items-center gap-1">
-        <Share2 className="w-4 h-4" /> Share:
-      </span>
+    <div className="flex justify-end mt-4">
       <Button
-        variant="outline"
-        size="sm"
+        variant="ghost"
+        size="icon"
         onClick={copyToClipboard}
-        className="gap-1"
+        className="rounded-full hover:bg-accent"
       >
-        <Link className="w-4 h-4" />
-        Copy Link
+        <Share2 className="w-5 h-5" />
       </Button>
     </div>
   );
