@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, MessageSquare } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,6 +21,15 @@ export const Footer = () => {
             . All rights reserved.
           </div>
           <div className="flex flex-wrap gap-4 items-center justify-center">
+            <a
+              href="https://t.me/kasparchive"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary hover:text-primary/80 flex items-center gap-1"
+            >
+              Suggest myths
+              <MessageSquare className="h-3 w-3" />
+            </a>
             <a
               href="https://kasmedia.com/article/unders"
               target="_blank"
