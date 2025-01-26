@@ -23,7 +23,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/myths/:id" element={<Myth />} />
+          <Route path="/kaspa/:id" element={<Myth />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
