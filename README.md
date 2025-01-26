@@ -23,41 +23,6 @@ A comprehensive platform dedicated to debunking myths and presenting facts about
 - [Framer Motion](https://www.framer.com/motion/) - Animation library
 - [Lucide Icons](https://lucide.dev/) - Beautiful open-source icons
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- npm or yarn package manager
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/kasparchive.git
-```
-
-2. Navigate to the project directory
-```bash
-cd kasparchive
-```
-
-3. Install dependencies
-```bash
-npm install
-# or
-yarn install
-```
-
-4. Start the development server
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-The application will be available at `http://localhost:5173`
-
 ## 🎯 Project Structure
 
 ```
@@ -87,11 +52,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Kaspa Community for their continuous support
 - Contributors who have helped improve the platform
-- [Lovable](https://lovable.dev) - AI-powered development platform
 
 ## 📬 Contact
 
-Project Link: [https://github.com/yourusername/kasparchive](https://github.com/yourusername/kasparchive)
+Project Link: [https://github.com/atl4so/kaspa-truth-teller](https://github.com/atl4so/kaspa-truth-teller)
 
 ---
 Made with ❤️ for the Kaspa Community
