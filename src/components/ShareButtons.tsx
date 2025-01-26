@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Share2 } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 interface ShareButtonsProps {
   title: string;
@@ -8,34 +7,35 @@ interface ShareButtonsProps {
 }
 
 export const ShareButtons = ({ title, url }: ShareButtonsProps) => {
-  const { toast } = useToast();
+  const shareData = {
+    title,
+    url: url.replace(":/", ""), // Remove the erroneous :/ from the URL
+    text: title,
+  };
 
-  const copyToClipboard = async () => {
+  const handleShare = async () => {
     try {
-      await navigator.clipboard.writeText(url);
-      toast({
-        title: "Link copied!",
-        description: "The link has been copied to your clipboard.",
-      });
-    } catch (err) {
-      toast({
-        title: "Failed to copy",
-        description: "Please try again or copy the URL manually.",
-        variant: "destructive",
-      });
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        // Fallback to clipboard copy
+        await navigator.clipboard.writeText(`${title}\n${url.replace(":/", "")}`);
+      }
+    } catch (error) {
+      console.error("Error sharing:", error);
     }
   };
 
   return (
-    <div className="flex justify-end mt-4">
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={copyToClipboard}
-        className="rounded-full hover:bg-accent"
-        aria-label={`Share ${title}`}
+    <div className="flex justify-start mt-6">
+      <Button 
+        variant="outline" 
+        size="sm" 
+        onClick={handleShare}
+        aria-label="Share this article"
       >
-        <Share2 className="w-5 h-5" aria-hidden="true" />
+        <Share2 className="h-4 w-4 mr-2" aria-hidden="true" />
+        Share
       </Button>
     </div>
   );

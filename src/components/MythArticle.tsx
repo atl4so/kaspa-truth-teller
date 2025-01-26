@@ -35,7 +35,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
       </div>
       <ShareButtons 
         title={`${myth.title} - KaspArchive`}
-        url={`${window.location.origin}/kaspa/${myth.id}`}
+        url={window.location.href}
       />
     </motion.article>
   );
