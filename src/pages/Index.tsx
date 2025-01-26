@@ -27,7 +27,7 @@ const Index = () => {
                 value="all"
                 className="data-[state=active]:bg-primary data-[state=active]:text-white"
               >
-                All Categories
+                Back to Main
               </TabsTrigger>
               {categories.map((category) => (
                 <TabsTrigger
