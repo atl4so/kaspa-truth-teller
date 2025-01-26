@@ -12,7 +12,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="max-w-3xl mx-auto mb-12 prose prose-invert"
+      className="max-w-3xl mx-auto mb-12 prose prose-invert dark:prose-invert"
     >
       <h3 className="text-2xl font-bold mb-4 text-foreground">{`Myth ${myth.id.split('-')[1]}: ${myth.title}`}</h3>
       <div className="mb-4">

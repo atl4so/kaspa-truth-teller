@@ -19,7 +19,7 @@ const queryClient = new QueryClient({
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
       <TooltipProvider>
         <div className="min-h-screen bg-background text-foreground">
           <ThemeToggle />
