@@ -31,7 +31,7 @@ export const Footer = () => {
               <MessageSquare className="h-3 w-3" />
             </a>
             <a
-              href="https://kasmedia.com/article/unders"
+              href="https://kasmedia.com/article/understanding-ghostdag-intro"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-primary hover:text-primary/80 flex items-center gap-1"
