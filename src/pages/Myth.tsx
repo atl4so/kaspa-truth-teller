@@ -1,13 +1,12 @@
 import { useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { MythArticle } from "@/components/MythArticle";
 import { myths } from "@/data/myths";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 
 const Myth = () => {
-  const location = useLocation();
-  const mythId = location.pathname.split('/kaspa/')[1];
+  const { mythId } = useParams();
   const myth = myths.find((m) => m.id === mythId);
 
   useEffect(() => {
