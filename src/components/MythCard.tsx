@@ -21,10 +21,10 @@ export const MythCard = ({ myth, fact, className }: MythCardProps) => {
     >
       <div className="space-y-4">
         <div>
-          <span className="inline-block px-2 py-1 text-xs font-medium bg-accent/50 text-primary rounded-full mb-2">
+          <span className="inline-block px-2 py-1 text-xs font-medium bg-accent text-primary rounded-full mb-2">
             Myth
           </span>
-          <p className="font-medium text-primary">{myth}</p>
+          <p className="font-medium text-secondary">{myth}</p>
         </div>
         <div>
           <span className="inline-block px-2 py-1 text-xs font-medium bg-primary text-white rounded-full mb-2">

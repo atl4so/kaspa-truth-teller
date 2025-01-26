@@ -25,7 +25,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0EA5E9",
+          DEFAULT: "#20B2AA", // Light Sea Green (Turquoise)
           foreground: "#ffffff",
         },
         secondary: {
@@ -33,8 +33,8 @@ export default {
           foreground: "#ffffff",
         },
         accent: {
-          DEFAULT: "#E0F2FE",
-          foreground: "#0EA5E9",
+          DEFAULT: "#E0F7F6", // Light turquoise for accent backgrounds
+          foreground: "#20B2AA", // Turquoise for accent text
         },
         muted: {
           DEFAULT: "#f5f5f5",

@@ -14,7 +14,7 @@ const Index = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-[#0EA5E9]/5">
+    <div className="min-h-screen bg-gradient-to-b from-white to-primary/5">
       <main className="container mx-auto px-4">
         <Hero />
         
@@ -23,7 +23,7 @@ const Index = () => {
             <TabsList className="w-full flex-wrap justify-start h-auto gap-2 bg-transparent">
               <TabsTrigger 
                 value="all"
-                className="data-[state=active]:bg-[#0EA5E9] data-[state=active]:text-white"
+                className="data-[state=active]:bg-primary data-[state=active]:text-white"
               >
                 All Categories
               </TabsTrigger>
@@ -31,7 +31,7 @@ const Index = () => {
                 <TabsTrigger
                   key={category}
                   value={category}
-                  className="data-[state=active]:bg-[#0EA5E9] data-[state=active]:text-white"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-white"
                 >
                   {category}
                 </TabsTrigger>
