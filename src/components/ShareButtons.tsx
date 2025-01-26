@@ -33,8 +33,9 @@ export const ShareButtons = ({ title, url }: ShareButtonsProps) => {
         size="icon"
         onClick={copyToClipboard}
         className="rounded-full hover:bg-accent"
+        aria-label={`Share ${title}`}
       >
-        <Share2 className="w-5 h-5" />
+        <Share2 className="w-5 h-5" aria-hidden="true" />
       </Button>
     </div>
   );
