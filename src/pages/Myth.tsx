@@ -27,7 +27,7 @@ const Myth = () => {
           {myth.category}
         </div>
         <p className="text-xl mt-6 font-semibold text-red-500 uppercase">
-          {myth.warning}
+          {myth.claim}
         </p>
         <div className="mt-8 space-y-6">
           {myth.facts.map((fact, index) => (
@@ -41,7 +41,10 @@ const Myth = () => {
         </div>
       </article>
       <div className="fixed bottom-4 right-4">
-        <ShareButtons />
+        <ShareButtons 
+          title={myth.title}
+          url={window.location.href}
+        />
       </div>
     </div>
   );
