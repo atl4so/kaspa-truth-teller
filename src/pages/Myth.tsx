@@ -26,7 +26,7 @@ const Myth = () => {
         <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
           {myth.category}
         </div>
-        <p className="text-xl mt-6 font-semibold text-red-500 uppercase">
+        <p className="text-xl mt-6 font-semibold uppercase">
           {myth.claim}
         </p>
         <div className="mt-8 space-y-6">
