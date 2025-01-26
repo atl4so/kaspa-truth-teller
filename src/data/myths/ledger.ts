@@ -3,7 +3,7 @@ import { MythData } from "./types";
 export const ledgerMyths: MythData[] = [
   {
     id: "ledger-1",
-    title: "Ledger Support Status",
+    title: "Ledger History Status",
     category: "Ledger",
     claim: "Missing ledger history data means the current state of Kaspa cannot be verified from genesis.",
     facts: [
