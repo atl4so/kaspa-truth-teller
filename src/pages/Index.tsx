@@ -16,7 +16,7 @@ const Index = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-primary/5">
+    <div className="min-h-screen bg-primary/5">
       <main className="container mx-auto px-4">
         <Hero />
         
