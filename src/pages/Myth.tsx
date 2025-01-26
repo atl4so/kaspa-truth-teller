@@ -1,114 +1,90 @@
-import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { MythArticle } from "@/components/MythArticle";
 import { myths } from "@/data/myths";
-import { Button } from "@/components/ui/button";
+import { ShareButtons } from "@/components/ShareButtons";
 import { ChevronLeft } from "lucide-react";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const Myth = () => {
   const { id } = useParams();
   const myth = myths.find((m) => m.id === id);
 
-  useEffect(() => {
-    if (myth) {
-      // Update meta tags
-      document.title = `${myth.title} - KaspArchive`;
-      
-      // Update meta description
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute("content", myth.claim);
-      }
-
-      // Update OpenGraph tags
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      const ogDescription = document.querySelector('meta[property="og:description"]');
-      const ogUrl = document.querySelector('meta[property="og:url"]');
-      
-      if (ogTitle) {
-        ogTitle.setAttribute("content", `${myth.title} - KaspArchive`);
-      }
-      if (ogDescription) {
-        ogDescription.setAttribute("content", myth.claim);
-      }
-      if (ogUrl) {
-        ogUrl.setAttribute("content", `${window.location.origin}/myths/${myth.id}`);
-      }
-
-      // Update Twitter tags
-      const twitterTitle = document.querySelector('meta[property="twitter:title"]');
-      const twitterDescription = document.querySelector('meta[property="twitter:description"]');
-      const twitterUrl = document.querySelector('meta[property="twitter:url"]');
-      
-      if (twitterTitle) {
-        twitterTitle.setAttribute("content", `${myth.title} - KaspArchive`);
-      }
-      if (twitterDescription) {
-        twitterDescription.setAttribute("content", myth.claim);
-      }
-      if (twitterUrl) {
-        twitterUrl.setAttribute("content", `${window.location.origin}/myths/${myth.id}`);
-      }
-    }
-
-    // Cleanup function to reset meta tags when component unmounts
-    return () => {
-      document.title = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute("content", "Comprehensive guide debunking common myths about Kaspa cryptocurrency. Learn facts about Kaspa's fair launch, PoW consensus, smart contracts, Layer 2 scaling, and technological innovations.");
-      }
-      
-      // Reset OpenGraph tags
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      const ogDescription = document.querySelector('meta[property="og:description"]');
-      const ogUrl = document.querySelector('meta[property="og:url"]');
-      
-      if (ogTitle) {
-        ogTitle.setAttribute("content", "KaspArchive - Facts & Myths About Kaspa");
-      }
-      if (ogDescription) {
-        ogDescription.setAttribute("content", "Discover the truth about Kaspa cryptocurrency. Get facts about fair launch, PoW mining, smart contracts, and technological innovations.");
-      }
-      if (ogUrl) {
-        ogUrl.setAttribute("content", window.location.origin);
-      }
-
-      // Reset Twitter tags
-      const twitterTitle = document.querySelector('meta[property="twitter:title"]');
-      const twitterDescription = document.querySelector('meta[property="twitter:description"]');
-      const twitterUrl = document.querySelector('meta[property="twitter:url"]');
-      
-      if (twitterTitle) {
-        twitterTitle.setAttribute("content", "KaspArchive - Facts & Myths About Kaspa");
-      }
-      if (twitterDescription) {
-        twitterDescription.setAttribute("content", "Discover the truth about Kaspa cryptocurrency. Get facts about fair launch, PoW mining, smart contracts, and technological innovations.");
-      }
-      if (twitterUrl) {
-        twitterUrl.setAttribute("content", window.location.origin);
-      }
-    };
-  }, [myth]);
-
   if (!myth) {
     return (
       <div className="container mx-auto px-4 py-8">
-        <h1>Myth not found</h1>
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Myth not found</h2>
+          <Link
+            to="/"
+            className="text-primary hover:text-primary/80"
+          >
+            Back to Main
+          </Link>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Link to="/">
-        <Button variant="ghost" className="mb-4">
+    <>
+      <Helmet>
+        <title>{`${myth.title} - KaspArchive`}</title>
+        <meta name="description" content={myth.claim} />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:title" content={`${myth.title} - KaspArchive`} />
+        <meta property="og:description" content={myth.claim} />
+        <meta property="og:image" content="https://i.postimg.cc/hPVwjmgx/images-1.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={window.location.href} />
+        <meta property="twitter:title" content={`${myth.title} - KaspArchive`} />
+        <meta property="twitter:description" content={myth.claim} />
+        <meta property="twitter:image" content="https://i.postimg.cc/hPVwjmgx/images-1.png" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-8">
+        <Link
+          to="/"
+          className="inline-flex items-center text-primary hover:text-primary/80 mb-6"
+        >
           <ChevronLeft className="mr-2 h-4 w-4" />
-          Back to All Myths
-        </Button>
-      </Link>
-      <MythArticle myth={myth} />
-    </div>
+          Back to Main
+        </Link>
+
+        <motion.article
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-3xl mx-auto mb-12 prose prose-slate dark:prose-invert"
+        >
+          <h3 className="text-2xl font-bold mb-4">{myth.title}</h3>
+          <div className="mb-4">
+            <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full mb-2">
+              {myth.category}
+            </span>
+            <p className="font-medium text-black mb-4">{myth.claim}</p>
+          </div>
+          <div className="space-y-4">
+            {myth.facts.map((fact, index) => (
+              <div key={index} className="flex gap-4">
+                <span className="font-bold text-primary shrink-0">Fact {index + 1}:</span>
+                <p className="text-black">{fact}</p>
+              </div>
+            ))}
+          </div>
+        </motion.article>
+        <div className="fixed bottom-4 right-4">
+          <ShareButtons 
+            title={`${myth.title} - KaspArchive`}
+            url={window.location.href}
+          />
+        </div>
+      </div>
+    </>
   );
 };
 
