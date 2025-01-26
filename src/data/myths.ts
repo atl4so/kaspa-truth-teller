@@ -11,7 +11,8 @@ export const categories = [
   "Proof-of-Work (PoW)",
   "Smart Contracts",
   "Technology",
-  "Layer 2"
+  "Layer 2",
+  "Ledger"
 ];
 
 export const myths: MythData[] = [
@@ -164,6 +165,37 @@ export const myths: MythData[] = [
       "Based rollups on Kaspa inherit the uncompromising security and censorship resistance of the Kaspa L1, as L1 sequencing is deeply integrated into their design. Kaspa L2s are fundamentally secure.",
       "Based rollups on Kaspa are designed to enhance user experience, streamline interoperability between different L2s within the Kaspa ecosystem, and ensure that L2 activity contributes to the economic robustness of the Kaspa L1. Kaspa L2s are designed for usability and economic alignment.",
       "Kaspa's entire architecture is being meticulously engineered from the ground up to seamlessly support efficient and secure L2 solutions, recognizing L2s as an essential component of truly scalable smart contract platforms. L2 scaling is a core design principle of Kaspa. To dismiss L2 scaling for Kaspa is to ignore its fundamental architectural approach."
+    ]
+  },
+  {
+    id: "myth-14",
+    title: "Gaps in Kaspa's ledger history imply security or transparency issues",
+    category: "Ledger",
+    claim: "Missing ledger history data means the current state of Kaspa cannot be verified from genesis, potentially hiding a pre-mine or other malicious activities, thus compromising security and transparency.",
+    facts: [
+      "Ledger pruning is essential for Kaspa's long-term decentralization and sustainability. At full capacity (10 BPS), the ledger grows by approximately 30TB per year, making archival nodes impractical for widespread decentralization without pruning.",
+      "The genesis block is hardcoded directly into the Kaspa node software. This hardcoded genesis block contains an empty UTXO set, verifiably demonstrating that there was no pre-mine.",
+      "Kaspa nodes store a \"proof-of-genesis.\" This cryptographic proof verifies that the current state of the ledger is derived from the hardcoded genesis block, without requiring the entire historical ledger data.",
+      "Forging the proof-of-genesis would require computational work equivalent to creating the entire ledger history, ensuring its security and authenticity.",
+      "The data available to each Kaspa node, including the proof-of-genesis, is sufficient to verify the current state back to genesis, ensuring transparency and security even without a complete historical ledger.",
+      "Kaspa employs techniques to provide proof of chain integrity without the entire ledger history. For example, a chain of checkpoint blocks (growing by one header per day) can be verified all the way back to genesis.",
+      "These checkpoint blocks, combined with UTXO commitments, cryptographically prove that the current state evolved from a genesis block with an empty UTXO set, thus demonstrating no pre-mine.",
+      "The MLS protocol, relevant to Kaspa, uses a special type of Non-Interactive Proofs of Proof-of-Work (NiPoPoW) to succinctly prove chain weight, which inherently prohibits pre-mining attacks.",
+      "The lack of archival nodes from the beginning was a matter of prioritization post-launch, not a security risk, as it was understood that ledger gaps do not compromise network integrity.",
+      "This approach provides a security level comparable to Nakamoto Consensus, offering a robust chain integrity proof that is more practical than requiring a full \"proof-of-history\" (which is considered unreasonably stringent for scalability)."
+    ]
+  },
+  {
+    id: "myth-15",
+    title: "Ledger history gaps are evidence of \"speedmining\" or hidden wrongdoing",
+    category: "Ledger",
+    claim: "The missing ledger data is intentionally hidden to conceal evidence of \"speedmining,\" pre-mines, or other illicit activities by the Kaspa team. THIS IS A BASELESS AND ILLOGICAL ACCUSATION.",
+    facts: [
+      "It is fundamentally impossible for anyone in a permissionless cryptocurrency to definitively prove they don't possess more coins than they publicly claim. Someone intending to hide coins could always use separate, secret addresses.",
+      "Even with a complete ledger, hidden coin holdings by individuals are virtually impossible to disprove, especially for mined coins, as miners can direct rewards to any address without linking it to their public identity.",
+      "The current ledger reconstruction process relies on data voluntarily provided by various users. No single entity controls which parts of the history are available, making intentional concealment of specific data segments by developers statistically improbable and illogical.",
+      "The argument that missing data hides wrongdoing relies on the absurd assumption that incriminating evidence exists in the ledger data and that the developers are relying on \"blind luck\" that the particular portion containing this hypothetical evidence will never surface during ledger reconstruction efforts.",
+      "Ironically, proponents of privacy coins, where the entire ledger is designed to be opaque and untraceable, are sometimes making these \"transparency\" accusations, highlighting the illogical and often politically motivated nature of such criticisms."
     ]
   }
 ];
