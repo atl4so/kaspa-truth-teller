@@ -42,12 +42,8 @@ const Index = () => {
 
             <div className="mt-4 w-full">
               {filteredMyths.length > 0 ? (
-                filteredMyths.map((myth, index) => (
-                  <MythArticle 
-                    key={myth.id} 
-                    myth={myth} 
-                    mythNumber={myths.findIndex(m => m.id === myth.id) + 1}
-                  />
+                filteredMyths.map((myth) => (
+                  <MythArticle key={myth.id} myth={myth} />
                 ))
               ) : (
                 <p className="text-center text-gray-500">

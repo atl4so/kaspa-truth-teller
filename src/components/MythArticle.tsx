@@ -5,10 +5,9 @@ import { ShareButtons } from "./ShareButtons";
 
 interface MythArticleProps {
   myth: MythData;
-  mythNumber: number;
 }
 
-export const MythArticle = ({ myth, mythNumber }: MythArticleProps) => {
+export const MythArticle = ({ myth }: MythArticleProps) => {
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -18,9 +17,7 @@ export const MythArticle = ({ myth, mythNumber }: MythArticleProps) => {
       className="max-w-3xl mx-auto mb-12 prose prose-slate dark:prose-invert"
     >
       <Link to={`/kaspa/${myth.id}`} className="no-underline">
-        <h3 className="text-2xl font-bold mb-4 hover:text-primary transition-colors">
-          Myth {mythNumber}: {myth.title}
-        </h3>
+        <h3 className="text-2xl font-bold mb-4 hover:text-primary transition-colors">{myth.title}</h3>
       </Link>
       <div className="mb-4">
         <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full mb-2">
@@ -37,7 +34,7 @@ export const MythArticle = ({ myth, mythNumber }: MythArticleProps) => {
         ))}
       </div>
       <ShareButtons 
-        title={`Myth ${mythNumber}: ${myth.title} - KaspArchive`}
+        title={`${myth.title} - KaspArchive`}
         url={`${window.location.origin}/kaspa/${myth.id}`}
       />
     </motion.article>
