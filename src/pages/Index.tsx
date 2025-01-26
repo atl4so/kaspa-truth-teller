@@ -19,8 +19,8 @@ const Index = () => {
         <Hero />
         
         <section className="py-1">
-          <Tabs defaultValue="all" onValueChange={setSelectedCategory}>
-            <TabsList className="w-full flex-wrap justify-start h-auto gap-2 bg-transparent">
+          <Tabs defaultValue="all" onValueChange={setSelectedCategory} className="flex flex-col items-center">
+            <TabsList className="flex flex-wrap justify-center h-auto gap-2 bg-transparent">
               <TabsTrigger 
                 value="all"
                 className="data-[state=active]:bg-primary data-[state=active]:text-white"
@@ -38,7 +38,7 @@ const Index = () => {
               ))}
             </TabsList>
 
-            <div className="mt-4">
+            <div className="mt-4 w-full">
               {filteredMyths.length > 0 ? (
                 filteredMyths.map((myth) => (
                   <MythArticle key={myth.id} myth={myth} />
