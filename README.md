@@ -1,69 +1,97 @@
-# Welcome to your Lovable project
+# KaspArchive 📚
 
-## Project info
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-**URL**: https://lovable.dev/projects/9fedf0f8-b40e-4e66-9137-2c76e421ecd3
+A comprehensive platform dedicated to debunking myths and presenting facts about Kaspa cryptocurrency. This project serves as a reliable source of information for the Kaspa community and newcomers interested in learning about the project.
 
-## How can I edit this code?
+## 🌟 Features
 
-There are several ways of editing your application.
+- **Myth Debunking**: Comprehensive collection of common myths about Kaspa with detailed factual explanations
+- **Category Filtering**: Easy navigation through different categories of myths and facts
+- **Responsive Design**: Fully responsive interface that works seamlessly across all devices
+- **Accessibility**: WCAG compliant with proper ARIA attributes and semantic HTML
+- **Share Functionality**: Easy sharing of specific myths and facts across various platforms
+- **Modern UI**: Clean and intuitive interface built with Tailwind CSS and shadcn/ui
 
-**Use Lovable**
+## 🛠️ Built With
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9fedf0f8-b40e-4e66-9137-2c76e421ecd3) and start prompting.
+- [React](https://reactjs.org/) - Frontend library
+- [TypeScript](https://www.typescriptlang.org/) - Type safety and enhanced developer experience
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [shadcn/ui](https://ui.shadcn.com/) - Re-usable components
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [Lucide Icons](https://lucide.dev/) - Beautiful open-source icons
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/kasparchive.git
 ```
 
-**Edit a file directly in GitHub**
+2. Navigate to the project directory
+```bash
+cd kasparchive
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
 
-**Use GitHub Codespaces**
+4. Start the development server
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The application will be available at `http://localhost:5173`
 
-## What technologies are used for this project?
+## 🎯 Project Structure
 
-This project is built with .
+```
+src/
+├── components/        # Reusable UI components
+├── pages/            # Page components
+├── data/            # Static data and configurations
+├── lib/             # Utility functions and helpers
+└── types/           # TypeScript type definitions
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🤝 Contributing
 
-## How can I deploy this project?
+Contributions are welcome! Feel free to submit issues and enhancement requests.
 
-Simply open [Lovable](https://lovable.dev/projects/9fedf0f8-b40e-4e66-9137-2c76e421ecd3) and click on Share -> Publish.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## I want to use a custom domain - is that possible?
+## 📝 License
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Kaspa Community for their continuous support
+- Contributors who have helped improve the platform
+- [Lovable](https://lovable.dev) - AI-powered development platform
+
+## 📬 Contact
+
+Project Link: [https://github.com/yourusername/kasparchive](https://github.com/yourusername/kasparchive)
+
+---
+Made with ❤️ for the Kaspa Community
