@@ -26,6 +26,8 @@ const Index = () => {
               <TabsTrigger 
                 value="all"
                 className="data-[state=active]:bg-primary data-[state=active]:text-white"
+                aria-label="Show all categories"
+                role="tab"
               >
                 All Categories
               </TabsTrigger>
@@ -34,6 +36,8 @@ const Index = () => {
                   key={category}
                   value={category}
                   className="data-[state=active]:bg-primary data-[state=active]:text-white"
+                  aria-label={`Show ${category} category`}
+                  role="tab"
                 >
                   {category}
                 </TabsTrigger>
