@@ -3,8 +3,16 @@ import { motion } from "framer-motion";
 import { Search as SearchIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export const Search = () => {
+interface SearchProps {
+  onSearch: (term: string) => void;
+}
+
+export const Search = ({ onSearch }: SearchProps) => {
   const [isFocused, setIsFocused] = useState(false);
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onSearch(e.target.value);
+  };
 
   return (
     <motion.div 
@@ -24,6 +32,7 @@ export const Search = () => {
           className="w-full py-3 pl-12 pr-4 rounded-full border border-accent/20 focus:outline-none focus:ring-2 focus:ring-primary/5 transition-all"
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
+          onChange={handleSearch}
         />
       </div>
     </motion.div>
