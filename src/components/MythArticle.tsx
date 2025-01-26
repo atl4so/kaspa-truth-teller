@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MythData } from "@/data/myths";
 import { Link } from "react-router-dom";
+import { ShareButtons } from "./ShareButtons";
 
 interface MythArticleProps {
   myth: MythData;
@@ -32,6 +33,10 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
           </div>
         ))}
       </div>
+      <ShareButtons 
+        title={`${myth.title} - KaspArchive`}
+        url={`${window.location.origin}/myths/${myth.id}`}
+      />
     </motion.article>
   );
 };
