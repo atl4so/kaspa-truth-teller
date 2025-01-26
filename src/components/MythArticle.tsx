@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MythData } from "@/data/myths";
+import { Link } from "react-router-dom";
 
 interface MythArticleProps {
   myth: MythData;
@@ -14,7 +15,9 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
       transition={{ duration: 0.5 }}
       className="max-w-3xl mx-auto mb-12 prose prose-slate dark:prose-invert"
     >
-      <h3 className="text-2xl font-bold mb-4">{`Myth ${myth.id.split('-')[1]}: ${myth.title}`}</h3>
+      <Link to={`/myths/${myth.id}`} className="no-underline">
+        <h3 className="text-2xl font-bold mb-4 hover:text-primary transition-colors">{`Myth ${myth.id.split('-')[1]}: ${myth.title}`}</h3>
+      </Link>
       <div className="mb-4">
         <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full mb-2">
           {myth.category}
