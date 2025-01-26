@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { MythArticle } from "@/components/MythArticle";
 import { myths, categories } from "@/data/myths";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { BackToTop } from "@/components/BackToTop";
 
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -52,6 +53,7 @@ const Index = () => {
           </Tabs>
         </section>
       </main>
+      <BackToTop />
     </div>
   );
 };
