@@ -2,15 +2,27 @@ import { MythData } from "./types";
 
 export const layer2Myths: MythData[] = [
   {
-    id: "kaspa-l2-scaling",
-    title: "L2 scaling is a flawed concept and won't work for smart contracts on Kaspa",
+    id: "layer2-1",
+    title: "Layer 2 Solutions",
     category: "Layer 2",
-    claim: "Layer-2 (L2) scaling is fundamentally broken and cannot provide a viable scaling solution for smart contracts on Kaspa. THIS IS BASED ON OUTDATED AND INCOMPLETE INFORMATION.",
+    claim: "Kaspa doesn't need Layer 2 solutions.",
     facts: [
-      "Kaspa's L2 strategy is built upon 'based rollups,' a cutting-edge L2 design that directly addresses the shortcomings of earlier L2 architectures and offers a highly secure and scalable solution. Kaspa is using advanced L2 technology.",
-      "Based rollups on Kaspa inherit the uncompromising security and censorship resistance of the Kaspa L1, as L1 sequencing is deeply integrated into their design. Kaspa L2s are fundamentally secure.",
-      "Based rollups on Kaspa are designed to enhance user experience, streamline interoperability between different L2s within the Kaspa ecosystem, and ensure that L2 activity contributes to the economic robustness of the Kaspa L1. Kaspa L2s are designed for usability and economic alignment.",
-      "Kaspa's entire architecture is being meticulously engineered from the ground up to seamlessly support efficient and secure L2 solutions, recognizing L2s as an essential component of truly scalable smart contract platforms. L2 scaling is a core design principle of Kaspa. To dismiss L2 scaling for Kaspa is to ignore its fundamental architectural approach."
+      "Layer 2 solutions can enhance Kaspa's capabilities.",
+      "Different use cases may benefit from Layer 2 scaling.",
+      "Layer 2 can provide additional features while maintaining security.",
+      "The base layer's performance doesn't eliminate the benefits of Layer 2."
+    ]
+  },
+  {
+    id: "layer2-2",
+    title: "Cross-chain Compatibility",
+    category: "Layer 2",
+    claim: "Kaspa cannot interact with other blockchains.",
+    facts: [
+      "Cross-chain bridges are possible and in development.",
+      "Layer 2 solutions can facilitate blockchain interoperability.",
+      "The community is working on various integration solutions.",
+      "Multiple approaches to cross-chain compatibility are being explored."
     ]
   }
 ];

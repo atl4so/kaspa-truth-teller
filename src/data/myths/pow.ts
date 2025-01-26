@@ -2,24 +2,39 @@ import { MythData } from "./types";
 
 export const powMyths: MythData[] = [
   {
-    id: "pow-vs-pos-comparison",
-    title: "PoW is inherently inferior to Proof-of-Stake (PoS)",
+    id: "pow-1",
+    title: "Energy Consumption Concerns",
     category: "Proof-of-Work (PoW)",
-    claim: "Proof-of-Stake (PoS) is unequivocally superior to Proof-of-Work (PoW) in every meaningful way. THIS IS A MISLEADING OVERSIMPLIFICATION.",
+    claim: "Kaspa's PoW mining wastes too much energy.",
     facts: [
-      "The supposed 'superiority' of PoS is not a universally accepted fact but a heavily debated topic, deeply influenced by complex and unpredictable economic factors, not just theoretical mathematical models. There is no definitive proof of PoS superiority.",
-      "Claims that 'PoS is factually better' lack objective, universally agreed-upon evidence and often ignore critical security and decentralization trade-offs. These claims are not based on settled science.",
-      "PoW and PoS represent fundamentally different approaches with distinct security, decentralization, and economic characteristics. The 'best' choice is context-dependent and not universally determined. To declare one definitively superior is inaccurate and ignores crucial nuances."
+      "Kaspa's mining can utilize renewable energy sources.",
+      "The energy used secures the network and provides real value.",
+      "Mining efficiency continues to improve with technological advances.",
+      "The energy cost is justified by the security and decentralization benefits."
     ]
   },
   {
-    id: "pow-cost-waste",
-    title: "PoW cost is a wasteful expenditure with no real network benefit",
+    id: "pow-2",
+    title: "Mining Centralization",
     category: "Proof-of-Work (PoW)",
-    claim: "The computational work in PoW is pointless, arbitrary number crunching that adds no value. THIS IS A FUNDAMENTAL MISUNDERSTANDING OF PoW's PURPOSE.",
+    claim: "Mining is too centralized in Kaspa.",
     facts: [
-      "PoW computations are the cornerstone of PoW security. They provide the essential cryptographic proof of the blockchain's accumulated work and security, forming the foundation for its immutability and resistance to attacks. PoW is not wasteful; it is the security mechanism itself.",
-      "To dismiss PoW computations as 'wasteful' is akin to dismissing cryptographic signatures as useless because they involve mathematical operations. PoW's computational cost is directly tied to network security."
+      "Kaspa's mining algorithm (GHOSTDAG) promotes decentralization.",
+      "Multiple mining pools operate independently.",
+      "Individual miners can effectively participate in the network.",
+      "The network has a healthy distribution of hash power."
+    ]
+  },
+  {
+    id: "pow-3",
+    title: "Mining Profitability",
+    category: "Proof-of-Work (PoW)",
+    claim: "Mining Kaspa is not profitable for small miners.",
+    facts: [
+      "Kaspa's high block rate provides frequent mining rewards.",
+      "The network supports various mining hardware options.",
+      "Small miners can join mining pools for consistent rewards.",
+      "Mining profitability depends on multiple factors including electricity costs and hardware efficiency."
     ]
   }
 ];

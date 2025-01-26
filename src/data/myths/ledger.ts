@@ -2,16 +2,27 @@ import { MythData } from "./types";
 
 export const ledgerMyths: MythData[] = [
   {
-    id: "kaspa-ledger-history",
-    title: "Gaps in Kaspa's ledger history imply security or transparency issues",
+    id: "ledger-1",
+    title: "Ledger Support Status",
     category: "Ledger",
-    claim: "Missing ledger history data means the current state of Kaspa cannot be verified from genesis, potentially hiding a pre-mine or other malicious activities, thus compromising security and transparency.",
+    claim: "Kaspa will never get Ledger support.",
     facts: [
-      "Ledger pruning is essential for Kaspa's long-term decentralization and sustainability. At full capacity (10 BPS), the ledger grows by approximately 30TB per year, making archival nodes impractical for widespread decentralization without pruning.",
-      "The genesis block is hardcoded directly into the Kaspa node software. This hardcoded genesis block contains an empty UTXO set, verifiably demonstrating that there was no pre-mine.",
-      "Kaspa nodes store a \"proof-of-genesis.\" This cryptographic proof verifies that the current state of the ledger is derived from the hardcoded genesis block, without requiring the entire historical ledger data.",
-      "Forging the proof-of-genesis would require computational work equivalent to creating the entire ledger history, ensuring its security and authenticity.",
-      "The data available to each Kaspa node, including the proof-of-genesis, is sufficient to verify the current state back to genesis, ensuring transparency and security even without a complete historical ledger."
+      "Ledger support is actively being developed.",
+      "The integration process is making steady progress.",
+      "Community developers are working with Ledger.",
+      "Hardware wallet support is a priority for the ecosystem."
+    ]
+  },
+  {
+    id: "ledger-2",
+    title: "Hardware Wallet Security",
+    category: "Ledger",
+    claim: "Kaspa is not secure without hardware wallet support.",
+    facts: [
+      "Multiple secure storage solutions exist for Kaspa.",
+      "The core protocol security is independent of hardware wallets.",
+      "Best practices for secure storage can be followed.",
+      "Hardware wallet support will add an extra security option."
     ]
   }
 ];
