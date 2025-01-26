@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { MythArticle } from "@/components/MythArticle";
 import { myths } from "@/data/myths";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
-import { motion } from "framer-motion";
-import { ShareButtons } from "@/components/ShareButtons";
 
 const Myth = () => {
   const { mythId } = useParams();
@@ -12,12 +11,84 @@ const Myth = () => {
 
   useEffect(() => {
     if (myth) {
+      // Update meta tags
       document.title = `${myth.title} - KaspArchive`;
+      
+      // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute("content", myth.claim);
       }
+
+      // Update OpenGraph tags
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      
+      if (ogTitle) {
+        ogTitle.setAttribute("content", `${myth.title} - KaspArchive`);
+      }
+      if (ogDescription) {
+        ogDescription.setAttribute("content", myth.claim);
+      }
+      if (ogUrl) {
+        ogUrl.setAttribute("content", `${window.location.origin}/kaspa/${myth.id}`);
+      }
+
+      // Update Twitter tags
+      const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+      const twitterDescription = document.querySelector('meta[property="twitter:description"]');
+      const twitterUrl = document.querySelector('meta[property="twitter:url"]');
+      
+      if (twitterTitle) {
+        twitterTitle.setAttribute("content", `${myth.title} - KaspArchive`);
+      }
+      if (twitterDescription) {
+        twitterDescription.setAttribute("content", myth.claim);
+      }
+      if (twitterUrl) {
+        twitterUrl.setAttribute("content", `${window.location.origin}/kaspa/${myth.id}`);
+      }
     }
+
+    // Cleanup function to reset meta tags when component unmounts
+    return () => {
+      document.title = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute("content", "Comprehensive guide debunking common myths about Kaspa cryptocurrency. Learn facts about Kaspa's fair launch, PoW consensus, smart contracts, Layer 2 scaling, and technological innovations.");
+      }
+      
+      // Reset OpenGraph tags
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      
+      if (ogTitle) {
+        ogTitle.setAttribute("content", "KaspArchive - Facts & Myths About Kaspa");
+      }
+      if (ogDescription) {
+        ogDescription.setAttribute("content", "Discover the truth about Kaspa cryptocurrency. Get facts about fair launch, PoW mining, smart contracts, and technological innovations.");
+      }
+      if (ogUrl) {
+        ogUrl.setAttribute("content", window.location.origin);
+      }
+
+      // Reset Twitter tags
+      const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+      const twitterDescription = document.querySelector('meta[property="twitter:description"]');
+      const twitterUrl = document.querySelector('meta[property="twitter:url"]');
+      
+      if (twitterTitle) {
+        twitterTitle.setAttribute("content", "KaspArchive - Facts & Myths About Kaspa");
+      }
+      if (twitterDescription) {
+        twitterDescription.setAttribute("content", "Discover the truth about Kaspa cryptocurrency. Get facts about fair launch, PoW mining, smart contracts, and technological innovations.");
+      }
+      if (twitterUrl) {
+        twitterUrl.setAttribute("content", window.location.origin);
+      }
+    };
   }, [myth]);
 
   if (!myth) {
@@ -36,37 +107,7 @@ const Myth = () => {
           Back to All Myths
         </Button>
       </Link>
-      
-      <motion.article
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-3xl mx-auto prose prose-slate dark:prose-invert"
-      >
-        <div className="mb-6">
-          <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full mb-4">
-            {myth.category}
-          </span>
-          <h1 className="text-3xl font-bold mb-4">{myth.title}</h1>
-          <p className="text-xl font-medium text-black dark:text-white mb-8">{myth.claim}</p>
-        </div>
-
-        <div className="space-y-6">
-          {myth.facts.map((fact, index) => (
-            <div key={index} className="flex gap-4">
-              <span className="font-bold text-primary shrink-0">Fact {index + 1}:</span>
-              <p className="text-black dark:text-white">{fact}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-8">
-          <ShareButtons 
-            title={`${myth.title} - KaspArchive`}
-            url={`${window.location.origin}/kaspa/${myth.id}`}
-          />
-        </div>
-      </motion.article>
+      <MythArticle myth={myth} />
     </div>
   );
 };
