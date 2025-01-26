@@ -25,7 +25,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#20B2AA", // Light Sea Green (Turquoise)
+          DEFAULT: "#1A8F89", // Darker turquoise for better contrast
           foreground: "#ffffff",
         },
         secondary: {
@@ -33,12 +33,12 @@ export default {
           foreground: "#ffffff",
         },
         accent: {
-          DEFAULT: "#E0F7F6", // Light turquoise for accent backgrounds
-          foreground: "#20B2AA", // Turquoise for accent text
+          DEFAULT: "#D1EFEE", // Lighter turquoise for accent backgrounds
+          foreground: "#1A8F89", // Matching darker turquoise for text
         },
         muted: {
           DEFAULT: "#f5f5f5",
-          foreground: "#737373",
+          foreground: "#595959", // Darker gray for better contrast
         },
       },
       borderRadius: {

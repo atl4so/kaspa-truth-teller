@@ -22,12 +22,14 @@ const Index = () => {
         
         <section className="py-1">
           <Tabs defaultValue="all" onValueChange={setSelectedCategory} className="flex flex-col items-center">
-            <TabsList className="flex flex-wrap justify-center h-auto gap-2 bg-transparent">
+            <TabsList 
+              className="flex flex-wrap justify-center h-auto gap-2 bg-transparent"
+              aria-label="Content categories"
+            >
               <TabsTrigger 
                 value="all"
-                className="data-[state=active]:bg-primary data-[state=active]:text-white"
+                className="data-[state=active]:bg-primary data-[state=active]:text-white hover:bg-accent focus:ring-2 focus:ring-primary"
                 aria-label="Show all categories"
-                role="tab"
               >
                 All Categories
               </TabsTrigger>
@@ -35,9 +37,8 @@ const Index = () => {
                 <TabsTrigger
                   key={category}
                   value={category}
-                  className="data-[state=active]:bg-primary data-[state=active]:text-white"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-white hover:bg-accent focus:ring-2 focus:ring-primary"
                   aria-label={`Show ${category} category`}
-                  role="tab"
                 >
                   {category}
                 </TabsTrigger>
@@ -47,10 +48,12 @@ const Index = () => {
             <div className="mt-4 w-full">
               {filteredMyths.length > 0 ? (
                 filteredMyths.map((myth) => (
-                  <MythArticle key={myth.id} myth={myth} />
+                  <TabsContent key={myth.id} value={myth.category}>
+                    <MythArticle myth={myth} />
+                  </TabsContent>
                 ))
               ) : (
-                <p className="text-center text-gray-500">
+                <p className="text-center text-gray-700">
                   No myths found for the selected category.
                 </p>
               )}
