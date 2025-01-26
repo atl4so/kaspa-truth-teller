@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Search as SearchIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export const Search = () => {
   const [isFocused, setIsFocused] = useState(false);
