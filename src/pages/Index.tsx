@@ -18,7 +18,7 @@ const Index = () => {
       <main className="container mx-auto px-4">
         <Hero />
         
-        <section className="py-3">
+        <section className="py-1">
           <Tabs defaultValue="all" onValueChange={setSelectedCategory}>
             <TabsList className="w-full flex-wrap justify-start h-auto gap-2 bg-transparent">
               <TabsTrigger 
