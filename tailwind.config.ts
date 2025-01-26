@@ -25,7 +25,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#20B2AA", // Light Sea Green (Turquoise)
+          DEFAULT: "#20B2AA",
           foreground: "#ffffff",
         },
         secondary: {
@@ -33,12 +33,12 @@ export default {
           foreground: "#ffffff",
         },
         accent: {
-          DEFAULT: "#E0F7F6", // Light turquoise for accent backgrounds
-          foreground: "#20B2AA", // Turquoise for accent text
+          DEFAULT: "#E0F7F6",
+          foreground: "#20B2AA",
         },
         muted: {
-          DEFAULT: "#f5f5f5",
-          foreground: "#737373",
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
       },
       borderRadius: {
@@ -55,20 +55,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-in": {
-          "0%": { opacity: "0", transform: "translateY(10px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "fade-out": {
-          "0%": { opacity: "1", transform: "translateY(0)" },
-          "100%": { opacity: "0", transform: "translateY(-10px)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.5s ease-out",
-        "fade-out": "fade-out 0.5s ease-out",
       },
     },
   },
