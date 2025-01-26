@@ -17,7 +17,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-[#f3f3f3]">
-      <main className="container mx-auto px-4">
+      <main className="container mx-auto px-4 max-w-3xl">
         <Hero />
         
         <section className="py-1">
