@@ -17,7 +17,7 @@ export const categories = [
 
 export const myths: MythData[] = [
   {
-    id: "myth-1",
+    id: "fair-launch-daglabs-control",
     title: "Kaspa was unfairly launched and is secretly controlled by DAGLabs",
     category: "Fair Launch and DAGLabs",
     claim: "Kaspa's launch was rigged, and it remains under the hidden control of DAGLabs, who enriched themselves with a pre-mine. THIS IS FALSE.",
@@ -34,7 +34,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-2",
+    id: "pow-vs-pos-comparison",
     title: "PoW is inherently inferior to Proof-of-Stake (PoS)",
     category: "Proof-of-Work (PoW)",
     claim: "Proof-of-Stake (PoS) is unequivocally superior to Proof-of-Work (PoW) in every meaningful way. THIS IS A MISLEADING OVERSIMPLIFICATION.",
@@ -45,7 +45,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-3",
+    id: "pow-cost-waste",
     title: "PoW cost is a wasteful expenditure with no real network benefit",
     category: "Proof-of-Work (PoW)",
     claim: "The computational work in PoW is pointless, arbitrary number crunching that adds no value. THIS IS A FUNDAMENTAL MISUNDERSTANDING OF PoW's PURPOSE.",
@@ -55,7 +55,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-4",
+    id: "pos-economic-superiority",
     title: "PoS is economically superior because it avoids 'wasteful' PoW costs",
     category: "Proof-of-Work (PoW)",
     claim: "PoS tokenomics are automatically better because they eliminate the energy expenditure of PoW. THIS IS A NARROW AND INCOMPLETE ECONOMIC VIEW.",
@@ -65,7 +65,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-5",
+    id: "pos-security-cost",
     title: "PoS is more secure because attacking it is more expensive",
     category: "Proof-of-Work (PoW)",
     claim: "Attacking a PoS network is always more expensive, making it inherently more secure. THIS IS A SIMPLISTIC AND OFTEN INCORRECT SECURITY ASSESSMENT.",
@@ -77,7 +77,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-6",
+    id: "pow-mining-exclusivity",
     title: "Average people are excluded from PoW mining due to prohibitive costs",
     category: "Proof-of-Work (PoW)",
     claim: "PoW mining is only for wealthy corporations and specialized entities, excluding ordinary individuals. THIS IS NOT TRUE FOR KASPA.",
@@ -88,7 +88,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-7",
+    id: "pow-environmental-impact",
     title: "PoW is inherently environmentally damaging and unsustainable",
     category: "Proof-of-Work (PoW)",
     claim: "PoW mining is a major environmental threat due to its excessive energy consumption. THIS IS AN OVERBLOWN AND INCOMPLETE PICTURE.",
@@ -99,7 +99,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-8",
+    id: "pow-pools-centralization",
     title: "PoW pools inevitably centralize mining power and undermine decentralization",
     category: "Proof-of-Work (PoW)",
     claim: "PoW mining pools concentrate power, leading to unacceptable centralization. THIS IS A GENERALIZATION THAT DOES NOT FULLY APPLY TO KASPA.",
@@ -109,7 +109,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-9",
+    id: "kaspa-finalization-speed",
     title: "Kaspa's 10-second finalization is too slow for practical use",
     category: "Technology",
     claim: "Kaspa's 10-second finalization is outdated and uncompetitive compared to faster blockchains. THIS IS A MISUNDERSTANDING OF KASPA'S FINALITY MODEL AND FUTURE PLANS.",
@@ -122,7 +122,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-10",
+    id: "kaspa-smart-contracts",
     title: "Kaspa has no smart contracts, making it uncompetitive and obsolete",
     category: "Smart Contracts",
     claim: "The current lack of smart contracts on Kaspa makes it irrelevant and incapable of competing in the modern crypto landscape. THIS IS A SHORT-SIGHTED AND INACCURATE ASSESSMENT.",
@@ -134,7 +134,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-11",
+    id: "kaspa-defi-utility",
     title: "Without DeFi, Kaspa has no real utility or adoption potential",
     category: "Smart Contracts",
     claim: "Kaspa's lack of a Decentralized Finance (DeFi) ecosystem means it has no practical use cases and will fail to gain adoption. THIS IS A RESTRICTIVE VIEW OF CRYPTO UTILITY.",
@@ -145,7 +145,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-12",
+    id: "kaspa-innovation",
     title: "Kaspa is just another scalable PoW L1, lacking genuine innovation",
     category: "Technology",
     claim: "Kaspa offers nothing truly new or groundbreaking, simply repackaging existing ideas. THIS IS A PROFOUNDLY IGNORANT STATEMENT.",
@@ -156,7 +156,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-13",
+    id: "kaspa-l2-scaling",
     title: "L2 scaling is a flawed concept and won't work for smart contracts on Kaspa",
     category: "Layer 2",
     claim: "Layer-2 (L2) scaling is fundamentally broken and cannot provide a viable scaling solution for smart contracts on Kaspa. THIS IS BASED ON OUTDATED AND INCOMPLETE INFORMATION.",
@@ -168,7 +168,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-14",
+    id: "kaspa-ledger-history",
     title: "Gaps in Kaspa's ledger history imply security or transparency issues",
     category: "Ledger",
     claim: "Missing ledger history data means the current state of Kaspa cannot be verified from genesis, potentially hiding a pre-mine or other malicious activities, thus compromising security and transparency.",
@@ -186,7 +186,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "myth-15",
+    id: "kaspa-ledger-speedmining",
     title: "Ledger history gaps are evidence of \"speedmining\" or hidden wrongdoing",
     category: "Ledger",
     claim: "The missing ledger data is intentionally hidden to conceal evidence of \"speedmining,\" pre-mines, or other illicit activities by the Kaspa team. THIS IS A BASELESS AND ILLOGICAL ACCUSATION.",
