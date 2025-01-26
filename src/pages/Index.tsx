@@ -4,6 +4,7 @@ import { MythArticle } from "@/components/MythArticle";
 import { myths, categories } from "@/data/myths";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { BackToTop } from "@/components/BackToTop";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -53,6 +54,7 @@ const Index = () => {
           </Tabs>
         </section>
       </main>
+      <Footer />
       <BackToTop />
     </div>
   );
