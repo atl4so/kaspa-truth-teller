@@ -2,13 +2,26 @@ import { useParams, Link } from "react-router-dom";
 import { myths } from "@/data/myths";
 import { ShareButtons } from "@/components/ShareButtons";
 import { ChevronLeft } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Myth = () => {
   const { id } = useParams();
   const myth = myths.find((m) => m.id === id);
 
   if (!myth) {
-    return <div>Myth not found</div>;
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Myth not found</h2>
+          <Link
+            to="/"
+            className="text-primary hover:text-primary/80"
+          >
+            Back to Main
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -21,28 +34,31 @@ const Myth = () => {
         Back to Main
       </Link>
 
-      <article className="prose prose-lg mx-auto">
-        <h1>{myth.title}</h1>
-        <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
-          {myth.category}
+      <motion.article
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-3xl mx-auto mb-12 prose prose-slate dark:prose-invert"
+      >
+        <h3 className="text-2xl font-bold mb-4">{`Myth ${myth.id.split('-')[1]}: ${myth.title}`}</h3>
+        <div className="mb-4">
+          <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full mb-2">
+            {myth.category}
+          </span>
+          <p className="font-medium text-black mb-4">{myth.claim}</p>
         </div>
-        <p className="text-xl mt-6 font-semibold uppercase">
-          {myth.claim}
-        </p>
-        <div className="mt-8 space-y-6">
+        <div className="space-y-4">
           {myth.facts.map((fact, index) => (
             <div key={index} className="flex gap-4">
-              <div className="text-primary font-medium whitespace-nowrap">
-                Fact {index + 1}:
-              </div>
-              <div>{fact}</div>
+              <span className="font-bold text-primary shrink-0">Fact {index + 1}:</span>
+              <p className="text-black">{fact}</p>
             </div>
           ))}
         </div>
-      </article>
+      </motion.article>
       <div className="fixed bottom-4 right-4">
         <ShareButtons 
-          title={myth.title}
+          title={`${myth.title} - KaspArchive`}
           url={window.location.href}
         />
       </div>
