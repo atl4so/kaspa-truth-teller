@@ -1,13 +1,14 @@
 import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { MythArticle } from "@/components/MythArticle";
 import { myths } from "@/data/myths";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 
 const Myth = () => {
-  const { id } = useParams();
-  const myth = myths.find((m) => m.id === id);
+  const location = useLocation();
+  const mythId = location.pathname.split('/kaspa/')[1];
+  const myth = myths.find((m) => m.id === mythId);
 
   useEffect(() => {
     if (myth) {
@@ -32,7 +33,7 @@ const Myth = () => {
         ogDescription.setAttribute("content", myth.claim);
       }
       if (ogUrl) {
-        ogUrl.setAttribute("content", `${window.location.origin}/myths/${myth.id}`);
+        ogUrl.setAttribute("content", `${window.location.origin}/kaspa/${myth.id}`);
       }
 
       // Update Twitter tags
@@ -47,7 +48,7 @@ const Myth = () => {
         twitterDescription.setAttribute("content", myth.claim);
       }
       if (twitterUrl) {
-        twitterUrl.setAttribute("content", `${window.location.origin}/myths/${myth.id}`);
+        twitterUrl.setAttribute("content", `${window.location.origin}/kaspa/${myth.id}`);
       }
     }
 
