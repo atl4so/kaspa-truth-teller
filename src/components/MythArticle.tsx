@@ -24,9 +24,22 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
         <h3 className="text-2xl font-bold mb-4 hover:text-primary transition-colors">{myth.title}</h3>
       </Link>
       <div className="mb-4">
-        <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full mb-2">
-          {myth.category}
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full mb-2">
+            {myth.category}
+          </span>
+          {myth.references && myth.references.length > 0 && (
+            <a 
+              href={myth.references[0]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-sm text-primary hover:underline"
+            >
+              <ExternalLink size={14} />
+              Read more
+            </a>
+          )}
+        </div>
         <p className="font-medium text-black mb-4">{myth.claim}</p>
       </div>
       <div className="space-y-4">
@@ -37,26 +50,6 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
           </div>
         ))}
       </div>
-      {myth.references && myth.references.length > 0 && (
-        <div className="mt-4 text-sm text-gray-600">
-          <p className="font-semibold mb-2">References:</p>
-          <ul className="list-none p-0">
-            {myth.references.map((ref, index) => (
-              <li key={index} className="flex items-center gap-2">
-                <ExternalLink size={14} />
-                <a 
-                  href={ref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-                >
-                  Read more
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
       <ShareButtons 
         title={`${myth.title} - KaspArchive`}
         url={mythUrl}
