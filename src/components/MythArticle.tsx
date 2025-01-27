@@ -14,7 +14,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="max-w-3xl mx-auto mb-12 prose prose-slate dark:prose-invert relative"
+      className="max-w-3xl mx-auto mb-12 prose prose-slate dark:prose-invert"
     >
       <Link to={`/kaspa/${myth.id}`} className="no-underline">
         <h3 className="text-2xl font-bold mb-4 hover:text-primary transition-colors">{myth.title}</h3>
@@ -33,12 +33,10 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
           </div>
         ))}
       </div>
-      <div className="absolute bottom-0 right-0">
-        <ShareButtons 
-          title={`${myth.title} - KaspArchive`}
-          url={`${window.location.origin}/kaspa/${myth.id}`}
-        />
-      </div>
+      <ShareButtons 
+        title={`${myth.title} - KaspArchive`}
+        url={window.location.href}
+      />
     </motion.article>
   );
 };
