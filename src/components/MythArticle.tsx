@@ -8,6 +8,9 @@ interface MythArticleProps {
 }
 
 export const MythArticle = ({ myth }: MythArticleProps) => {
+  // Generate the specific myth URL
+  const mythUrl = `${window.location.origin}/kaspa/${myth.id}`;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -35,7 +38,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
       </div>
       <ShareButtons 
         title={`${myth.title} - KaspArchive`}
-        url={window.location.href}
+        url={mythUrl}
       />
     </motion.article>
   );
