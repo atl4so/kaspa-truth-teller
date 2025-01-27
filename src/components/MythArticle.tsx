@@ -25,7 +25,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
       </Link>
       <div className="mb-4">
         <div className="flex items-center gap-2">
-          <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full mb-2">
+          <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full">
             {myth.category}
           </span>
           {myth.references && myth.references.length > 0 && (
@@ -33,14 +33,14 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
               href={myth.references[0]}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-sm text-primary hover:underline"
+              className="inline-flex items-center px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full hover:bg-accent/70 transition-colors"
             >
-              <ExternalLink size={14} />
+              <ExternalLink size={14} className="mr-1" />
               Read more
             </a>
           )}
         </div>
-        <p className="font-medium text-black mb-4">{myth.claim}</p>
+        <p className="font-medium text-black mb-4 mt-4">{myth.claim}</p>
       </div>
       <div className="space-y-4">
         {myth.facts.map((fact, index) => (
