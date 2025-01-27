@@ -100,14 +100,16 @@ const Myth = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Link to="/">
-        <Button variant="ghost" className="mb-4">
-          <ChevronLeft className="mr-2 h-4 w-4" />
-          Back to All Myths
-        </Button>
-      </Link>
-      <MythArticle myth={myth} />
+    <div className="min-h-screen bg-[#f3f3f3]">
+      <div className="container mx-auto px-4 py-8">
+        <Link to="/">
+          <Button variant="ghost" className="mb-4">
+            <ChevronLeft className="mr-2 h-4 w-4" />
+            Back to All Myths
+          </Button>
+        </Link>
+        <MythArticle myth={myth} />
+      </div>
     </div>
   );
 };
