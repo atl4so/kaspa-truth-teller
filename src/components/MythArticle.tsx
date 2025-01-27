@@ -11,6 +11,9 @@ interface MythArticleProps {
 export const MythArticle = ({ myth }: MythArticleProps) => {
   // Generate the specific myth URL
   const mythUrl = `${window.location.origin}/kaspa/${myth.id}`;
+  
+  // Extract myth number from ID (e.g., "myth-1" becomes "1")
+  const mythNumber = myth.id.split("-")[1];
 
   return (
     <motion.article
@@ -21,7 +24,9 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
       className="max-w-3xl mx-auto mb-12 prose prose-slate dark:prose-invert"
     >
       <Link to={`/kaspa/${myth.id}`} className="no-underline">
-        <h3 className="text-2xl font-bold mb-4 hover:text-primary transition-colors">{myth.title}</h3>
+        <h3 className="text-2xl font-bold mb-4 hover:text-primary transition-colors">
+          Myth {mythNumber}: {myth.title}
+        </h3>
       </Link>
       <div className="mb-4">
         <div className="flex items-center gap-2">
@@ -51,7 +56,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
         ))}
       </div>
       <ShareButtons 
-        title={`${myth.title} - KaspArchive`}
+        title={`Myth ${mythNumber}: ${myth.title} - KaspArchive`}
         url={mythUrl}
       />
     </motion.article>
