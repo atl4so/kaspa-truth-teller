@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Share2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface ShareButtonsProps {
   title: string;
@@ -7,19 +8,21 @@ interface ShareButtonsProps {
 }
 
 export const ShareButtons = ({ title, url }: ShareButtonsProps) => {
-  const shareData = {
-    title,
-    url: url.replace(":/", ""), // Remove the erroneous :/ from the URL
-    text: title,
-  };
+  const { toast } = useToast();
 
   const handleShare = async () => {
     try {
       if (navigator.share) {
-        await navigator.share(shareData);
+        await navigator.share({
+          title,
+          url
+        });
       } else {
-        // Fallback to clipboard copy
-        await navigator.clipboard.writeText(`${title}\n${url.replace(":/", "")}`);
+        await navigator.clipboard.writeText(url);
+        toast({
+          title: "Link copied to clipboard",
+          description: "You can now share it with others"
+        });
       }
     } catch (error) {
       console.error("Error sharing:", error);
