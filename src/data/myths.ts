@@ -4,7 +4,7 @@ export interface MythData {
   category: string;
   claim: string;
   facts: string[];
-  references?: string[]; // Adding optional references field
+  references?: string[];
 }
 
 export const categories = [
@@ -185,7 +185,8 @@ export const myths: MythData[] = [
       "The MLS protocol, relevant to Kaspa, uses a special type of Non-Interactive Proofs of Proof-of-Work (NiPoPoW) to succinctly prove chain weight, which inherently prohibits pre-mining attacks.",
       "The lack of archival nodes from the beginning was a matter of prioritization post-launch, not a security risk, as it was understood that ledger gaps do not compromise network integrity.",
       "This approach provides a security level comparable to Nakamoto Consensus, offering a robust chain integrity proof that is more practical than requiring a full \"proof-of-history\" (which is considered unreasonably stringent for scalability)."
-    ]
+    ],
+    references: ["https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb"]
   },
   {
     id: "myth-15",
