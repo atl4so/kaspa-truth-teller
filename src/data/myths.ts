@@ -200,5 +200,19 @@ export const myths: MythData[] = [
       "The argument that missing data hides wrongdoing relies on the absurd assumption that incriminating evidence exists in the ledger data and that the developers are relying on \"blind luck\" that the particular portion containing this hypothetical evidence will never surface during ledger reconstruction efforts.",
       "Ironically, proponents of privacy coins, where the entire ledger is designed to be opaque and untraceable, are sometimes making these \"transparency\" accusations, highlighting the illogical and often politically motivated nature of such criticisms."
     ]
+  },
+  {
+    id: "myth-16",
+    title: "Kaspa can't scale because its ledger will get too big (state bloat)",
+    category: "Technology",
+    claim: "Kaspa can't scale. Its system for managing transactions will cause its blockchain to grow too large, making it slow and unusable over time. It will get \"clogged up\" and unable to handle more users, meaning Kaspa can't grow to be used by everyone.",
+    facts: [
+      "That's wrong! Kaspa developers have created a smart solution called KIP-9 specifically to prevent the ledger from getting too big and to make sure Kaspa can keep scaling up for many, many users.",
+      "KIP-9 adds a \"storage cost\" to transactions. Think of it like a small fee for using storage space on the Kaspa network. Transactions that take up more space (like creating lots of tiny coin pieces) pay a bit more, which stops the ledger from ballooning.",
+      "This \"storage cost\" system is designed to automatically control ledger size. The cost to make the ledger bigger increases very quickly, making it too expensive for anyone to try and overload the system and cause problems. Kaspa is designed to stay efficient as it grows.",
+      "KIP-9 is not just an idea – it's already part of Kaspa's software and is actively working behind the scenes to keep the ledger size in check. This is a real, working solution for long-term growth.",
+      "Experts have tested KIP-9 and confirmed it works. They've shown that it stops ledger bloat attacks and keeps the ledger growth manageable, even if Kaspa becomes incredibly popular. Kaspa is designed to scale, and KIP-9 is a key reason why."
+    ],
+    references: ["https://github.com/kaspanet/kips/blob/master/kip-0009.md"]
   }
 ];
