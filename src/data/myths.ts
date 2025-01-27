@@ -4,6 +4,7 @@ export interface MythData {
   category: string;
   claim: string;
   facts: string[];
+  references?: string[]; // Adding optional references field
 }
 
 export const categories = [
@@ -31,7 +32,8 @@ export const myths: MythData[] = [
       "The mined coins were distributed proportionally to investors and former DAGLabs contributors as part of their wind-down process, a transparent distribution, not hidden accumulation.",
       "DAGLabs officially ceased operations and dissolved after this period, definitively ending any operational control or involvement with Kaspa. DAGLabs does not control Kaspa.",
       "Kaspa's history demonstrates a clear and documented transition to a community-driven project, directly refuting the myth of unfair launch and ongoing DAGLabs control."
-    ]
+    ],
+    references: ["https://wiki.kaspa.org/en/prehistory"]
   },
   {
     id: "myth-2",

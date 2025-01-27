@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { MythData } from "@/data/myths";
 import { Link } from "react-router-dom";
 import { ShareButtons } from "./ShareButtons";
+import { ExternalLink } from "lucide-react";
 
 interface MythArticleProps {
   myth: MythData;
@@ -36,6 +37,26 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
           </div>
         ))}
       </div>
+      {myth.references && myth.references.length > 0 && (
+        <div className="mt-4 text-sm text-gray-600">
+          <p className="font-semibold mb-2">References:</p>
+          <ul className="list-none p-0">
+            {myth.references.map((ref, index) => (
+              <li key={index} className="flex items-center gap-2">
+                <ExternalLink size={14} />
+                <a 
+                  href={ref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  Read more
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       <ShareButtons 
         title={`${myth.title} - KaspArchive`}
         url={mythUrl}
