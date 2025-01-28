@@ -2,17 +2,14 @@ import { motion } from "framer-motion";
 import { MythData } from "@/data/myths";
 import { Link } from "react-router-dom";
 import { ShareButtons } from "./ShareButtons";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, X } from "lucide-react";
 
 interface MythArticleProps {
   myth: MythData;
 }
 
 export const MythArticle = ({ myth }: MythArticleProps) => {
-  // Generate the specific myth URL
   const mythUrl = `${window.location.origin}/kaspa/${myth.id}`;
-  
-  // Extract myth number from ID (e.g., "myth-1" becomes "1")
   const mythNumber = myth.id.split("-")[1];
 
   return (
@@ -45,7 +42,13 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
             </a>
           )}
         </div>
-        <p className="font-medium text-black mb-4 mt-4">{myth.claim}</p>
+        <div className="flex items-start gap-2 mt-4">
+          <X className="text-red-500 mt-1" size={20} />
+          <div>
+            <span className="font-medium text-red-500">The False Claim: </span>
+            <span className="text-black">{myth.claim}</span>
+          </div>
+        </div>
       </div>
       <div className="space-y-4">
         {myth.facts.map((fact, index) => (
