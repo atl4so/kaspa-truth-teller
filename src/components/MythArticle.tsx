@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MythData } from "@/data/myths";
 import { Link } from "react-router-dom";
 import { ShareButtons } from "./ShareButtons";
-import { X } from "lucide-react";
+import { X, Github } from "lucide-react";
 
 interface MythArticleProps {
   myth: MythData;
@@ -30,6 +30,16 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
 
   const isTwitterLink = (url: string) => {
     return url.includes("twitter.com") || url.includes("x.com");
+  };
+
+  const isGithubLink = (url: string) => {
+    return url.includes("github.com");
+  };
+
+  const getLinkIcon = (url: string) => {
+    if (isTwitterLink(url)) return <TwitterIcon />;
+    if (isGithubLink(url)) return <Github className="w-4 h-4" />;
+    return <WebsiteIcon />;
   };
 
   return (
@@ -61,7 +71,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center hover:text-primary transition-colors"
               >
-                {isTwitterLink(myth.references[0]) ? <TwitterIcon /> : <WebsiteIcon />}
+                {getLinkIcon(myth.references[0])}
               </a>
             </div>
           )}
