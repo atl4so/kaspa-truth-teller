@@ -42,10 +42,12 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
             </a>
           )}
         </div>
-        <div className="flex items-start gap-2 mt-4">
-          <X className="text-red-500 mt-1" size={20} />
-          <div>
-            <span className="font-medium text-red-500">The False Claim: </span>
+        <div className="flex items-start gap-4 mt-6 bg-red-50 p-4 rounded-lg border border-red-100">
+          <div className="bg-red-100 p-2 rounded-full">
+            <X className="text-red-500" size={32} strokeWidth={3} />
+          </div>
+          <div className="flex-1">
+            <span className="font-bold text-red-500 text-lg">The False Claim: </span>
             <span className="text-black">{myth.claim}</span>
           </div>
         </div>
