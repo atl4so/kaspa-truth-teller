@@ -174,8 +174,7 @@ export const myths: MythData[] = [
       "Kaspa's entire architecture is being meticulously engineered from the ground up to seamlessly support efficient and secure L2 solutions, recognizing L2s as an essential component of truly scalable smart contract platforms. L2 scaling is a core design principle of Kaspa. To dismiss L2 scaling for Kaspa is to ignore its fundamental architectural approach."
     ],
     references: [
-      "https://x.com/DesheShai/status/1883191027869065654",
-      "https://kasmedia.com/article/understanding-ghostdag-intro"
+      "https://x.com/DesheShai/status/1883191027869065654"
     ]
   },
   {
