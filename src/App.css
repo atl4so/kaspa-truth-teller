@@ -40,3 +40,46 @@
 .read-the-docs {
   color: #888;
 }
+
+.false-claim-container {
+  background-color: #FFF1F1;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.false-claim-icon {
+  background-color: #FFE3E3;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.false-claim-icon svg {
+  color: #FF4D4D;
+  width: 24px;
+  height: 24px;
+}
+
+.false-claim-content {
+  text-align: left;
+}
+
+.false-claim-label {
+  color: #FF4D4D;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.false-claim-text {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+}
