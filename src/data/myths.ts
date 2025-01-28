@@ -9,7 +9,7 @@ export interface MythData {
 
 export const categories = [
   "Fair Launch",
-  "Proof-of-Work (PoW)",
+  "PoW",
   "Smart Contracts",
   "Technology",
   "Layer 2",
@@ -38,7 +38,7 @@ export const myths: MythData[] = [
   {
     id: "fud-2",
     title: "PoW is inherently inferior to Proof-of-Stake (PoS)",
-    category: "Proof-of-Work (PoW)",
+    category: "PoW",
     claim: "Proof-of-Stake (PoS) is unequivocally superior to Proof-of-Work (PoW) in every meaningful way.",
     facts: [
       "The supposed 'superiority' of PoS is not a universally accepted fact but a heavily debated topic, deeply influenced by complex and unpredictable economic factors, not just theoretical mathematical models. There is no definitive proof of PoS superiority.",
@@ -54,7 +54,7 @@ export const myths: MythData[] = [
   {
     id: "fud-3",
     title: "PoW cost is a wasteful expenditure with no real network benefit",
-    category: "Proof-of-Work (PoW)",
+    category: "PoW",
     claim: "The computational work in PoW is pointless, arbitrary number crunching that adds no value.",
     facts: [
       "PoW computations are the cornerstone of PoW security. They provide the essential cryptographic proof of the blockchain's accumulated work and security, forming the foundation for its immutability and resistance to attacks. PoW is not wasteful; it is the security mechanism itself.",
@@ -64,7 +64,7 @@ export const myths: MythData[] = [
   {
     id: "fud-4",
     title: "PoS is economically superior because it avoids 'wasteful' PoW costs",
-    category: "Proof-of-Work (PoW)",
+    category: "PoW",
     claim: "PoS tokenomics are automatically better because they eliminate the energy expenditure of PoW.",
     facts: [
       "Focusing solely on the operational costs of PoW and ignoring its security benefits presents a distorted economic comparison. PoW's costs are investments in robust, decentralized security.",
@@ -74,7 +74,7 @@ export const myths: MythData[] = [
   {
     id: "fud-5",
     title: "PoS is more secure because attacking it is more expensive",
-    category: "Proof-of-Work (PoW)",
+    category: "PoW",
     claim: "Attacking a PoS network is always more expensive, making it inherently more secure.",
     facts: [
       "Comparing attack costs based only on token acquisition price for PoS versus hardware costs for PoW is a grossly oversimplified and often misleading way to evaluate network security. Real-world attack costs are far more complex.",
@@ -86,7 +86,7 @@ export const myths: MythData[] = [
   {
     id: "fud-6",
     title: "Average people are excluded from PoW mining due to prohibitive costs",
-    category: "Proof-of-Work (PoW)",
+    category: "PoW",
     claim: "PoW mining is only for wealthy corporations and specialized entities, excluding ordinary individuals.",
     facts: [
       "Kaspa's innovative high Block Per Second (BPS) design specifically enables broader mining participation, making it viable and even profitable for home miners and smaller operators. Kaspa is designed to be more inclusive.",
@@ -97,7 +97,7 @@ export const myths: MythData[] = [
   {
     id: "fud-7",
     title: "PoW is inherently environmentally damaging and unsustainable",
-    category: "Proof-of-Work (PoW)",
+    category: "PoW",
     claim: "PoW mining is a major environmental threat due to its excessive energy consumption.",
     facts: [
       "While PoW mining does consume energy, the environmental impact is not monolithic and can be significantly mitigated. Renewable energy sources, efficiency improvements, and heat recapture technologies are actively reducing PoW's carbon footprint.",
@@ -108,7 +108,7 @@ export const myths: MythData[] = [
   {
     id: "fud-8",
     title: "PoW pools inevitably centralize mining power and undermine decentralization",
-    category: "Proof-of-Work (PoW)",
+    category: "PoW",
     claim: "PoW mining pools concentrate power, leading to unacceptable centralization.",
     facts: [
       "Kaspa's unique design and high block rate make solo mining more feasible and potentially profitable for smaller participants, directly incentivizing a more distributed mining landscape beyond large pools. Kaspa promotes solo mining viability.",
