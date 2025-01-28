@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MythData } from "@/data/myths";
 import { Link } from "react-router-dom";
 import { ShareButtons } from "./ShareButtons";
-import { X, Github } from "lucide-react";
+import { X, Github, Link2 } from "lucide-react";
 
 interface MythArticleProps {
   myth: MythData;
@@ -61,18 +61,23 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
             {myth.category}
           </span>
           {myth.references && myth.references.length > 0 && (
-            <div className="inline-flex items-center gap-1">
+            <div className="inline-flex items-center gap-2">
               <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full">
-                Fact Source:
+                Fact Sources:
               </span>
-              <a 
-                href={myth.references[0]}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center hover:text-primary transition-colors"
-              >
-                {getLinkIcon(myth.references[0])}
-              </a>
+              <div className="flex gap-2">
+                {myth.references.map((ref, index) => (
+                  <a 
+                    key={index}
+                    href={ref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center hover:text-primary transition-colors"
+                  >
+                    {getLinkIcon(ref)}
+                  </a>
+                ))}
+              </div>
             </div>
           )}
         </div>
