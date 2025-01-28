@@ -46,7 +46,10 @@ export const myths: MythData[] = [
       "PoW and PoS represent fundamentally different approaches with distinct security, decentralization, and economic characteristics. The 'best' choice is context-dependent and not universally determined. To declare one definitively superior is inaccurate and ignores crucial nuances.",
       "Research advancements like \"Mining in Logarithmic Space\" and NiPoPoW demonstrate that Proof-of-Work protocols can achieve near-logarithmic storage requirements through secure pruning of consensus data. In contrast, Proof-of-Stake protocols, lacking a mining mechanism, are limited to linear storage growth, making them significantly less scalable and more storage intensive over time."
     ],
-    references: ["https://x.com/DesheShai/status/1883191027869065654"]
+    references: [
+      "https://x.com/DesheShai/status/1883191027869065654",
+      "https://kasmedia.com/article/understanding-ghostdag-intro"
+    ]
   },
   {
     id: "fud-3",
@@ -170,7 +173,10 @@ export const myths: MythData[] = [
       "Based rollups on Kaspa are designed to enhance user experience, streamline interoperability between different L2s within the Kaspa ecosystem, and ensure that L2 activity contributes to the economic robustness of the Kaspa L1. Kaspa L2s are designed for usability and economic alignment.",
       "Kaspa's entire architecture is being meticulously engineered from the ground up to seamlessly support efficient and secure L2 solutions, recognizing L2s as an essential component of truly scalable smart contract platforms. L2 scaling is a core design principle of Kaspa. To dismiss L2 scaling for Kaspa is to ignore its fundamental architectural approach."
     ],
-    references: ["https://x.com/DesheShai/status/1883191027869065654"]
+    references: [
+      "https://x.com/DesheShai/status/1883191027869065654",
+      "https://kasmedia.com/article/understanding-ghostdag-intro"
+    ]
   },
   {
     id: "fud-14",
