@@ -45,7 +45,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
   const mythNumber = myth.id.split("-")[1];
 
   const isTwitterLink = (url: string) => {
-    return url.includes("twitter.com") || url.includes("x.com");
+    return url.includes("twitter.com") || url.includes("x.com") || url.includes("t.co");
   };
 
   const isGithubLink = (url: string) => {
