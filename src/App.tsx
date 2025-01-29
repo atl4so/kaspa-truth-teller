@@ -3,7 +3,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { ScrollProgress } from "./components/ScrollProgress";
 import Index from "./pages/Index";
 import Myth from "./pages/Myth";
 
@@ -19,7 +18,6 @@ const queryClient = new QueryClient({
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <ScrollProgress />
       <Toaster />
       <Sonner />
       <BrowserRouter>
