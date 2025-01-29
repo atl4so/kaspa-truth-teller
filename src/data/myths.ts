@@ -35,7 +35,8 @@ export const myths: MythData[] = [
     ],
     references: [
       "https://wiki.kaspa.org/en/prehistory",
-      "https://chatgpt.com/share/6799af28-08fc-800e-b254-e8964b9a2348"
+      "https://chatgpt.com/share/6799af28-08fc-800e-b254-e8964b9a2348",
+      "https://x.com/DesheShai/status/1680904708842561542?t=E7MCoGAYV7ymCMorm81wCg&s=19"
     ]
   },
   {
