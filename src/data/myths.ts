@@ -69,7 +69,26 @@ export const myths: MythData[] = [
     references: ["https://github.com/kaspanet/kips/blob/master/kip-0009.md"]
   },
   {
-    id: "fud-4",
+    id: "fud-14",
+    title: "Gaps in Kaspa's ledger history imply security or transparency issues",
+    category: "Ledger",
+    claim: "Missing ledger history data means the current state of Kaspa cannot be verified from genesis, potentially hiding a pre-mine or other malicious activities, thus compromising security and transparency.",
+    facts: [
+      "Ledger pruning is essential for Kaspa's long-term decentralization and sustainability. At full capacity (10 BPS), the ledger grows by approximately 30TB per year, making archival nodes impractical for widespread decentralization without pruning.",
+      "The genesis block is hardcoded directly into the Kaspa node software. This hardcoded genesis block contains an empty UTXO set, verifiably demonstrating that there was no pre-mine.",
+      "Kaspa nodes store a \"proof-of-genesis.\" This cryptographic proof verifies that the current state of the ledger is derived from the hardcoded genesis block, without requiring the entire historical ledger data.",
+      "Forging the proof-of-genesis would require computational work equivalent to creating the entire ledger history, ensuring its security and authenticity.",
+      "The data available to each Kaspa node, including the proof-of-genesis, is sufficient to verify the current state back to genesis, ensuring transparency and security even without a complete historical ledger.",
+      "Kaspa employs techniques to provide proof of chain integrity without the entire ledger history. For example, a chain of checkpoint blocks (growing by one header per day) can be verified all the way back to genesis.",
+      "These checkpoint blocks, combined with UTXO commitments, cryptographically prove that the current state evolved from a genesis block with an empty UTXO set, thus demonstrating no pre-mine.",
+      "The MLS protocol, relevant to Kaspa, uses a special type of Non-Interactive Proofs of Proof-of-Work (NiPoPoW) to succinctly prove chain weight, which inherently prohibits pre-mining attacks.",
+      "The lack of archival nodes from the beginning was a matter of prioritization post-launch, not a security risk, as it was understood that ledger gaps do not compromise network integrity.",
+      "This approach provides a security level comparable to Nakamoto Consensus, offering a robust chain integrity proof that is more practical than requiring a full \"proof-of-history\" (which is considered unreasonably stringent for scalability)."
+    ],
+    references: ["https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb"]
+  },
+  {
+    id: "fud-5",
     title: "PoS is economically superior because it avoids 'wasteful' PoW costs",
     category: "PoW",
     claim: "PoS tokenomics are automatically better because they eliminate the energy expenditure of PoW.",
@@ -79,7 +98,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "fud-5",
+    id: "fud-6",
     title: "PoS is more secure because attacking it is more expensive",
     category: "PoW",
     claim: "Attacking a PoS network is always more expensive, making it inherently more secure.",
@@ -91,7 +110,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "fud-6",
+    id: "fud-7",
     title: "Average people are excluded from PoW mining due to prohibitive costs",
     category: "PoW",
     claim: "PoW mining is only for wealthy corporations and specialized entities, excluding ordinary individuals.",
@@ -102,7 +121,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "fud-7",
+    id: "fud-8",
     title: "PoW is inherently environmentally damaging and unsustainable",
     category: "PoW",
     claim: "PoW mining is a major environmental threat due to its excessive energy consumption.",
@@ -113,7 +132,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "fud-8",
+    id: "fud-9",
     title: "PoW pools inevitably centralize mining power and undermine decentralization",
     category: "PoW",
     claim: "PoW mining pools concentrate power, leading to unacceptable centralization.",
@@ -123,7 +142,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "fud-9",
+    id: "fud-10",
     title: "Kaspa's 10-second finalization is too slow for practical use",
     category: "Technology",
     claim: "Kaspa's 10-second finalization is outdated and uncompetitive compared to faster blockchains.",
@@ -136,7 +155,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "fud-10",
+    id: "fud-11",
     title: "Kaspa has no smart contracts, making it uncompetitive and obsolete",
     category: "Smart Contracts",
     claim: "The current lack of smart contracts on Kaspa makes it irrelevant and incapable of competing in the modern crypto landscape.",
@@ -148,7 +167,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "fud-11",
+    id: "fud-12",
     title: "Without DeFi, Kaspa has no real utility or adoption potential",
     category: "Smart Contracts",
     claim: "Kaspa's lack of a Decentralized Finance (DeFi) ecosystem means it has no practical use cases and will fail to gain adoption.",
@@ -159,7 +178,7 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "fud-12",
+    id: "fud-13",
     title: "Kaspa is just another scalable PoW L1, lacking genuine innovation",
     category: "Technology",
     claim: "Kaspa offers nothing truly new or groundbreaking, simply repackaging existing ideas.",
@@ -169,21 +188,6 @@ export const myths: MythData[] = [
       "Kaspa directly tackles and solves critical limitations of existing blockchains, such as state bloat and slow transaction finality, with novel and sophisticated technical solutions. Kaspa is pushing the boundaries of blockchain technology. To claim it lacks innovation is to ignore the substantial technical breakthroughs it represents."
     ],
     references: ["https://youtu.be/MugsziO0OYY?si=P5X4ULsQbEEI3Fsj"]
-  },
-  {
-    id: "fud-13",
-    title: "L2 scaling is a flawed concept and won't work for smart contracts on Kaspa",
-    category: "Layer 2",
-    claim: "Layer-2 (L2) scaling is fundamentally broken and cannot provide a viable scaling solution for smart contracts on Kaspa.",
-    facts: [
-      "Kaspa's L2 strategy is built upon 'based rollups,' a cutting-edge L2 design that directly addresses the shortcomings of earlier L2 architectures and offers a highly secure and scalable solution. Kaspa is using advanced L2 technology.",
-      "Based rollups on Kaspa inherit the uncompromising security and censorship resistance of the Kaspa L1, as L1 sequencing is deeply integrated into their design. Kaspa L2s are fundamentally secure.",
-      "Based rollups on Kaspa are designed to enhance user experience, streamline interoperability between different L2s within the Kaspa ecosystem, and ensure that L2 activity contributes to the economic robustness of the Kaspa L1. Kaspa L2s are designed for usability and economic alignment.",
-      "Kaspa's entire architecture is being meticulously engineered from the ground up to seamlessly support efficient and secure L2 solutions, recognizing L2s as an essential component of truly scalable smart contract platforms. L2 scaling is a core design principle of Kaspa. To dismiss L2 scaling for Kaspa is to ignore its fundamental architectural approach."
-    ],
-    references: [
-      "https://x.com/DesheShai/status/1883191027869065654"
-    ]
   },
   {
     id: "fud-14",
