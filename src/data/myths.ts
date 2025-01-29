@@ -190,7 +190,7 @@ export const myths: MythData[] = [
     references: ["https://youtu.be/MugsziO0OYY?si=P5X4ULsQbEEI3Fsj"]
   },
   {
-    id: "fud-14",
+    id: "fud-4",
     title: "Gaps in Kaspa's ledger history imply security or transparency issues",
     category: "Ledger",
     claim: "Missing ledger history data means the current state of Kaspa cannot be verified from genesis, potentially hiding a pre-mine or other malicious activities, thus compromising security and transparency.",
