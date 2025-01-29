@@ -70,6 +70,7 @@ export const myths: MythData[] = [
     ],
     references: [
       "https://x.com/DesheShai/status/1773663596607652043?t=e8qJxhSySH9d1cF5vikXUA&s=19",
+      "https://x.com/DesheShai/status/1797666923469037944",
       "https://chatgpt.com/share/679a25d8-ee54-800e-9cac-4cec2514ed93",
       "https://github.com/kaspanet/kips/blob/master/kip-0009.md",
       "https://eprint.iacr.org/2021/623.pdf"
@@ -94,6 +95,7 @@ export const myths: MythData[] = [
     ],
     references: [
       "https://hashdag.medium.com/kaspa-black-tuesday-8c7f4fa35834",
+      "https://x.com/DesheShai/status/1808177677674684772",
       "https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb",
       "https://discord.com/channels/599153230659846165/844142778232864809/912831900287131649"
     ]
@@ -106,6 +108,9 @@ export const myths: MythData[] = [
     facts: [
       "Focusing solely on the operational costs of PoW and ignoring its security benefits presents a distorted economic comparison. PoW's costs are investments in robust, decentralized security.",
       "Both PoW and PoS require economic incentives to secure the network. PoW uses mining rewards and fees, while PoS uses staking rewards and minting. The economic mechanisms are comparable in function, not inherently superior or inferior in design. To claim PoS is economically 'superior' solely due to lower operational costs is superficial and ignores the value of PoW security."
+    ],
+    references: [
+      "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3"
     ]
   },
   {
@@ -129,6 +134,10 @@ export const myths: MythData[] = [
       "Kaspa's innovative high Block Per Second (BPS) design specifically enables broader mining participation, making it viable and even profitable for home miners and smaller operators. Kaspa is designed to be more inclusive.",
       "The initial investment required to start mining Kaspa can be surprisingly low, making it accessible to individuals and fostering a more decentralized mining community. Entry into Kaspa mining is not limited to the wealthy.",
       "Kaspa's architecture is designed to promote a more distributed and egalitarian mining ecosystem, directly contradicting the myth of PoW being inherently exclusive."
+    ],
+    references: [
+      "https://x.com/DesheShai/status/1806438453225377802",
+      "https://x.com/DesheShai/status/1622320826975457281"
     ]
   },
   {
@@ -137,19 +146,27 @@ export const myths: MythData[] = [
     category: "PoW",
     claim: "PoW mining is a major environmental threat due to its excessive energy consumption.",
     facts: [
-      "While PoW mining does consume energy, the environmental impact is not monolithic and can be significantly mitigated. Renewable energy sources, efficiency improvements, and heat recapture technologies are actively reducing PoW's carbon footprint.",
-      "The energy used in PoW mining secures a decentralized, permissionless financial network, providing a valuable global service. The energy use is not inherently 'wasteful' but a trade-off for security and decentralization.",
-      "Ongoing technological advancements in mining hardware and algorithms, including ASIC-resistant and potentially optical mining in the future, hold the promise of significantly reducing the energy intensity of PoW over time. PoW technology is evolving towards greater energy efficiency."
+      "PoW mining predominantly uses excess, stranded, or renewable energy that would otherwise be wasted. It can actually incentivize and fund renewable energy development.",
+      "Mining operations are highly mobile and can be strategically located where energy is abundant and cheap, often utilizing energy that would otherwise be wasted.",
+      "The environmental impact must be weighed against the critical service PoW provides: securing a decentralized, permissionless monetary network. This security mechanism is essential for a truly independent financial system."
+    ],
+    references: [
+      "https://qitmeer.medium.com/pow-mining-and-the-environment-global-perspectives-and-sustainability-025918cfa0bc",
+      "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3"
     ]
   },
   {
     id: "fud-9",
-    title: "PoW pools inevitably centralize mining power and undermine decentralization",
+    title: "PoW mining is inherently centralized and controlled by mining pools",
     category: "PoW",
     claim: "PoW mining pools concentrate power, leading to unacceptable centralization.",
     facts: [
-      "Kaspa's unique design and high block rate make solo mining more feasible and potentially profitable for smaller participants, directly incentivizing a more distributed mining landscape beyond large pools. Kaspa promotes solo mining viability.",
-      "The sheer volume of blocks produced by Kaspa allows for a significantly larger number of mining pools to operate effectively and competitively, fostering greater diversity and reducing the dominance of any single pool. Kaspa's design naturally encourages pool diversity and competition."
+      "Mining pools are voluntary associations that miners can freely join or leave. This dynamic nature prevents any single pool from gaining too much control.",
+      "Kaspa's high blockrate and GHOSTDAG protocol naturally discourage pool centralization by reducing variance in mining rewards, making solo mining more viable.",
+      "The ability to easily switch between pools or mine independently creates market pressure that keeps pools competitive and honest."
+    ],
+    references: [
+      "https://x.com/DesheShai/status/1622320826975457281"
     ]
   },
   {
@@ -229,6 +246,9 @@ export const myths: MythData[] = [
       "The current ledger reconstruction process relies on data voluntarily provided by various users. No single entity controls which parts of the history are available, making intentional concealment of specific data segments by developers statistically improbable and illogical.",
       "The argument that missing data hides wrongdoing relies on the absurd assumption that incriminating evidence exists in the ledger data and that the developers are relying on \"blind luck\" that the particular portion containing this hypothetical evidence will never surface during ledger reconstruction efforts.",
       "Ironically, proponents of privacy coins, where the entire ledger is designed to be opaque and untraceable, are sometimes making these \"transparency\" accusations, highlighting the illogical and often politically motivated nature of such criticisms."
+    ],
+    references: [
+      "https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb"
     ]
   },
   {
@@ -237,8 +257,13 @@ export const myths: MythData[] = [
     category: "PoW",
     claim: "The computational work in PoW is pointless, arbitrary number crunching that adds no value.",
     facts: [
-      "PoW computations are the cornerstone of PoW security. They provide the essential cryptographic proof of the blockchain's accumulated work and security, forming the foundation for its immutability and resistance to attacks. PoW is not wasteful; it is the security mechanism itself.",
-      "To dismiss PoW computations as 'wasteful' is akin to dismissing cryptographic signatures as useless because they involve mathematical operations. PoW's computational cost is directly tied to network security."
+      "The energy expenditure in PoW directly contributes to network security by making attacks economically unfeasible. This is not waste, but rather a crucial feature that enables trustless consensus.",
+      "PoW's energy cost creates a real-world anchor for digital scarcity, something that cannot be achieved through purely digital means. The physical cost of mining gives fundamental value to the network.",
+      "The competitive nature of PoW mining drives innovation in energy efficiency and utilization of otherwise wasted energy sources, contributing to broader technological advancement."
+    ],
+    references: [
+      "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3",
+      "https://chatgpt.com/share/679a5163-c264-800e-a14b-04d118566505"
     ]
   }
 ];
