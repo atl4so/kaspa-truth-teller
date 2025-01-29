@@ -93,8 +93,8 @@ export const myths: MythData[] = [
       "This approach provides a security level comparable to Nakamoto Consensus, offering a robust chain integrity proof that is more practical than requiring a full \"proof-of-history\" (which is considered unreasonably stringent for scalability)."
     ],
     references: [
-      "https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb",
       "https://hashdag.medium.com/kaspa-black-tuesday-8c7f4fa35834",
+      "https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb",
       "https://discord.com/channels/599153230659846165/844142778232864809/912831900287131649"
     ]
   },
