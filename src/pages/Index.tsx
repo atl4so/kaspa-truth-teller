@@ -5,6 +5,7 @@ import { myths, categories } from "@/data/myths";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { BackToTop } from "@/components/BackToTop";
 import { Footer } from "@/components/Footer";
+import { ScrollSpy } from "@/components/ScrollSpy";
 
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -17,6 +18,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-[#f3f3f3]">
+      <ScrollSpy />
       <main className="container mx-auto px-4">
         <Hero />
         
