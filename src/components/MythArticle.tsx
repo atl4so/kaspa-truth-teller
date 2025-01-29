@@ -32,6 +32,14 @@ const YoutubeIcon = () => (
   />
 );
 
+const ChatGPTIcon = () => (
+  <img 
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9Im5vbmUiLz48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTE4LjM4IDI3Ljk0di0xNC40bDExLjE5LTYuNDZjNi4yLTMuNTggMTcuMyA1LjI1IDEyLjY0IDEzLjMzIi8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Im0xOC4zOCAyMC45NGwxMi40Ny03LjJsMTEuMTkgNi40NmM2LjIgMy41OCA0LjEgMTcuNjEtNS4yMyAxNy42MSIvPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJtMjQuNDQgMTcuNDRsMTIuNDcgNy4ydjEyLjkzYzAgNy4xNi0xMy4yIDEyLjM2LTE3Ljg2IDQuMjgiLz48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTMwLjUgMjEuMnYxNC4xNEwxOS4zMSA0MS44Yy02LjIgMy41OC0xNy4zLTUuMjUtMTIuNjQtMTMuMzMiLz48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0ibTMwLjUgMjcuOTRsLTEyLjQ3IDcuMmwtMTEuMTktNi40NmMtNi4yMS0zLjU5LTQuMTEtMTcuNjEgNS4yMi0xNy42MSIvPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJtMjQuNDQgMzEuNDRsLTEyLjQ3LTcuMlYxMS4zMWMwLTcuMTYgMTMuMi0xMi4zNiAxNy44Ni00LjI4Ii8+PC9zdmc+"
+    alt="ChatGPT"
+    className="w-5 h-5"
+  />
+);
+
 export const MythArticle = ({ myth }: MythArticleProps) => {
   const mythUrl = `${window.location.origin}/kaspa/${myth.id}`;
   const mythNumber = myth.id.split("-")[1];
@@ -48,10 +56,15 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
     return url.includes("youtu.be") || url.includes("youtube.com");
   };
 
+  const isChatGPTLink = (url: string) => {
+    return url.includes("chatgpt.com");
+  };
+
   const getLinkIcon = (url: string) => {
     if (isTwitterLink(url)) return <TwitterIcon />;
-    if (isGithubLink(url)) return <Github className="w-6 h-6" />;
+    if (isGithubLink(url)) return <Github className="w-5 h-5" />;
     if (isYoutubeLink(url)) return <YoutubeIcon />;
+    if (isChatGPTLink(url)) return <ChatGPTIcon />;
     return <WebsiteIcon />;
   };
 

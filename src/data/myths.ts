@@ -33,7 +33,10 @@ export const myths: MythData[] = [
       "DAGLabs officially ceased operations and dissolved after this period, definitively ending any operational control or involvement with Kaspa. DAGLabs does not control Kaspa.",
       "Kaspa's history demonstrates a clear and documented transition to a community-driven project, directly refuting the myth of unfair launch and ongoing DAGLabs control."
     ],
-    references: ["https://wiki.kaspa.org/en/prehistory"]
+    references: [
+      "https://wiki.kaspa.org/en/prehistory",
+      "https://chatgpt.com/share/6799af28-08fc-800e-b254-e8964b9a2348"
+    ]
   },
   {
     id: "fud-2",
