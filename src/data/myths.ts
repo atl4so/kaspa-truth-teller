@@ -94,7 +94,8 @@ export const myths: MythData[] = [
     ],
     references: [
       "https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb",
-      "https://hashdag.medium.com/kaspa-black-tuesday-8c7f4fa35834"
+      "https://hashdag.medium.com/kaspa-black-tuesday-8c7f4fa35834",
+      "https://discord.com/channels/599153230659846165/844142778232864809/912831900287131649"
     ]
   },
   {

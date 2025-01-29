@@ -24,6 +24,14 @@ const TwitterIcon = () => (
   />
 );
 
+const DiscordIcon = () => (
+  <img 
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMTkuMjcgNS4zM0MxNy45NCA0LjcxIDE2LjUgNC4yNiAxNSA0YS4xLjEgMCAwIDAtLjA3LjAzYy0uMTguMzMtLjM5Ljc2LS41MyAxLjA5YTE2LjEgMTYuMSAwIDAgMC00LjggMGMtLjE0LS4zNC0uMzUtLjc2LS41NC0xLjA5Yy0uMDEtLjAyLS4wNC0uMDMtLjA3LS4wM2MtMS41LjI2LTIuOTMuNzEtNC4yNyAxLjMzYy0uMDEgMC0uMDIuMDEtLjAzLjAyYy0yLjcyIDQuMDctMy40NyA4LjAzLTMuMSAxMS45NWMwIC4wMi4wMS4wNC4wMy4wNWMxLjggMS4zMiAzLjUzIDIuMTIgNS4yNCAyLjY1Yy4wMy4wMS4wNiAwIC4wNy0uMDJjLjQtLjU1Ljc2LTEuMTMgMS4wNy0xLjc0Yy4wMi0uMDQgMC0uMDgtLjA0LS4wOWMtLjU3LS4yMi0xLjExLS40OC0xLjY0LS43OGMtLjA0LS4wMi0uMDQtLjA4LS4wMS0uMTFjLjExLS4wOC4yMi0uMTcuMzMtLjI1Yy4wMi0uMDIuMDUtLjAyLjA3LS4wMWMzLjQ0IDEuNTcgNy4xNSAxLjU3IDEwLjU1IDBjLjAyLS4wMS4wNS0uMDEuMDcuMDFjLjExLjA5LjIyLjE3LjMzLjI2Yy4wNC4wMy4wNC4wOS0uMDEuMTFjLS41Mi4zMS0xLjA3LjU2LTEuNjQuNzhjLS4wNC4wMS0uMDUuMDYtLjA0LjA5Yy4zMi42MS42OCAxLjE5IDEuMDcgMS43NGMuMDMuMDEuMDYuMDIuMDkuMDFjMS43Mi0uNTMgMy40NS0xLjMzIDUuMjUtMi42NWMuMDItLjAxLjAzLS4wMy4wMy0uMDVjLjQ0LTQuNTMtLjczLTguNDYtMy4xLTExLjk1Yy0uMDEtLjAxLS4wMi0uMDItLjA0LS4wMk04LjUyIDE0LjkxYy0xLjAzIDAtMS44OS0uOTUtMS44OS0yLjEycy44NC0yLjEyIDEuODktMi4xMmMxLjA2IDAgMS45Ljk2IDEuODkgMi4xMmMwIDEuMTctLjg0IDIuMTItMS44OSAyLjEybTYuOTcgMGMtMS4wMyAwLTEuODktLjk1LTEuODktMi4xMnMuODQtMi4xMiAxLjg5LTIuMTJjMS4wNiAwIDEuOS45NiAxLjg5IDIuMTJjMCAxLjE3LS44MyAyLjEyLTEuODkgMi4xMiIvPjwvc3ZnPg=="
+    alt="Discord"
+    className="w-4 h-4 sm:w-5 sm:h-5"
+  />
+);
+
 const YoutubeIcon = () => (
   <img 
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiLz48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMyA5LjcxYTguNSA4LjUgMCAwIDAtLjkxLTQuMTNhMi45MiAyLjkyIDAgMCAwLTEuNzItMUE3OCA3OCAwIDAgMCAxMiA0LjI3YTc5IDc5IDAgMCAwLTguMzQuM2EyLjg3IDIuODcgMCAwIDAtMS40Ni43NGMtLjkuODMtMSAyLjI1LTEuMSAzLjQ1YTQ4IDQ4IDAgMCAwIDAgNi40OGE5LjYgOS42IDAgMCAwIC4zIDJhMy4xNCAzLjE0IDAgMCAwIC43MSAxLjM2YTIuODYgMi44NiAwIDAgMCAxLjQ5Ljc4YTQ1IDQ1IDAgMCAwIDYuNS4zM2MzLjUuMDUgNi41NyAwIDEwLjItLjI4YTIuOSAyLjkgMCAwIDAgMS41My0uNzhhMi41IDIuNSAwIDAgMCAuNjEtMWExMC42IDEwLjYgMCAwIDAgLjUyLTMuNGMuMDQtLjU2LjA0LTMuOTQuMDQtNC41NE05Ljc0IDE0Ljg1VjguNjZsNS45MiAzLjExYy0xLjY2LjkyLTMuODUgMS45Ni01LjkyIDMuMDgiLz48L3N2Zz4="
@@ -72,12 +80,17 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
     return url.toLowerCase().endsWith('.pdf');
   };
 
+  const isDiscordLink = (url: string) => {
+    return url.includes("discord.com");
+  };
+
   const getLinkIcon = (url: string) => {
     if (isTwitterLink(url)) return <TwitterIcon />;
     if (isGithubLink(url)) return <Github className="w-4 h-4 sm:w-5 sm:h-5" />;
     if (isYoutubeLink(url)) return <YoutubeIcon />;
     if (isChatGPTLink(url)) return <ChatGPTIcon />;
     if (isPDFLink(url)) return <PDFIcon />;
+    if (isDiscordLink(url)) return <DiscordIcon />;
     return <WebsiteIcon />;
   };
 
