@@ -35,8 +35,8 @@ export const myths: MythData[] = [
     ],
     references: [
       "https://wiki.kaspa.org/en/prehistory",
-      "https://chatgpt.com/share/6799af28-08fc-800e-b254-e8964b9a2348",
-      "https://x.com/DesheShai/status/1680899017708912640?t=JZWXtwwc3yVkdCdY69rTBQ&s=19"
+      "https://x.com/DesheShai/status/1680899017708912640?t=JZWXtwwc3yVkdCdY69rTBQ&s=19",
+      "https://chatgpt.com/share/6799af28-08fc-800e-b254-e8964b9a2348"
     ]
   },
   {
@@ -51,8 +51,8 @@ export const myths: MythData[] = [
       "Research advancements like \"Mining in Logarithmic Space\" and NiPoPoW demonstrate that Proof-of-Work protocols can achieve near-logarithmic storage requirements through secure pruning of consensus data. In contrast, Proof-of-Stake protocols, lacking a mining mechanism, are limited to linear storage growth, making them significantly less scalable and more storage intensive over time."
     ],
     references: [
-      "https://x.com/DesheShai/status/1883191027869065654",
       "https://kasmedia.com/article/understanding-ghostdag-intro",
+      "https://x.com/DesheShai/status/1883191027869065654",
       "https://chatgpt.com/share/6799b5ac-4f4c-800e-8d10-ddc58539ad52"
     ]
   },
