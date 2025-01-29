@@ -69,9 +69,9 @@ export const myths: MythData[] = [
       "Experts have tested KIP-9 and confirmed it works. They've shown that it stops ledger bloat attacks and keeps the ledger growth manageable, even if Kaspa becomes incredibly popular. Kaspa is designed to scale, and KIP-9 is a key reason why."
     ],
     references: [
+      "https://x.com/DesheShai/status/1773663596607652043?t=e8qJxhSySH9d1cF5vikXUA&s=19",
       "https://github.com/kaspanet/kips/blob/master/kip-0009.md",
-      "https://eprint.iacr.org/2021/623.pdf",
-      "https://x.com/DesheShai/status/1773663596607652043?t=e8qJxhSySH9d1cF5vikXUA&s=19"
+      "https://eprint.iacr.org/2021/623.pdf"
     ]
   },
   {
