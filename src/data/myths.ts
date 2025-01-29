@@ -92,7 +92,10 @@ export const myths: MythData[] = [
       "The lack of archival nodes from the beginning was a matter of prioritization post-launch, not a security risk, as it was understood that ledger gaps do not compromise network integrity.",
       "This approach provides a security level comparable to Nakamoto Consensus, offering a robust chain integrity proof that is more practical than requiring a full \"proof-of-history\" (which is considered unreasonably stringent for scalability)."
     ],
-    references: ["https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb"]
+    references: [
+      "https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb",
+      "https://hashdag.medium.com/kaspa-black-tuesday-8c7f4fa35834"
+    ]
   },
   {
     id: "fud-5",
