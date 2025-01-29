@@ -195,16 +195,6 @@ export const myths: MythData[] = [
     ]
   },
   {
-    id: "fud-14",
-    title: "PoS is economically superior because it avoids 'wasteful' PoW costs",
-    category: "PoW",
-    claim: "PoS tokenomics are automatically better because they eliminate the energy expenditure of PoW.",
-    facts: [
-      "Focusing solely on the operational costs of PoW and ignoring its security benefits presents a distorted economic comparison. PoW's costs are investments in robust, decentralized security.",
-      "Both PoW and PoS require economic incentives to secure the network. PoW uses mining rewards and fees, while PoS uses staking rewards and minting. The economic mechanisms are comparable in function, not inherently superior or inferior in design. To claim PoS is economically 'superior' solely due to lower operational costs is superficial and ignores the value of PoW security."
-    ]
-  },
-  {
     id: "fud-15",
     title: "Ledger history gaps are evidence of \"speedmining\" or hidden wrongdoing",
     category: "Ledger",
