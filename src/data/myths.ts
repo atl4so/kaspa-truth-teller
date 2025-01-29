@@ -70,7 +70,8 @@ export const myths: MythData[] = [
     ],
     references: [
       "https://github.com/kaspanet/kips/blob/master/kip-0009.md",
-      "https://eprint.iacr.org/2021/623.pdf"
+      "https://eprint.iacr.org/2021/623.pdf",
+      "https://x.com/DesheShai/status/1773663596607652043?t=e8qJxhSySH9d1cF5vikXUA&s=19"
     ]
   },
   {
