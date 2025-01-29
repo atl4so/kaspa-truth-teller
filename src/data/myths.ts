@@ -11,7 +11,7 @@ export const categories = [
   "Fair Launch",
   "PoW",
   "Smart Contracts",
-  "Technology",
+  "Tech",
   "Layer 2",
   "Ledger"
 ];
@@ -59,7 +59,7 @@ export const myths: MythData[] = [
   {
     id: "fud-3",
     title: "Kaspa can't scale because its ledger will get too big (state bloat)",
-    category: "Technology",
+    category: "Tech",
     claim: "Kaspa can't scale. Its system for managing transactions will cause its blockchain to grow too large, making it slow and unusable over time. It will get \"clogged up\" and unable to handle more users, meaning Kaspa can't grow to be used by everyone.",
     facts: [
       "That's wrong! Kaspa developers have created a smart solution called KIP-9 specifically to prevent the ledger from getting too big and to make sure Kaspa can keep scaling up for many, many users.",
@@ -172,7 +172,7 @@ export const myths: MythData[] = [
   {
     id: "fud-10",
     title: "Kaspa's 10-second finalization is too slow for practical use",
-    category: "Technology",
+    category: "Tech",
     claim: "Kaspa's 10-second finalization is outdated and uncompetitive compared to faster blockchains.",
     facts: [
       "Kaspa's current 10-second finalization is optimized to achieve true, Nakamoto-style probabilistic finality within the inherent constraints of network latency. This provides robust and secure finality now, not slow finality.",
@@ -208,7 +208,7 @@ export const myths: MythData[] = [
   {
     id: "fud-13",
     title: "Kaspa is just another scalable PoW L1, lacking genuine innovation",
-    category: "Technology",
+    category: "Tech",
     claim: "Kaspa offers nothing truly new or groundbreaking, simply repackaging existing ideas.",
     facts: [
       "Kaspa represents a major leap forward in blockchain technology, achieving an unprecedented combination of scalability, speed, and security within a Proof-of-Work framework. Kaspa is demonstrably innovative.",
