@@ -18,7 +18,7 @@ export const categories = [
 
 export const myths: MythData[] = [
   {
-    id: "fud-1",
+    id: "fud-2",
     title: "Kaspa was unfairly launched and is secretly controlled by DAGLabs",
     category: "Fair Launch",
     claim: "Kaspa's launch was rigged, and it remains under the hidden control of DAGLabs, who enriched themselves with a pre-mine.",
