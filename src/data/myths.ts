@@ -189,7 +189,10 @@ export const myths: MythData[] = [
       "Kaspa incorporates groundbreaking innovations like the GHOSTDAG protocol, BlockDAG architecture, and planned advancements for MEV resistance and secure oracles. These are not just incremental changes, but fundamental advancements.",
       "Kaspa directly tackles and solves critical limitations of existing blockchains, such as state bloat and slow transaction finality, with novel and sophisticated technical solutions. Kaspa is pushing the boundaries of blockchain technology. To claim it lacks innovation is to ignore the substantial technical breakthroughs it represents."
     ],
-    references: ["https://youtu.be/MugsziO0OYY?si=P5X4ULsQbEEI3Fsj"]
+    references: [
+      "https://youtu.be/MugsziO0OYY?si=P5X4ULsQbEEI3Fsj",
+      "https://chatgpt.com/share/6799b98b-7e90-800e-a185-f2a42274b3a0d"
+    ]
   },
   {
     id: "fud-14",
