@@ -82,7 +82,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
         </h3>
       </Link>
       <div className="mb-4">
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full">
             {myth.category}
           </span>
@@ -98,7 +98,8 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
                     href={ref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center hover:text-primary transition-colors p-2"
+                    className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/50 hover:bg-accent transition-colors"
+                    title={ref}
                   >
                     {getLinkIcon(ref)}
                   </a>
