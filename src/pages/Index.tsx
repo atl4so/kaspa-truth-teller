@@ -11,9 +11,13 @@ const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const filteredMyths = myths.filter((myth) => {
-    const matchesCategory = 
-      selectedCategory === "all" || myth.category === selectedCategory;
-    return matchesCategory;
+    if (selectedCategory === "all") return true;
+    
+    if (Array.isArray(myth.category)) {
+      return myth.category.includes(selectedCategory);
+    }
+    
+    return myth.category === selectedCategory;
   });
 
   return (

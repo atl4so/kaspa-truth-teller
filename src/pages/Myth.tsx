@@ -19,36 +19,62 @@ const Myth = () => {
       // Update document title
       document.title = shareTitle;
 
-      // Function to update or create meta tag
-      const updateMetaTag = (selector: string, attribute: string, content: string) => {
-        let tag = document.querySelector(selector);
+      // Helper functions for different meta tag types
+      const updateStandardMeta = (name: string, content: string) => {
+        let tag = document.querySelector(`meta[name="${name}"]`);
         if (!tag) {
           tag = document.createElement('meta');
-          const [key, value] = selector.slice(1, -1).split('=');
-          tag.setAttribute(key, value.replace(/['"]/g, ''));
+          tag.setAttribute('name', name);
           document.head.appendChild(tag);
         }
-        tag.setAttribute(attribute, content);
+        tag.setAttribute('content', content);
       };
 
-      // Update all meta tags
-      updateMetaTag('meta[name="description"]', 'content', shareDescription);
-      updateMetaTag('meta[property="og:title"]', 'content', shareTitle);
-      updateMetaTag('meta[property="og:description"]', 'content', shareDescription);
-      updateMetaTag('meta[property="og:url"]', 'content', shareUrl);
-      updateMetaTag('meta[property="twitter:title"]', 'content', shareTitle);
-      updateMetaTag('meta[property="twitter:description"]', 'content', shareDescription);
-      updateMetaTag('meta[property="twitter:url"]', 'content', shareUrl);
+      const updateOpenGraphMeta = (property: string, content: string) => {
+        let tag = document.querySelector(`meta[property="${property}"]`);
+        if (!tag) {
+          tag = document.createElement('meta');
+          tag.setAttribute('property', property);
+          document.head.appendChild(tag);
+        }
+        tag.setAttribute('content', content);
+      };
 
-      // Log updates for verification
-      console.log('Meta tags updated:', {
-        title: shareTitle,
-        description: shareDescription,
-        url: shareUrl
-      });
+      const updateTwitterMeta = (name: string, content: string) => {
+        let tag = document.querySelector(`meta[name="${name}"]`);
+        if (!tag) {
+          tag = document.createElement('meta');
+          tag.setAttribute('name', name);
+          document.head.appendChild(tag);
+        }
+        tag.setAttribute('content', content);
+      };
+
+      try {
+        // Update standard meta tags
+        updateStandardMeta('description', shareDescription);
+
+        // Update OpenGraph meta tags
+        updateOpenGraphMeta('og:title', shareTitle);
+        updateOpenGraphMeta('og:description', shareDescription);
+        updateOpenGraphMeta('og:url', shareUrl);
+
+        // Update Twitter meta tags
+        updateTwitterMeta('twitter:title', shareTitle);
+        updateTwitterMeta('twitter:description', shareDescription);
+        updateTwitterMeta('twitter:url', shareUrl);
+
+        console.log('Meta tags updated successfully:', {
+          title: shareTitle,
+          description: shareDescription,
+          url: shareUrl
+        });
+      } catch (error) {
+        console.error('Error updating meta tags:', error);
+      }
     }
 
-    // Cleanup function to reset meta tags when component unmounts
+    // Cleanup function
     return () => {
       const defaultTitle = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
       const defaultDescription = "Comprehensive guide debunking common myths about Kaspa cryptocurrency. Learn facts about Kaspa's fair launch, PoW consensus, smart contracts, Layer 2 scaling, and technological innovations.";
@@ -56,18 +82,36 @@ const Myth = () => {
 
       document.title = defaultTitle;
 
-      const updateMetaTag = (selector: string, attribute: string, content: string) => {
-        const tag = document.querySelector(selector);
-        if (tag) tag.setAttribute(attribute, content);
-      };
+      try {
+        // Reset standard meta tags
+        const updateStandardMeta = (name: string, content: string) => {
+          const tag = document.querySelector(`meta[name="${name}"]`);
+          if (tag) tag.setAttribute('content', content);
+        };
 
-      updateMetaTag('meta[name="description"]', 'content', defaultDescription);
-      updateMetaTag('meta[property="og:title"]', 'content', defaultTitle);
-      updateMetaTag('meta[property="og:description"]', 'content', defaultDescription);
-      updateMetaTag('meta[property="og:url"]', 'content', defaultUrl);
-      updateMetaTag('meta[property="twitter:title"]', 'content', defaultTitle);
-      updateMetaTag('meta[property="twitter:description"]', 'content', defaultDescription);
-      updateMetaTag('meta[property="twitter:url"]', 'content', defaultUrl);
+        const updateOpenGraphMeta = (property: string, content: string) => {
+          const tag = document.querySelector(`meta[property="${property}"]`);
+          if (tag) tag.setAttribute('content', content);
+        };
+
+        const updateTwitterMeta = (name: string, content: string) => {
+          const tag = document.querySelector(`meta[name="${name}"]`);
+          if (tag) tag.setAttribute('content', content);
+        };
+
+        // Reset all meta tags
+        updateStandardMeta('description', defaultDescription);
+        updateOpenGraphMeta('og:title', defaultTitle);
+        updateOpenGraphMeta('og:description', defaultDescription);
+        updateOpenGraphMeta('og:url', defaultUrl);
+        updateTwitterMeta('twitter:title', defaultTitle);
+        updateTwitterMeta('twitter:description', defaultDescription);
+        updateTwitterMeta('twitter:url', defaultUrl);
+
+        console.log('Meta tags reset successfully');
+      } catch (error) {
+        console.error('Error resetting meta tags:', error);
+      }
     };
   }, [myth, mythId]);
 

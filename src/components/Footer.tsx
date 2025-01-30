@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-muted-foreground text-sm">
-            © {currentYear} {" "}
+            {currentYear} {" "}
             <a
               href="https://kasparchive.com"
               target="_blank"
@@ -27,7 +27,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
               className="text-sm text-primary hover:text-primary/80 flex items-center gap-1"
             >
-              Suggest myths
+              CONTACT
               <MessageSquare className="h-3 w-3" />
             </a>
             <a
