@@ -191,5 +191,19 @@ export const myths: MythData[] = [
       "https://youtu.be/MugsziO0OYY?si=P5X4ULsQbEEI3Fsj",
       "https://chatgpt.com/share/679b9324-c478-800e-bff8-e930222fa096"
     ]
+  },
+  {
+    id: "fud-9",
+    title: "Kaspa is not quantum-secure and will be obsolete when quantum computers arrive",
+    category: "Tech",
+    claim: "Blockchains that rely on elliptic curve (EC) cryptography will be broken once quantum computers become powerful enough. Without immediate adoption of post-quantum cryptography (PQC), these networks are ignoring the threat and will eventually become obsolete.",
+    facts: [
+      "Quantum computers capable of breaking EC cryptography are still far from being practical. While advancements are being made, large-scale quantum machines with millions of stable qubits—needed to break EC encryption—do not yet exist. Even optimistic projections suggest this is decades away.",
+      "The Boneh-Lipton attack on EC cryptography is a well-known theoretical threat, but mitigations exist. Increasing key sizes or shifting to larger elliptic curves can provide additional security for years before a full transition to PQC is necessary.",
+      "Post-quantum cryptography (PQC) is not yet ready for large-scale blockchain adoption. Many PQC schemes have significant trade-offs, including larger key and signature sizes that increase data storage and transaction costs, higher computational requirements that slow down transaction processing, and limited real-world testing compared to the decades of security validation that EC cryptography has undergone.",
+      "Kaspa's blockDAG architecture makes it better suited for a future transition to PQC compared to traditional blockchain designs. Since blockDAG technology enables high throughput and efficient transaction processing, it can better accommodate the larger signature sizes required by post-quantum cryptography. While many blockchains struggle with scalability limitations, Kaspa's ability to handle high transaction volumes without bottlenecks allows for a smoother adoption of quantum-safe cryptographic solutions when the technology is mature.",
+      "Quantum mining, not just cryptographic breaking, presents a unique challenge. Unlike classical mining, quantum miners could attempt strategies that increase orphan rates and disrupt network stability. Protocols designed to manage high orphan rates and network adaptability may have an advantage if quantum mining ever becomes viable.",
+      "The timeline for quantum threats is long, allowing gradual transitions. Even if quantum advancements accelerate, blockchain protocols can adopt quantum-safe cryptographic methods when they are sufficiently tested and optimized, rather than rushing into unproven solutions."
+    ]
   }
 ];
