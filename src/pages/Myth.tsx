@@ -13,8 +13,10 @@ const Myth = () => {
     if (myth) {
       // Create unique title and description for social sharing
       const shareTitle = `FUD ${mythId}: ${myth.title} - KaspArchive`;
-      const shareDescription = `Debunking the myth: "${myth.claim}" Learn the facts about this Kaspa cryptocurrency claim.`;
+      // Create a concise description using the claim and first fact
+      const shareDescription = `Debunking: "${myth.claim}" Learn the truth about this Kaspa cryptocurrency claim. Fact: ${myth.facts[0]}`;
       const shareUrl = `${window.location.origin}/kaspa/${mythId}`;
+      const shareImage = `${window.location.origin}/og-image.png`;
 
       // Update document title
       document.title = shareTitle;
@@ -58,16 +60,21 @@ const Myth = () => {
         updateOpenGraphMeta('og:title', shareTitle);
         updateOpenGraphMeta('og:description', shareDescription);
         updateOpenGraphMeta('og:url', shareUrl);
+        updateOpenGraphMeta('og:type', 'article');
+        updateOpenGraphMeta('og:image', shareImage);
 
         // Update Twitter meta tags
+        updateTwitterMeta('twitter:card', 'summary_large_image');
         updateTwitterMeta('twitter:title', shareTitle);
         updateTwitterMeta('twitter:description', shareDescription);
         updateTwitterMeta('twitter:url', shareUrl);
+        updateTwitterMeta('twitter:image', shareImage);
 
         console.log('Meta tags updated successfully:', {
           title: shareTitle,
           description: shareDescription,
-          url: shareUrl
+          url: shareUrl,
+          image: shareImage
         });
       } catch (error) {
         console.error('Error updating meta tags:', error);
@@ -79,6 +86,7 @@ const Myth = () => {
       const defaultTitle = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
       const defaultDescription = "Comprehensive guide debunking common myths about Kaspa cryptocurrency. Learn facts about Kaspa's fair launch, PoW consensus, smart contracts, Layer 2 scaling, and technological innovations.";
       const defaultUrl = window.location.origin;
+      const defaultImage = `${window.location.origin}/og-image.png`;
 
       document.title = defaultTitle;
 
@@ -104,9 +112,13 @@ const Myth = () => {
         updateOpenGraphMeta('og:title', defaultTitle);
         updateOpenGraphMeta('og:description', defaultDescription);
         updateOpenGraphMeta('og:url', defaultUrl);
+        updateOpenGraphMeta('og:type', 'website');
+        updateOpenGraphMeta('og:image', defaultImage);
+        updateTwitterMeta('twitter:card', 'summary_large_image');
         updateTwitterMeta('twitter:title', defaultTitle);
         updateTwitterMeta('twitter:description', defaultDescription);
         updateTwitterMeta('twitter:url', defaultUrl);
+        updateTwitterMeta('twitter:image', defaultImage);
 
         console.log('Meta tags reset successfully');
       } catch (error) {
