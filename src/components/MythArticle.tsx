@@ -106,7 +106,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
                     href={ref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center hover:text-primary transition-colors p-1 sm:p-2 rounded-full bg-accent/50"
+                    className="inline-flex items-center hover:text-primary transition-colors p-1 sm:p-2"
                   >
                     {getLinkIcon(ref)}
                   </a>
