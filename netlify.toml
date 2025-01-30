@@ -4,3 +4,19 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+
+# Enable prerendering for dynamic routes
+[[redirects]]
+  from = "/kaspa/*"
+  to = "/index.html"
+  status = 200
+
+# Force prerendering for social media crawlers
+[[headers]]
+  for = "/kaspa/*"
+  [headers.values]
+    X-Robots-Tag = "all"
+    Cache-Control = "public, max-age=0, must-revalidate"
