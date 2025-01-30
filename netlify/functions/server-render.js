@@ -51,6 +51,9 @@ exports.handler = async (event) => {
     };
   }
 
+  // Create the full URL for the current article
+  const fullUrl = `https://kasparchive.com/kaspa/${articleId}`;
+
   const html = `
     <!DOCTYPE html>
     <html lang="en">
@@ -65,7 +68,7 @@ exports.handler = async (event) => {
         
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://kasparchive.com${path}" />
+        <meta property="og:url" content="${fullUrl}" />
         <meta property="og:title" content="${article.title}" />
         <meta property="og:description" content="${article.description}" />
         <meta property="og:image" content="https://i.postimg.cc/hPVwjmgx/images-1.png" />
@@ -73,7 +76,7 @@ exports.handler = async (event) => {
         
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://kasparchive.com${path}" />
+        <meta name="twitter:url" content="${fullUrl}" />
         <meta name="twitter:title" content="${article.title}" />
         <meta name="twitter:description" content="${article.description}" />
         <meta name="twitter:image" content="https://i.postimg.cc/hPVwjmgx/images-1.png" />
