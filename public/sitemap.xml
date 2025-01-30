@@ -2,103 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kasparchive.com/</loc>
-    <lastmod>2024-03-21</lastmod>
+    <lastmod>2024-02-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kasparchive.com/kaspa/fud-1</loc>
-    <lastmod>2024-03-21</lastmod>
+    <loc>https://kasparchive.com/kaspa/1</loc>
+    <lastmod>2024-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kasparchive.com/kaspa/fud-2</loc>
-    <lastmod>2024-03-21</lastmod>
+    <loc>https://kasparchive.com/kaspa/2</loc>
+    <lastmod>2024-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kasparchive.com/kaspa/fud-3</loc>
-    <lastmod>2024-03-21</lastmod>
+    <loc>https://kasparchive.com/kaspa/3</loc>
+    <lastmod>2024-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kasparchive.com/kaspa/fud-4</loc>
-    <lastmod>2024-03-21</lastmod>
+    <loc>https://kasparchive.com/kaspa/4</loc>
+    <lastmod>2024-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kasparchive.com/kaspa/fud-5</loc>
-    <lastmod>2024-03-21</lastmod>
+    <loc>https://kasparchive.com/kaspa/5</loc>
+    <lastmod>2024-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kasparchive.com/kaspa/fud-6</loc>
-    <lastmod>2024-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kasparchive.com/kaspa/fud-7</loc>
-    <lastmod>2024-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kasparchive.com/kaspa/fud-8</loc>
-    <lastmod>2024-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kasparchive.com/kaspa/fud-9</loc>
-    <lastmod>2024-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kasparchive.com/kaspa/fud-10</loc>
-    <lastmod>2024-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kasparchive.com/kaspa/fud-11</loc>
-    <lastmod>2024-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kasparchive.com/kaspa/fud-12</loc>
-    <lastmod>2024-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kasparchive.com/kaspa/fud-13</loc>
-    <lastmod>2024-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kasparchive.com/kaspa/fud-14</loc>
-    <lastmod>2024-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kasparchive.com/kaspa/fud-15</loc>
-    <lastmod>2024-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kasparchive.com/kaspa/fud-16</loc>
-    <lastmod>2024-03-21</lastmod>
+    <loc>https://kasparchive.com/kaspa/6</loc>
+    <lastmod>2024-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
