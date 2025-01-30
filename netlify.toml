@@ -8,169 +8,26 @@
 [[plugins]]
   package = "@netlify/plugin-sitemap"
 
-# Enable prerendering for dynamic routes
+# Static page rules with proper server-side rendering
 [[redirects]]
-  from = "/kaspa/1"
-  to = "/index.html"
+  from = "/kaspa/*"
+  to = "/.netlify/functions/server-render"
   status = 200
   force = true
-  [redirects.headers]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    "og:title" = "Kaspa Analysis #1: Understanding DAGLabs' Role"
-    "og:description" = "DAGLabs, founded in 2018 by Yonatan Sompolinsky, was initially funded to research and develop the GhostDAG protocol and explore optical ASIC mining for a cryptocurrency. Investment totaled $8M, primarily from Polychain."
-    "og:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "og:url" = "https://kasparchive.com/kaspa/1"
-    "twitter:title" = "Kaspa Analysis #1: Understanding DAGLabs' Role"
-    "twitter:description" = "DAGLabs, founded in 2018 by Yonatan Sompolinsky, was initially funded to research and develop the GhostDAG protocol and explore optical ASIC mining for a cryptocurrency. Investment totaled $8M, primarily from Polychain."
-    "twitter:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "twitter:card" = "summary_large_image"
 
-[[redirects]]
-  from = "/kaspa/2"
-  to = "/index.html"
-  status = 200
-  force = true
-  [redirects.headers]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    "og:title" = "Kaspa Analysis #2: Understanding PoW Security"
-    "og:description" = "The supposed 'superiority' of PoS is not a universally accepted fact but a heavily debated topic, deeply influenced by complex and unpredictable economic factors, not just theoretical mathematical models."
-    "og:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "og:url" = "https://kasparchive.com/kaspa/2"
-    "twitter:title" = "Kaspa Analysis #2: Understanding PoW Security"
-    "twitter:description" = "The supposed 'superiority' of PoS is not a universally accepted fact but a heavily debated topic, deeply influenced by complex and unpredictable economic factors, not just theoretical mathematical models."
-    "twitter:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "twitter:card" = "summary_large_image"
-
-[[redirects]]
-  from = "/kaspa/3"
-  to = "/index.html"
-  status = 200
-  force = true
-  [redirects.headers]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    "og:title" = "Kaspa Analysis #3: Scalability Solutions"
-    "og:description" = "Kaspa developers have created a smart solution called KIP-9 specifically to prevent the ledger from getting too big and to make sure Kaspa can keep scaling up for many, many users."
-    "og:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "og:url" = "https://kasparchive.com/kaspa/3"
-    "twitter:title" = "Kaspa Analysis #3: Scalability Solutions"
-    "twitter:description" = "Kaspa developers have created a smart solution called KIP-9 specifically to prevent the ledger from getting too big and to make sure Kaspa can keep scaling up for many, many users."
-    "twitter:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "twitter:card" = "summary_large_image"
-
-[[redirects]]
-  from = "/kaspa/4"
-  to = "/index.html"
-  status = 200
-  force = true
-  [redirects.headers]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    "og:title" = "Kaspa Analysis #4: Understanding Ledger History"
-    "og:description" = "Ledger pruning is essential for Kaspa's long-term decentralization and sustainability. At full capacity (10 BPS), the ledger grows by approximately 30TB per year, making archival nodes impractical for widespread decentralization without pruning."
-    "og:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "og:url" = "https://kasparchive.com/kaspa/4"
-    "twitter:title" = "Kaspa Analysis #4: Understanding Ledger History"
-    "twitter:description" = "Ledger pruning is essential for Kaspa's long-term decentralization and sustainability. At full capacity (10 BPS), the ledger grows by approximately 30TB per year, making archival nodes impractical for widespread decentralization without pruning."
-    "twitter:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "twitter:card" = "summary_large_image"
-
-[[redirects]]
-  from = "/kaspa/5"
-  to = "/index.html"
-  status = 200
-  force = true
-  [redirects.headers]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    "og:title" = "Kaspa Analysis #5: PoW Mining Accessibility"
-    "og:description" = "PoW mining is actually more decentralized than many think! Anyone can start mining with basic hardware, and there are miners all around the world. This global spread helps keep the network secure and fair."
-    "og:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "og:url" = "https://kasparchive.com/kaspa/5"
-    "twitter:title" = "Kaspa Analysis #5: PoW Mining Accessibility"
-    "twitter:description" = "PoW mining is actually more decentralized than many think! Anyone can start mining with basic hardware, and there are miners all around the world. This global spread helps keep the network secure and fair."
-    "twitter:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "twitter:card" = "summary_large_image"
-
-[[redirects]]
-  from = "/kaspa/6"
-  to = "/index.html"
-  status = 200
-  force = true
-  [redirects.headers]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    "og:title" = "Kaspa Analysis #6: Speed and Efficiency"
-    "og:description" = "Kaspa's GhostDAG protocol is a breakthrough that allows for parallel processing of transactions, making it much faster than traditional blockchains."
-    "og:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "og:url" = "https://kasparchive.com/kaspa/6"
-    "twitter:title" = "Kaspa Analysis #6: Speed and Efficiency"
-    "twitter:description" = "Kaspa's GhostDAG protocol is a breakthrough that allows for parallel processing of transactions, making it much faster than traditional blockchains."
-    "twitter:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "twitter:card" = "summary_large_image"
-
-[[redirects]]
-  from = "/kaspa/7"
-  to = "/index.html"
-  status = 200
-  force = true
-  [redirects.headers]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    "og:title" = "Kaspa Analysis #7: Smart Contract Development"
-    "og:description" = "Kaspa's focus on building a robust, scalable Layer 1 is intentional and strategic. This approach ensures a solid foundation for future developments."
-    "og:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "og:url" = "https://kasparchive.com/kaspa/7"
-    "twitter:title" = "Kaspa Analysis #7: Smart Contract Development"
-    "twitter:description" = "Kaspa's focus on building a robust, scalable Layer 1 is intentional and strategic. This approach ensures a solid foundation for future developments."
-    "twitter:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "twitter:card" = "summary_large_image"
-
-[[redirects]]
-  from = "/kaspa/8"
-  to = "/index.html"
-  status = 200
-  force = true
-  [redirects.headers]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    "og:title" = "Kaspa Analysis #8: Innovation in Blockchain"
-    "og:description" = "Kaspa represents a major leap forward in blockchain technology, achieving an unprecedented combination of scalability, speed, and security within a Proof-of-Work framework."
-    "og:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "og:url" = "https://kasparchive.com/kaspa/8"
-    "twitter:title" = "Kaspa Analysis #8: Innovation in Blockchain"
-    "twitter:description" = "Kaspa represents a major leap forward in blockchain technology, achieving an unprecedented combination of scalability, speed, and security within a Proof-of-Work framework."
-    "twitter:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "twitter:card" = "summary_large_image"
-
-[[redirects]]
-  from = "/kaspa/9"
-  to = "/index.html"
-  status = 200
-  force = true
-  [redirects.headers]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    "og:title" = "Kaspa Analysis #9: Quantum Computing Preparedness"
-    "og:description" = "Quantum computers capable of breaking EC cryptography are still far from being practical. While advancements are being made, large-scale quantum machines with millions of stable qubits—needed to break EC encryption—do not yet exist."
-    "og:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "og:url" = "https://kasparchive.com/kaspa/9"
-    "twitter:title" = "Kaspa Analysis #9: Quantum Computing Preparedness"
-    "twitter:description" = "Quantum computers capable of breaking EC cryptography are still far from being practical. While advancements are being made, large-scale quantum machines with millions of stable qubits—needed to break EC encryption—do not yet exist."
-    "twitter:image" = "https://i.postimg.cc/hPVwjmgx/images-1.png"
-    "twitter:card" = "summary_large_image"
-
-# Catch-all redirect for other routes
+# Fallback for other routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Force prerendering for social media crawlers
+# Headers to ensure proper indexing
 [[headers]]
-  for = "/kaspa/*"
+  for = "/*"
   [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
     X-Robots-Tag = "all"
     Cache-Control = "public, max-age=0, must-revalidate"
