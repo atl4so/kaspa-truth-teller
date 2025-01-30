@@ -59,7 +59,8 @@ export const myths: MythData[] = [
       "https://kasmedia.com/article/understanding-ghostdag-intro",
       "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3",
       "https://x.com/DesheShai/status/1883191027869065654",
-      "https://eprint.iacr.org/2021/623.pdf"
+      "https://eprint.iacr.org/2021/623.pdf",
+      "https://chatgpt.com/share/679b8f7d-b810-800e-af56-92ea3af8c824"
     ]
   },
   {
