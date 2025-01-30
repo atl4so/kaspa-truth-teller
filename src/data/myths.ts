@@ -108,8 +108,9 @@ export const myths: MythData[] = [
     references: [
       "https://hashdag.medium.com/kaspa-black-tuesday-8c7f4fa35834",
       "https://x.com/DesheShai/status/1808177677674684772",
-      "https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb",
-      "https://discord.com/channels/599153230659846165/844142778232864809/912831900287131649"
+      "https://github.com/kaspangang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb",
+      "https://discord.com/channels/599153230659846165/844142778232864809/912831900287131649",
+      "https://chatgpt.com/share/679b9139-4e88-800e-bb1a-59de34e83ff8"
     ]
   },
   {
@@ -131,7 +132,8 @@ export const myths: MythData[] = [
     references: [
       "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3",
       "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3",
-      "https://x.com/DesheShai/status/1883191027869065654"
+      "https://x.com/DesheShai/status/1883191027869065654",
+      "https://chatgpt.com/share/679b91ea-6950-800e-aac5-bdd8b8805b96"
     ]
   },
   {
