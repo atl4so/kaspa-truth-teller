@@ -4,11 +4,11 @@ import { MythData } from '@/data/myths';
 export const useMetaTags = (myth: MythData | undefined, mythId: string | undefined) => {
   useEffect(() => {
     if (myth) {
-      // Create more professional titles and descriptions for sharing
-      const shareTitle = `Kaspa Analysis #${mythId}: ${myth.title} - KaspArchive`;
-      const shareDescription = `Learn about Kaspa's ${myth.category} features and technology. Get accurate information about ${myth.title.toLowerCase()}.`;
+      // Create positive descriptions based on the first fact
+      const shareTitle = `Kaspa Analysis #${mythId}: ${myth.title}`;
+      const shareDescription = myth.facts[0]; // Using the first fact as the positive description
       const shareUrl = `${window.location.origin}/kaspa/${mythId}`;
-      const shareImage = `${window.location.origin}/og-image.png`;
+      const shareImage = "https://i.postimg.cc/hPVwjmgx/images-1.png";
 
       document.title = shareTitle;
 
@@ -74,7 +74,7 @@ export const useMetaTags = (myth: MythData | undefined, mythId: string | undefin
       const defaultTitle = "KaspArchive - Your Guide to Kaspa Facts";
       const defaultDescription = "Learn the truth about Kaspa. Simple facts that clear up common myths about this fast and scalable cryptocurrency.";
       const defaultUrl = window.location.origin;
-      const defaultImage = `${window.location.origin}/og-image.png`;
+      const defaultImage = "https://i.postimg.cc/hPVwjmgx/images-1.png";
 
       try {
         const updateStandardMeta = (name: string, content: string) => {
