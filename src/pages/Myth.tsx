@@ -14,48 +14,68 @@ const Myth = () => {
       // Create unique title and description for social sharing
       const shareTitle = `FUD ${mythId}: ${myth.title} - KaspArchive`;
       const shareDescription = `Debunking the myth: "${myth.claim}" Learn the facts about this Kaspa cryptocurrency claim.`;
+      const shareUrl = `${window.location.origin}/kaspa/${mythId}`;
       
       // Update all meta tags immediately when component mounts
       document.title = shareTitle;
       
       // Update standard meta tags
-      document.querySelector('meta[name="description"]')?.setAttribute("content", shareDescription);
+      const descriptionTag = document.querySelector('meta[name="description"]');
+      if (descriptionTag) {
+        descriptionTag.setAttribute("content", shareDescription);
+      }
       
       // Update Open Graph meta tags
-      document.querySelector('meta[property="og:type"]')?.setAttribute("content", "article");
-      document.querySelector('meta[property="og:title"]')?.setAttribute("content", shareTitle);
-      document.querySelector('meta[property="og:description"]')?.setAttribute("content", shareDescription);
-      document.querySelector('meta[property="og:url"]')?.setAttribute("content", `${window.location.origin}/kaspa/${mythId}`);
+      const ogTitleTag = document.querySelector('meta[property="og:title"]');
+      const ogDescTag = document.querySelector('meta[property="og:description"]');
+      const ogUrlTag = document.querySelector('meta[property="og:url"]');
+      
+      if (ogTitleTag) ogTitleTag.setAttribute("content", shareTitle);
+      if (ogDescTag) ogDescTag.setAttribute("content", shareDescription);
+      if (ogUrlTag) ogUrlTag.setAttribute("content", shareUrl);
       
       // Update Twitter meta tags
-      document.querySelector('meta[property="twitter:card"]')?.setAttribute("content", "summary_large_image");
-      document.querySelector('meta[property="twitter:title"]')?.setAttribute("content", shareTitle);
-      document.querySelector('meta[property="twitter:description"]')?.setAttribute("content", shareDescription);
-      document.querySelector('meta[property="twitter:url"]')?.setAttribute("content", `${window.location.origin}/kaspa/${mythId}`);
+      const twitterTitleTag = document.querySelector('meta[property="twitter:title"]');
+      const twitterDescTag = document.querySelector('meta[property="twitter:description"]');
+      const twitterUrlTag = document.querySelector('meta[property="twitter:url"]');
+      
+      if (twitterTitleTag) twitterTitleTag.setAttribute("content", shareTitle);
+      if (twitterDescTag) twitterDescTag.setAttribute("content", shareDescription);
+      if (twitterUrlTag) twitterUrlTag.setAttribute("content", shareUrl);
     }
 
     return () => {
       // Reset meta tags when component unmounts
       const defaultTitle = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
       const defaultDescription = "Comprehensive guide debunking common myths about Kaspa cryptocurrency. Learn facts about Kaspa's fair launch, PoW consensus, smart contracts, Layer 2 scaling, and technological innovations.";
+      const defaultUrl = window.location.origin;
       
       // Reset all meta tags to default values
       document.title = defaultTitle;
       
       // Reset standard meta tags
-      document.querySelector('meta[name="description"]')?.setAttribute("content", defaultDescription);
+      const descriptionTag = document.querySelector('meta[name="description"]');
+      if (descriptionTag) {
+        descriptionTag.setAttribute("content", defaultDescription);
+      }
       
       // Reset Open Graph meta tags
-      document.querySelector('meta[property="og:type"]')?.setAttribute("content", "website");
-      document.querySelector('meta[property="og:title"]')?.setAttribute("content", defaultTitle);
-      document.querySelector('meta[property="og:description"]')?.setAttribute("content", defaultDescription);
-      document.querySelector('meta[property="og:url"]')?.setAttribute("content", window.location.origin);
+      const ogTitleTag = document.querySelector('meta[property="og:title"]');
+      const ogDescTag = document.querySelector('meta[property="og:description"]');
+      const ogUrlTag = document.querySelector('meta[property="og:url"]');
+      
+      if (ogTitleTag) ogTitleTag.setAttribute("content", defaultTitle);
+      if (ogDescTag) ogDescTag.setAttribute("content", defaultDescription);
+      if (ogUrlTag) ogUrlTag.setAttribute("content", defaultUrl);
       
       // Reset Twitter meta tags
-      document.querySelector('meta[property="twitter:card"]')?.setAttribute("content", "summary_large_image");
-      document.querySelector('meta[property="twitter:title"]')?.setAttribute("content", defaultTitle);
-      document.querySelector('meta[property="twitter:description"]')?.setAttribute("content", defaultDescription);
-      document.querySelector('meta[property="twitter:url"]')?.setAttribute("content", window.location.origin);
+      const twitterTitleTag = document.querySelector('meta[property="twitter:title"]');
+      const twitterDescTag = document.querySelector('meta[property="twitter:description"]');
+      const twitterUrlTag = document.querySelector('meta[property="twitter:url"]');
+      
+      if (twitterTitleTag) twitterTitleTag.setAttribute("content", defaultTitle);
+      if (twitterDescTag) twitterDescTag.setAttribute("content", defaultDescription);
+      if (twitterUrlTag) twitterUrlTag.setAttribute("content", defaultUrl);
     };
   }, [myth, mythId]);
 
