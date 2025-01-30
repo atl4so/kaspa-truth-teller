@@ -206,11 +206,11 @@ export const myths: MythData[] = [
       "The timeline for quantum threats is long, allowing gradual transitions. Even if quantum advancements accelerate, blockchain protocols can adopt quantum-safe cryptographic methods when they are sufficiently tested and optimized, rather than rushing into unproven solutions."
     ],
     references: [
-      "https://x.com/DesheShai/status/1681696299358343169?t=2RH2OE-cc3RZjcixfWkgMA&s=19",
-      "https://t.co/J3RaAGxcG6",
       "https://eprint.iacr.org/2021/772",
       "https://eprint.iacr.org/2023/362",
-      "https://arxiv.org/abs/1804.08118"
+      "https://arxiv.org/abs/1804.08118",
+      "https://x.com/DesheShai/status/1681696299358343169?t=2RH2OE-cc3RZjcixfWkgMA&s=19",
+      "https://t.co/J3RaAGxcG6"
     ]
   }
 ];
