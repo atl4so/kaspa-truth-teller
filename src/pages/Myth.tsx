@@ -87,7 +87,7 @@ const Myth = () => {
     // Cleanup function
     return () => {
       const defaultTitle = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
-      const defaultDescription = "Comprehensive guide debunking common myths about Kaspa cryptocurrency. Learn facts about Kaspa's fair launch, PoW consensus, smart contracts, Layer 2 scaling, and technological innovations.";
+      const defaultDescription = "Explore comprehensive guides debunking common myths about Kaspa cryptocurrency. Get accurate information about Kaspa's technology, features, and innovations.";
       const defaultUrl = window.location.origin;
       const defaultImage = `${window.location.origin}/og-image.png`;
 
