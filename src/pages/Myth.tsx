@@ -5,34 +5,11 @@ import { myths } from "@/data/myths";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 
-const updateMetaTags = (title: string, description: string, url: string) => {
-  // Update standard meta tags
-  document.title = title;
-  document.querySelector('meta[name="title"]')?.setAttribute("content", title);
-  document.querySelector('meta[name="description"]')?.setAttribute("content", description);
-
-  // Update Open Graph meta tags
-  document.querySelector('meta[property="og:title"]Let me audit the current implementation to identify why the social sharing metadata isn't working as expected.
-
-The issue appears to be in how we're handling the metadata updates. Let's fix this:
-
-<lov-code>
-We need to update the `src/pages/Myth.tsx` file to ensure the metadata is properly set and updated:
-
-<lov-write file_path="src/pages/Myth.tsx">
-import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { MythArticle } from "@/components/MythArticle";
-import { myths } from "@/data/myths";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft } from "lucide-react";
-
 const Myth = () => {
   const { mythId } = useParams();
   const myth = myths.find((m) => m.id === `fud-${mythId}`);
 
   useEffect(() => {
-    // Only update metadata if we have a valid myth
     if (myth) {
       // Create unique title and description for social sharing
       const shareTitle = `FUD ${mythId}: ${myth.title} - KaspArchive`;
