@@ -53,7 +53,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
   };
 
   const isPDFLink = (url: string) => {
-    return url.toLowerCase().endsWith('.pdf');
+    return url.toLowerCase().endsWith('.pdf') || url.includes("t.co/") || url.includes("eprint.iacr.org") || url.includes("arxiv.org");
   };
 
   const isDiscordLink = (url: string) => {
