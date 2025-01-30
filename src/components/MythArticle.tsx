@@ -57,8 +57,8 @@ const PDFIcon = () => (
 );
 
 export const MythArticle = ({ myth }: MythArticleProps) => {
-  const mythUrl = `${window.location.origin}/kaspa/${myth.id}`;
-  const mythNumber = myth.id.split("-")[1];
+  const mythNumber = myth.id.replace('fud-', '');
+  const mythUrl = `${window.location.origin}/kaspa/${mythNumber}`;
 
   const isTwitterLink = (url: string) => {
     return url.includes("twitter.com") || url.includes("x.com");
@@ -115,7 +115,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
       transition={{ duration: 0.5 }}
       className="max-w-3xl mx-auto mb-12 prose prose-slate dark:prose-invert"
     >
-      <Link to={`/kaspa/${myth.id}`} className="no-underline">
+      <Link to={`/kaspa/${mythNumber}`} className="no-underline">
         <h3 className="text-2xl font-bold mb-4 hover:text-primary transition-colors">
           FUD {mythNumber}: "{myth.title}"
         </h3>
