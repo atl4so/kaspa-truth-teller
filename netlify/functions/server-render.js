@@ -5,11 +5,11 @@ exports.handler = async (event) => {
   // Define your meta content based on the article ID
   const metaContent = {
     '1': {
-      title: 'Kaspa Analysis #1: Understanding DAGLabs\' Role',
+      title: 'KaspArchive #1: Understanding DAGLabs\' Role',
       description: 'DAGLabs, founded in 2018 by Yonatan Sompolinsky, has a transparent history of development and fair launch, with clear documentation of their $8M funding primarily from Polychain.',
     },
     '2': {
-      title: 'Kaspa Analysis #2: Understanding PoW Security',
+      title: 'KaspArchive #2: Understanding PoW Security',
       description: 'Proof of Work provides unique security benefits through its physical backing and proven track record of securing high-value networks.',
     },
     // ... Add meta content for other articles
