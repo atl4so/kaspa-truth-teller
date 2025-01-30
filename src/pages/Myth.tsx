@@ -12,9 +12,9 @@ const Myth = () => {
   useEffect(() => {
     if (myth) {
       // Create unique title and description for social sharing
-      const shareTitle = `FUD ${mythId}: ${myth.title} - KaspArchive`;
-      // Create a concise description using the claim and first fact
-      const shareDescription = `Debunking: "${myth.claim}" Learn the truth about this Kaspa cryptocurrency claim. Fact: ${myth.facts[0]}`;
+      const shareTitle = `KaspArchive - FUD ${mythId}: ${myth.title}`;
+      // Create a more concise description that works better with Telegram
+      const shareDescription = `Discover the truth about Kaspa cryptocurrency. Get facts about ${myth.title.toLowerCase()}`;
       const shareUrl = `${window.location.origin}/kaspa/${mythId}`;
       const shareImage = `${window.location.origin}/og-image.png`;
 
@@ -56,12 +56,15 @@ const Myth = () => {
         // Update standard meta tags
         updateStandardMeta('description', shareDescription);
 
-        // Update OpenGraph meta tags
+        // Update OpenGraph meta tags - Telegram primarily uses these
+        updateOpenGraphMeta('og:site_name', 'KaspArchive');
         updateOpenGraphMeta('og:title', shareTitle);
         updateOpenGraphMeta('og:description', shareDescription);
         updateOpenGraphMeta('og:url', shareUrl);
         updateOpenGraphMeta('og:type', 'article');
         updateOpenGraphMeta('og:image', shareImage);
+        // Force Telegram to refresh the preview by adding a timestamp
+        updateOpenGraphMeta('og:updated_time', new Date().toISOString());
 
         // Update Twitter meta tags
         updateTwitterMeta('twitter:card', 'summary_large_image');
@@ -109,6 +112,7 @@ const Myth = () => {
 
         // Reset all meta tags
         updateStandardMeta('description', defaultDescription);
+        updateOpenGraphMeta('og:site_name', 'KaspArchive');
         updateOpenGraphMeta('og:title', defaultTitle);
         updateOpenGraphMeta('og:description', defaultDescription);
         updateOpenGraphMeta('og:url', defaultUrl);
