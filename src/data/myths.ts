@@ -153,7 +153,8 @@ export const myths: MythData[] = [
     ],
     references: [
       "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3",
-      "https://x.com/DesheShai/status/1883191027869065654"
+      "https://x.com/DesheShai/status/1883191027869065654",
+      "https://chatgpt.com/share/679b9253-ff50-800e-b4a6-8a78338f3252"
     ]
   },
   {
@@ -172,7 +173,8 @@ export const myths: MythData[] = [
     ],
     references: [
       "https://medium.com/@kaspanet/kaspa-roadmap-2024-25-d9ce5f0aa19c",
-      "https://x.com/DesheShai/status/1883191027869065654"
+      "https://x.com/DesheShai/status/1883191027869065654",
+      "https://chatgpt.com/share/679b92c2-1314-800e-ad34-d2a83ac85400"
     ]
   },
   {
@@ -186,7 +188,8 @@ export const myths: MythData[] = [
       "Kaspa directly tackles and solves critical limitations of existing blockchains, such as state bloat and slow transaction finality, with novel and sophisticated technical solutions. Kaspa is pushing the boundaries of blockchain technology. To claim it lacks innovation is to ignore the substantial technical breakthroughs it represents."
     ],
     references: [
-      "https://youtu.be/MugsziO0OYY?si=P5X4ULsQbEEI3Fsj"
+      "https://youtu.be/MugsziO0OYY?si=P5X4ULsQbEEI3Fsj",
+      "https://chatgpt.com/share/679b9324-c478-800e-bff8-e930222fa096"
     ]
   }
 ];
