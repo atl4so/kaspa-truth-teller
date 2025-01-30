@@ -110,7 +110,7 @@ export const myths: MythData[] = [
       "https://x.com/DesheShai/status/1808177677674684772",
       "https://github.com/kaspangang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb",
       "https://discord.com/channels/599153230659846165/844142778232864809/912831900287131649",
-      "https://chatgpt.com/share/679b9654-4f24-800e-893f-b603779bf36c"
+      "https://chatgpt.com/share/679b9742-c9d0-800e-98dd-a428d85e50e5"
     ]
   },
   {
