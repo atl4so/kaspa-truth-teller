@@ -12,9 +12,9 @@ const Myth = () => {
   useEffect(() => {
     if (myth) {
       // Create unique title and description for social sharing
-      const shareTitle = `KaspArchive - FUD ${mythId}: ${myth.title}`;
+      const shareTitle = `FUD ${mythId}: ${myth.title} - KaspArchive`;
       // Create a more concise description that works better with Telegram
-      const shareDescription = `Discover the truth about Kaspa cryptocurrency. Get facts about ${myth.title.toLowerCase()}`;
+      const shareDescription = `${myth.claim}`;
       const shareUrl = `${window.location.origin}/kaspa/${mythId}`;
       const shareImage = `${window.location.origin}/og-image.png`;
 
@@ -90,8 +90,6 @@ const Myth = () => {
       const defaultDescription = "Explore comprehensive guides debunking common myths about Kaspa cryptocurrency. Get accurate information about Kaspa's technology, features, and innovations.";
       const defaultUrl = window.location.origin;
       const defaultImage = `${window.location.origin}/og-image.png`;
-
-      document.title = defaultTitle;
 
       try {
         // Reset standard meta tags
