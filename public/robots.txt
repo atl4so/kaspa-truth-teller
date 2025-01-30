@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+User-agent: TelegramBot
+Allow: /
+
 Sitemap: https://kasparchive.com/sitemap.xml
