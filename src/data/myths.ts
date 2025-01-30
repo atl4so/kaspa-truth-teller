@@ -65,7 +65,7 @@ export const myths: MythData[] = [
     id: "fud-3",
     title: "Kaspa's Scalability is Limited by Ledger Growth & L2 Flaws",
     category: ["SC/L2", "Ledger"],
-    claim: "Critics claim Kaspa will struggle with state bloat due to its high-speed transactions and that Layer 2 scaling won't work. However, Kaspa's architecture allows pruning, minimizing long-term storage issues. Additionally, Layer 2 scaling (like rollups) has been successfully implemented on other chains and is feasible for Kaspa.",
+    claim: "Critics claim Kaspa will struggle with state bloat due to its high-speed transactions.",
     facts: [
       "That's wrong! Kaspa developers have created a smart solution called KIP-9 specifically to prevent the ledger from getting too big and to make sure Kaspa can keep scaling up for many, many users.",
       "KIP-9 adds a \"storage cost\" to transactions. Think of it like a small fee for using storage space on the Kaspa network. Transactions that take up more space (like creating lots of tiny coin pieces) pay a bit more, which stops the ledger from ballooning.",
