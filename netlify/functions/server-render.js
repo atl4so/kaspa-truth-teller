@@ -13,8 +13,6 @@ exports.handler = async (event) => {
     };
   }
 
-  // Update title format to use KaspArchive instead of Kaspa Analysis
-  const formattedTitle = article.title.replace('KaspArchive', 'KaspArchive');
   const fullUrl = `https://kasparchive.com/kaspa/${articleId}`;
 
   const html = `
@@ -25,14 +23,14 @@ exports.handler = async (event) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         <!-- Primary Meta Tags -->
-        <title>${formattedTitle}</title>
-        <meta name="title" content="${formattedTitle}" />
+        <title>${article.title}</title>
+        <meta name="title" content="${article.title}" />
         <meta name="description" content="${article.description}" />
         
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="article" />
         <meta property="og:url" content="${fullUrl}" />
-        <meta property="og:title" content="${formattedTitle}" />
+        <meta property="og:title" content="${article.title}" />
         <meta property="og:description" content="${article.description}" />
         <meta property="og:image" content="https://i.postimg.cc/hPVwjmgx/images-1.png" />
         <meta property="og:site_name" content="KaspArchive" />
@@ -40,7 +38,7 @@ exports.handler = async (event) => {
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="${fullUrl}" />
-        <meta name="twitter:title" content="${formattedTitle}" />
+        <meta name="twitter:title" content="${article.title}" />
         <meta name="twitter:description" content="${article.description}" />
         <meta name="twitter:image" content="https://i.postimg.cc/hPVwjmgx/images-1.png" />
         
