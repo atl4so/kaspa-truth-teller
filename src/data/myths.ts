@@ -53,7 +53,8 @@ export const myths: MythData[] = [
     references: [
       "https://kasmedia.com/article/understanding-ghostdag-intro",
       "https://x.com/DesheShai/status/1883191027869065654",
-      "https://chatgpt.com/share/679a1527-d7f8-800e-99ef-a2f55532dd52"
+      "https://chatgpt.com/share/679a1527-d7f8-800e-99ef-a2f55532dd52",
+      "https://eprint.iacr.org/2021/623.pdf"
     ]
   },
   {
