@@ -7,27 +7,30 @@ import { ChevronLeft } from "lucide-react";
 
 const Myth = () => {
   const { mythId } = useParams();
-  // Add back the "fud-" prefix when looking up the myth
   const myth = myths.find((m) => m.id === `fud-${mythId}`);
 
   useEffect(() => {
     if (myth) {
-      document.title = `${myth.title} - KaspArchive`;
+      // Create unique title and description for social sharing
+      const shareTitle = `FUD ${mythId}: ${myth.title} - KaspArchive`;
+      const shareDescription = `Debunking the myth: "${myth.claim}" Learn the facts about this Kaspa cryptocurrency claim.`;
+      
+      document.title = shareTitle;
       
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute("content", myth.claim);
+        metaDescription.setAttribute("content", shareDescription);
       }
-
+      
       const ogTitle = document.querySelector('meta[property="og:title"]');
       const ogDescription = document.querySelector('meta[property="og:description"]');
       const ogUrl = document.querySelector('meta[property="og:url"]');
       
       if (ogTitle) {
-        ogTitle.setAttribute("content", `${myth.title} - KaspArchive`);
+        ogTitle.setAttribute("content", shareTitle);
       }
       if (ogDescription) {
-        ogDescription.setAttribute("content", myth.claim);
+        ogDescription.setAttribute("content", shareDescription);
       }
       if (ogUrl) {
         ogUrl.setAttribute("content", `${window.location.origin}/kaspa/${mythId}`);
@@ -38,10 +41,10 @@ const Myth = () => {
       const twitterUrl = document.querySelector('meta[property="twitter:url"]');
       
       if (twitterTitle) {
-        twitterTitle.setAttribute("content", `${myth.title} - KaspArchive`);
+        twitterTitle.setAttribute("content", shareTitle);
       }
       if (twitterDescription) {
-        twitterDescription.setAttribute("content", myth.claim);
+        twitterDescription.setAttribute("content", shareDescription);
       }
       if (twitterUrl) {
         twitterUrl.setAttribute("content", `${window.location.origin}/kaspa/${mythId}`);
@@ -49,10 +52,15 @@ const Myth = () => {
     }
 
     return () => {
-      document.title = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
+      // Reset meta tags when component unmounts
+      const defaultTitle = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
+      const defaultDescription = "Comprehensive guide debunking common myths about Kaspa cryptocurrency. Learn facts about Kaspa's fair launch, PoW consensus, smart contracts, Layer 2 scaling, and technological innovations.";
+      
+      document.title = defaultTitle;
+      
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute("content", "Comprehensive guide debunking common myths about Kaspa cryptocurrency. Learn facts about Kaspa's fair launch, PoW consensus, smart contracts, Layer 2 scaling, and technological innovations.");
+        metaDescription.setAttribute("content", defaultDescription);
       }
       
       const ogTitle = document.querySelector('meta[property="og:title"]');
@@ -60,10 +68,10 @@ const Myth = () => {
       const ogUrl = document.querySelector('meta[property="og:url"]');
       
       if (ogTitle) {
-        ogTitle.setAttribute("content", "KaspArchive - Facts & Myths About Kaspa");
+        ogTitle.setAttribute("content", defaultTitle);
       }
       if (ogDescription) {
-        ogDescription.setAttribute("content", "Discover the truth about Kaspa cryptocurrency. Get facts about fair launch, PoW mining, smart contracts, and technological innovations.");
+        ogDescription.setAttribute("content", defaultDescription);
       }
       if (ogUrl) {
         ogUrl.setAttribute("content", window.location.origin);
@@ -74,10 +82,10 @@ const Myth = () => {
       const twitterUrl = document.querySelector('meta[property="twitter:url"]');
       
       if (twitterTitle) {
-        twitterTitle.setAttribute("content", "KaspArchive - Facts & Myths About Kaspa");
+        twitterTitle.setAttribute("content", defaultTitle);
       }
       if (twitterDescription) {
-        twitterDescription.setAttribute("content", "Discover the truth about Kaspa cryptocurrency. Get facts about fair launch, PoW mining, smart contracts, and technological innovations.");
+        twitterDescription.setAttribute("content", defaultDescription);
       }
       if (twitterUrl) {
         twitterUrl.setAttribute("content", window.location.origin);
