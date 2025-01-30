@@ -15,40 +15,23 @@ const Myth = () => {
       const shareTitle = `FUD ${mythId}: ${myth.title} - KaspArchive`;
       const shareDescription = `Debunking the myth: "${myth.claim}" Learn the facts about this Kaspa cryptocurrency claim.`;
       
+      // Update all meta tags immediately when component mounts
       document.title = shareTitle;
       
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute("content", shareDescription);
-      }
+      // Update standard meta tags
+      document.querySelector('meta[name="description"]')?.setAttribute("content", shareDescription);
       
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      const ogDescription = document.querySelector('meta[property="og:description"]');
-      const ogUrl = document.querySelector('meta[property="og:url"]');
+      // Update Open Graph meta tags
+      document.querySelector('meta[property="og:type"]')?.setAttribute("content", "article");
+      document.querySelector('meta[property="og:title"]')?.setAttribute("content", shareTitle);
+      document.querySelector('meta[property="og:description"]')?.setAttribute("content", shareDescription);
+      document.querySelector('meta[property="og:url"]')?.setAttribute("content", `${window.location.origin}/kaspa/${mythId}`);
       
-      if (ogTitle) {
-        ogTitle.setAttribute("content", shareTitle);
-      }
-      if (ogDescription) {
-        ogDescription.setAttribute("content", shareDescription);
-      }
-      if (ogUrl) {
-        ogUrl.setAttribute("content", `${window.location.origin}/kaspa/${mythId}`);
-      }
-
-      const twitterTitle = document.querySelector('meta[property="twitter:title"]');
-      const twitterDescription = document.querySelector('meta[property="twitter:description"]');
-      const twitterUrl = document.querySelector('meta[property="twitter:url"]');
-      
-      if (twitterTitle) {
-        twitterTitle.setAttribute("content", shareTitle);
-      }
-      if (twitterDescription) {
-        twitterDescription.setAttribute("content", shareDescription);
-      }
-      if (twitterUrl) {
-        twitterUrl.setAttribute("content", `${window.location.origin}/kaspa/${mythId}`);
-      }
+      // Update Twitter meta tags
+      document.querySelector('meta[property="twitter:card"]')?.setAttribute("content", "summary_large_image");
+      document.querySelector('meta[property="twitter:title"]')?.setAttribute("content", shareTitle);
+      document.querySelector('meta[property="twitter:description"]')?.setAttribute("content", shareDescription);
+      document.querySelector('meta[property="twitter:url"]')?.setAttribute("content", `${window.location.origin}/kaspa/${mythId}`);
     }
 
     return () => {
@@ -56,40 +39,23 @@ const Myth = () => {
       const defaultTitle = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
       const defaultDescription = "Comprehensive guide debunking common myths about Kaspa cryptocurrency. Learn facts about Kaspa's fair launch, PoW consensus, smart contracts, Layer 2 scaling, and technological innovations.";
       
+      // Reset all meta tags to default values
       document.title = defaultTitle;
       
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute("content", defaultDescription);
-      }
+      // Reset standard meta tags
+      document.querySelector('meta[name="description"]')?.setAttribute("content", defaultDescription);
       
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      const ogDescription = document.querySelector('meta[property="og:description"]');
-      const ogUrl = document.querySelector('meta[property="og:url"]');
+      // Reset Open Graph meta tags
+      document.querySelector('meta[property="og:type"]')?.setAttribute("content", "website");
+      document.querySelector('meta[property="og:title"]')?.setAttribute("content", defaultTitle);
+      document.querySelector('meta[property="og:description"]')?.setAttribute("content", defaultDescription);
+      document.querySelector('meta[property="og:url"]')?.setAttribute("content", window.location.origin);
       
-      if (ogTitle) {
-        ogTitle.setAttribute("content", defaultTitle);
-      }
-      if (ogDescription) {
-        ogDescription.setAttribute("content", defaultDescription);
-      }
-      if (ogUrl) {
-        ogUrl.setAttribute("content", window.location.origin);
-      }
-
-      const twitterTitle = document.querySelector('meta[property="twitter:title"]');
-      const twitterDescription = document.querySelector('meta[property="twitter:description"]');
-      const twitterUrl = document.querySelector('meta[property="twitter:url"]');
-      
-      if (twitterTitle) {
-        twitterTitle.setAttribute("content", defaultTitle);
-      }
-      if (twitterDescription) {
-        twitterDescription.setAttribute("content", defaultDescription);
-      }
-      if (twitterUrl) {
-        twitterUrl.setAttribute("content", window.location.origin);
-      }
+      // Reset Twitter meta tags
+      document.querySelector('meta[property="twitter:card"]')?.setAttribute("content", "summary_large_image");
+      document.querySelector('meta[property="twitter:title"]')?.setAttribute("content", defaultTitle);
+      document.querySelector('meta[property="twitter:description"]')?.setAttribute("content", defaultDescription);
+      document.querySelector('meta[property="twitter:url"]')?.setAttribute("content", window.location.origin);
     };
   }, [myth, mythId]);
 
