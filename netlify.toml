@@ -8,6 +8,13 @@
 [[plugins]]
   package = "@netlify/plugin-sitemap"
 
+# Headers to ensure proper XML content type for sitemap
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+    X-Content-Type-Options = "nosniff"
+
 # Static page rules with proper server-side rendering
 [[redirects]]
   from = "/kaspa/*"
