@@ -7,20 +7,18 @@ import { ChevronLeft } from "lucide-react";
 
 const Myth = () => {
   const { mythId } = useParams();
-  const myth = myths.find((m) => m.id === mythId);
+  // Add back the "fud-" prefix when looking up the myth
+  const myth = myths.find((m) => m.id === `fud-${mythId}`);
 
   useEffect(() => {
     if (myth) {
-      // Update meta tags
       document.title = `${myth.title} - KaspArchive`;
       
-      // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute("content", myth.claim);
       }
 
-      // Update OpenGraph tags
       const ogTitle = document.querySelector('meta[property="og:title"]');
       const ogDescription = document.querySelector('meta[property="og:description"]');
       const ogUrl = document.querySelector('meta[property="og:url"]');
@@ -32,10 +30,9 @@ const Myth = () => {
         ogDescription.setAttribute("content", myth.claim);
       }
       if (ogUrl) {
-        ogUrl.setAttribute("content", `${window.location.origin}/kaspa/${myth.id}`);
+        ogUrl.setAttribute("content", `${window.location.origin}/kaspa/${mythId}`);
       }
 
-      // Update Twitter tags
       const twitterTitle = document.querySelector('meta[property="twitter:title"]');
       const twitterDescription = document.querySelector('meta[property="twitter:description"]');
       const twitterUrl = document.querySelector('meta[property="twitter:url"]');
@@ -47,11 +44,10 @@ const Myth = () => {
         twitterDescription.setAttribute("content", myth.claim);
       }
       if (twitterUrl) {
-        twitterUrl.setAttribute("content", `${window.location.origin}/kaspa/${myth.id}`);
+        twitterUrl.setAttribute("content", `${window.location.origin}/kaspa/${mythId}`);
       }
     }
 
-    // Cleanup function to reset meta tags when component unmounts
     return () => {
       document.title = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
       const metaDescription = document.querySelector('meta[name="description"]');
@@ -59,7 +55,6 @@ const Myth = () => {
         metaDescription.setAttribute("content", "Comprehensive guide debunking common myths about Kaspa cryptocurrency. Learn facts about Kaspa's fair launch, PoW consensus, smart contracts, Layer 2 scaling, and technological innovations.");
       }
       
-      // Reset OpenGraph tags
       const ogTitle = document.querySelector('meta[property="og:title"]');
       const ogDescription = document.querySelector('meta[property="og:description"]');
       const ogUrl = document.querySelector('meta[property="og:url"]');
@@ -74,7 +69,6 @@ const Myth = () => {
         ogUrl.setAttribute("content", window.location.origin);
       }
 
-      // Reset Twitter tags
       const twitterTitle = document.querySelector('meta[property="twitter:title"]');
       const twitterDescription = document.querySelector('meta[property="twitter:description"]');
       const twitterUrl = document.querySelector('meta[property="twitter:url"]');
@@ -89,7 +83,7 @@ const Myth = () => {
         twitterUrl.setAttribute("content", window.location.origin);
       }
     };
-  }, [myth]);
+  }, [myth, mythId]);
 
   if (!myth) {
     return (
