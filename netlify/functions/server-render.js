@@ -46,7 +46,6 @@ exports.handler = async (event) => {
       </head>
       <body>
         <div id="root"></div>
-        <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
         <script type="module" src="/src/main.tsx"></script>
       </body>
     </html>
