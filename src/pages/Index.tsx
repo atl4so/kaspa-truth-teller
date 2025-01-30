@@ -8,13 +8,14 @@ import { Footer } from "@/components/Footer";
 import { ScrollSpy } from "@/components/ScrollSpy";
 
 const Index = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  // Use the correct type from the categories array
+  const [selectedCategory, setSelectedCategory] = useState<typeof categories[number] | "all">("all");
 
   const filteredMyths = myths.filter((myth) => {
     if (selectedCategory === "all") return true;
     
     if (Array.isArray(myth.category)) {
-      return myth.category.includes(selectedCategory);
+      return myth.category.includes(selectedCategory as typeof categories[number]);
     }
     
     return myth.category === selectedCategory;
