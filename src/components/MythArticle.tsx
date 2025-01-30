@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MythData } from "@/data/myths";
 import { Link } from "react-router-dom";
 import { ShareButtons } from "./ShareButtons";
-import { X, Github, Link2, Twitter, Youtube, MessageSquare, FileText, Globe } from "lucide-react";
+import { X, Github, Link2, Twitter, Youtube, MessageSquare, FileText, Globe, Bot } from "lucide-react";
 
 interface MythArticleProps {
   myth: MythData;
@@ -25,7 +25,7 @@ const YoutubeIcon = () => (
 );
 
 const ChatGPTIcon = () => (
-  <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5" />
+  <Bot className="w-4 h-4 sm:w-5 sm:h-5" />
 );
 
 const PDFIcon = () => (
