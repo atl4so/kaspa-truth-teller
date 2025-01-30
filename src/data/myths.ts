@@ -204,6 +204,13 @@ export const myths: MythData[] = [
       "Kaspa's blockDAG architecture makes it better suited for a future transition to PQC compared to traditional blockchain designs. Since blockDAG technology enables high throughput and efficient transaction processing, it can better accommodate the larger signature sizes required by post-quantum cryptography. While many blockchains struggle with scalability limitations, Kaspa's ability to handle high transaction volumes without bottlenecks allows for a smoother adoption of quantum-safe cryptographic solutions when the technology is mature.",
       "Quantum mining, not just cryptographic breaking, presents a unique challenge. Unlike classical mining, quantum miners could attempt strategies that increase orphan rates and disrupt network stability. Protocols designed to manage high orphan rates and network adaptability may have an advantage if quantum mining ever becomes viable.",
       "The timeline for quantum threats is long, allowing gradual transitions. Even if quantum advancements accelerate, blockchain protocols can adopt quantum-safe cryptographic methods when they are sufficiently tested and optimized, rather than rushing into unproven solutions."
+    ],
+    references: [
+      "https://x.com/DesheShai/status/1681696299358343169?t=2RH2OE-cc3RZjcixfWkgMA&s=19",
+      "https://t.co/J3RaAGxcG6",
+      "https://eprint.iacr.org/2021/772",
+      "https://eprint.iacr.org/2023/362",
+      "https://arxiv.org/abs/1804.08118"
     ]
   }
 ];
