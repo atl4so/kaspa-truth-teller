@@ -45,12 +45,12 @@ const getLinkType = (url: string, mythId: string) => {
 const getLinkOrder = (type: string) => {
   const orderMap: { [key: string]: number } = {
     website: 1,
-    github: 2,
-    youtube: 3,
-    twitter: 4,
-    chatgpt: 5,
-    discord: 6,
-    pdf: 7
+    youtube: 2,
+    twitter: 3,
+    chatgpt: 4,
+    discord: 5,
+    pdf: 6,
+    github: 7
   };
   return orderMap[type] || 999;
 };
