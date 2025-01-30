@@ -84,7 +84,8 @@ export const myths: MythData[] = [
       "https://x.com/DesheShai/status/1797666923469037944",
       "https://x.com/DesheShai/status/1883191027869065654?t=u7MUoJdpISqZ0vwCG4Xv1A&s=19",
       "https://github.com/kaspanet/kips/blob/master/kip-0009.md",
-      "https://eprint.iacr.org/2021/623.pdf"
+      "https://eprint.iacr.org/2021/623.pdf",
+      "https://chatgpt.com/share/679b9139-4e88-800e-bb1a-59de34e83ff8"
     ]
   },
   {
