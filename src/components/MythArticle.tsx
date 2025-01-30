@@ -32,50 +32,52 @@ const PDFIcon = () => (
   <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
 );
 
+const getLinkType = (url: string, mythId: string) => {
+  if (url === "https://t.co/J3RaAGxcG6") return "pdf";
+  if (url.includes("twitter.com") || url.includes("x.com")) return "twitter";
+  if (url.includes("github.com")) return "github";
+  if (url.includes("youtu.be") || url.includes("youtube.com")) return "youtube";
+  if (url.includes("chatgpt.com")) return "chatgpt";
+  if (url.includes("discord.com")) return "discord";
+  return "website";
+};
+
+const getLinkOrder = (type: string) => {
+  const orderMap: { [key: string]: number } = {
+    website: 1,
+    github: 2,
+    youtube: 3,
+    twitter: 4,
+    chatgpt: 5,
+    discord: 6,
+    pdf: 7
+  };
+  return orderMap[type] || 999;
+};
+
+const sortReferences = (references: string[], mythId: string) => {
+  return [...references].sort((a, b) => {
+    const typeA = getLinkType(a, mythId);
+    const typeB = getLinkType(b, mythId);
+    return getLinkOrder(typeA) - getLinkOrder(typeB);
+  });
+};
+
 export const MythArticle = ({ myth }: MythArticleProps) => {
   const mythNumber = myth.id.replace('fud-', '');
   const mythUrl = `${window.location.origin}/kaspa/${mythNumber}`;
 
-  const isTwitterLink = (url: string) => {
-    return url.includes("twitter.com") || url.includes("x.com");
-  };
-
-  const isGithubLink = (url: string) => {
-    return url.includes("github.com");
-  };
-
-  const isYoutubeLink = (url: string) => {
-    return url.includes("youtu.be") || url.includes("youtube.com");
-  };
-
-  const isChatGPTLink = (url: string) => {
-    return url.includes("chatgpt.com");
-  };
-
-  const isPDFLink = (url: string) => {
-    return url === "https://t.co/J3RaAGxcG6";
-  };
-
-  const isDiscordLink = (url: string) => {
-    return url.includes("discord.com");
-  };
-
-  const isFUD6BitMEXLink = (url: string, mythId: string) => {
-    return mythId === "fud-6" && url.includes("blog.bitmex.com");
-  };
-
   const getLinkIcon = (url: string) => {
-    if (isFUD6BitMEXLink(url, myth.id)) {
-      return <WebsiteIcon />;
-    }
-    if (isTwitterLink(url)) return <TwitterIcon />;
-    if (isGithubLink(url)) return <Github className="w-4 h-4 sm:w-5 sm:h-5" />;
-    if (isYoutubeLink(url)) return <YoutubeIcon />;
-    if (isChatGPTLink(url)) return <ChatGPTIcon />;
-    if (isPDFLink(url)) return <PDFIcon />;
-    if (isDiscordLink(url)) return <DiscordIcon />;
+    if (url === "https://t.co/J3RaAGxcG6") return <PDFIcon />;
+    if (url.includes("twitter.com") || url.includes("x.com")) return <TwitterIcon />;
+    if (url.includes("github.com")) return <Github className="w-4 h-4 sm:w-5 sm:h-5" />;
+    if (url.includes("youtu.be") || url.includes("youtube.com")) return <YoutubeIcon />;
+    if (url.includes("chatgpt.com")) return <ChatGPTIcon />;
+    if (url.includes("discord.com")) return <DiscordIcon />;
     return <WebsiteIcon />;
   };
+
+  const sortedReferences = myth.references ? sortReferences(myth.references, myth.id) : [];
 
   return (
     <motion.article
@@ -92,13 +94,13 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
       </Link>
       <div className="mb-4">
         <div className="flex flex-wrap items-center gap-2">
-          {myth.references && myth.references.length > 0 && (
+          {sortedReferences.length > 0 && (
             <div className="inline-flex flex-wrap items-center gap-2">
               <span className="inline-block px-3 py-1 text-sm font-medium bg-accent/50 text-primary rounded-full">
                 Fact Sources:
               </span>
               <div className="flex flex-wrap gap-2">
-                {myth.references.map((ref, index) => (
+                {sortedReferences.map((ref, index) => (
                   <a 
                     key={index}
                     href={ref}
