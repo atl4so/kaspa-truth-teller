@@ -4,8 +4,9 @@ import { MythData } from '@/data/myths';
 export const useMetaTags = (myth: MythData | undefined, mythId: string | undefined) => {
   useEffect(() => {
     if (myth) {
-      const shareTitle = `FUD ${mythId}: ${myth.title} - KaspArchive`;
-      const shareDescription = `${myth.claim}`;
+      // Create more professional titles and descriptions for sharing
+      const shareTitle = `Kaspa Analysis #${mythId}: ${myth.title} - KaspArchive`;
+      const shareDescription = `Learn about Kaspa's ${myth.category} features and technology. Get accurate information about ${myth.title.toLowerCase()}.`;
       const shareUrl = `${window.location.origin}/kaspa/${mythId}`;
       const shareImage = `${window.location.origin}/og-image.png`;
 
@@ -70,8 +71,8 @@ export const useMetaTags = (myth: MythData | undefined, mythId: string | undefin
     }
 
     return () => {
-      const defaultTitle = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
-      const defaultDescription = "Explore comprehensive guides debunking common myths about Kaspa cryptocurrency. Get accurate information about Kaspa's technology, features, and innovations.";
+      const defaultTitle = "KaspArchive - Your Guide to Kaspa Facts";
+      const defaultDescription = "Learn the truth about Kaspa. Simple facts that clear up common myths about this fast and scalable cryptocurrency.";
       const defaultUrl = window.location.origin;
       const defaultImage = `${window.location.origin}/og-image.png`;
 
