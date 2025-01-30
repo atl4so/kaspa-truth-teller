@@ -8,7 +8,6 @@ import { Footer } from "@/components/Footer";
 import { ScrollSpy } from "@/components/ScrollSpy";
 
 const Index = () => {
-  // Use the correct type from the categories array
   const [selectedCategory, setSelectedCategory] = useState<typeof categories[number] | "all">("all");
 
   const filteredMyths = myths.filter((myth) => {
@@ -21,6 +20,10 @@ const Index = () => {
     return myth.category === selectedCategory;
   });
 
+  const handleCategoryChange = (value: string) => {
+    setSelectedCategory(value as typeof categories[number] | "all");
+  };
+
   return (
     <div className="min-h-screen bg-[#f3f3f3]">
       <ScrollSpy />
@@ -28,7 +31,7 @@ const Index = () => {
         <Hero />
         
         <section className="py-1">
-          <Tabs defaultValue="all" onValueChange={setSelectedCategory} className="flex flex-col items-center">
+          <Tabs defaultValue="all" onValueChange={handleCategoryChange} className="flex flex-col items-center">
             <TabsList className="flex flex-wrap justify-center h-auto gap-2 bg-transparent">
               <TabsTrigger 
                 value="all"
