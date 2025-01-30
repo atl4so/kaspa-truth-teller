@@ -53,7 +53,7 @@ export const MythArticle = ({ myth }: MythArticleProps) => {
   };
 
   const isPDFLink = (url: string) => {
-    return url.toLowerCase().endsWith('.pdf');
+    return url === "https://t.co/J3RaAGxcG6";
   };
 
   const isDiscordLink = (url: string) => {
