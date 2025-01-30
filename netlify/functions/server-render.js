@@ -1,4 +1,4 @@
-const { metaContent } = require('./articleMeta');
+const { metaContent } = require('./articleMeta.ts');
 
 exports.handler = async (event) => {
   const path = event.path;
