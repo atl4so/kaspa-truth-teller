@@ -44,22 +44,19 @@ const Myth = () => {
       if (twitterUrlTag) twitterUrlTag.setAttribute("content", shareUrl);
     }
 
+    // Cleanup function to reset meta tags when component unmounts
     return () => {
-      // Reset meta tags when component unmounts
       const defaultTitle = "KaspArchive - Debunking Myths & Facts About Kaspa Cryptocurrency";
       const defaultDescription = "Comprehensive guide debunking common myths about Kaspa cryptocurrency. Learn facts about Kaspa's fair launch, PoW consensus, smart contracts, Layer 2 scaling, and technological innovations.";
       const defaultUrl = window.location.origin;
       
-      // Reset all meta tags to default values
       document.title = defaultTitle;
       
-      // Reset standard meta tags
       const descriptionTag = document.querySelector('meta[name="description"]');
       if (descriptionTag) {
         descriptionTag.setAttribute("content", defaultDescription);
       }
       
-      // Reset Open Graph meta tags
       const ogTitleTag = document.querySelector('meta[property="og:title"]');
       const ogDescTag = document.querySelector('meta[property="og:description"]');
       const ogUrlTag = document.querySelector('meta[property="og:url"]');
@@ -68,7 +65,6 @@ const Myth = () => {
       if (ogDescTag) ogDescTag.setAttribute("content", defaultDescription);
       if (ogUrlTag) ogUrlTag.setAttribute("content", defaultUrl);
       
-      // Reset Twitter meta tags
       const twitterTitleTag = document.querySelector('meta[property="twitter:title"]');
       const twitterDescTag = document.querySelector('meta[property="twitter:description"]');
       const twitterUrlTag = document.querySelector('meta[property="twitter:url"]');
