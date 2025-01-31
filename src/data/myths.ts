@@ -134,7 +134,8 @@ export const myths: MythData[] = [
       "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3",
       "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3",
       "https://x.com/DesheShai/status/1883191027869065654",
-      "https://chatgpt.com/share/679b91ea-6950-800e-aac5-bdd8b8805b96"
+      "https://chatgpt.com/share/679b91ea-6950-800e-aac5-bdd8b8805b96",
+      "https://x.com/coinathlete/status/1639989498384732160?t=P5lsgxgUo5yz7JJ5k9ht2w&s=19"
     ]
   },
   {
