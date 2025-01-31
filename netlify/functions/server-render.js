@@ -61,6 +61,10 @@ exports.handler = async (event) => {
         <meta name="googlebot" content="index, follow" />
         
         <link rel="icon" type="image/png" href="https://i.postimg.cc/hPVwjmgx/images-1.png" />
+        
+        <!-- Preconnect to important third-party origins -->
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://i.postimg.cc" />
       </head>
       <body>
         <div id="root"></div>
