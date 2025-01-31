@@ -14,9 +14,7 @@ exports.handler = async (event) => {
   }
 
   const fullUrl = `https://kasparchive.com/kaspa/${articleId}`;
-  const imageUrl = articleId === '1' 
-    ? 'https://i.postimg.cc/HxDZDmnh/Circle-sign-1-svg.png'
-    : 'https://i.postimg.cc/hPVwjmgx/images-1.png';
+  const imageUrl = 'https://i.postimg.cc/j5xrhTvm/MXOm-Sp-Te-S0yia29rbq-G4g-1.jpg';
 
   const html = `
     <!DOCTYPE html>
