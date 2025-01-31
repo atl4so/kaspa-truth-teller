@@ -65,6 +65,9 @@ exports.handler = async (event) => {
         <!-- Preconnect to important third-party origins -->
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://i.postimg.cc" />
+        
+        <!-- Remove any existing asset links and add only the required ones -->
+        <link rel="modulepreload" href="/src/main.tsx" />
       </head>
       <body>
         <div id="root"></div>
@@ -77,6 +80,9 @@ exports.handler = async (event) => {
     statusCode: 200,
     headers: {
       'Content-Type': 'text/html',
+      'Cache-Control': 'no-store, must-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0'
     },
     body: html,
   };
