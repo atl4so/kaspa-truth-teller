@@ -3,7 +3,6 @@ import { MythArticle } from "@/components/MythArticle";
 import { myths } from "@/data/myths";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
-import { Helmet } from "react-helmet";
 import { useMetaTags } from "@/hooks/useMetaTags";
 
 const Myth = () => {
@@ -22,19 +21,17 @@ const Myth = () => {
   }
 
   return (
-    <>
-      <div className="min-h-screen bg-[#f3f3f3]">
-        <div className="container mx-auto px-4 py-8">
-          <Link to="/">
-            <Button variant="ghost" className="mb-4">
-              <ChevronLeft className="mr-2 h-4 w-4" />
-              Back to Main
-            </Button>
-          </Link>
-          <MythArticle myth={myth} />
-        </div>
+    <div className="min-h-screen bg-[#f3f3f3]">
+      <div className="container mx-auto px-4 py-8">
+        <Link to="/">
+          <Button variant="ghost" className="mb-4">
+            <ChevronLeft className="mr-2 h-4 w-4" />
+            Back to Main
+          </Button>
+        </Link>
+        <MythArticle myth={myth} />
       </div>
-    </>
+    </div>
   );
 };
 

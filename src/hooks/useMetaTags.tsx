@@ -4,9 +4,10 @@ import { MythData } from '@/data/myths';
 export const useMetaTags = (myth: MythData | undefined, mythId: string | undefined) => {
   useEffect(() => {
     if (myth) {
+      // For individual myth pages
       const mythNumber = mythId ? mythId.replace('fud-', '') : '';
-      const shareTitle = `KaspArchive #${mythNumber}`;
-      const shareDescription = myth.claim;
+      const shareTitle = `FUD #${mythNumber}: ${myth.title} - KaspArchive`;
+      const shareDescription = `Learn the truth about "${myth.claim}" - Get the facts about this Kaspa myth.`;
       const shareUrl = `${window.location.origin}/kaspa/${mythNumber}`;
       const shareImage = 'https://i.postimg.cc/j5xrhTvm/MXOm-Sp-Te-S0yia29rbq-G4g-1.jpg';
 
@@ -46,9 +47,8 @@ export const useMetaTags = (myth: MythData | undefined, mythId: string | undefin
       });
 
       console.log('Meta tags updated successfully:', metaTags);
-    }
-
-    return () => {
+    } else {
+      // For index page or when no myth is found
       const defaultTitle = "KaspArchive - Your Guide to Kaspa Facts";
       const defaultDescription = "Learn the truth about Kaspa. Simple facts that clear up common myths about this fast and scalable cryptocurrency.";
       const defaultImage = "https://i.postimg.cc/j5xrhTvm/MXOm-Sp-Te-S0yia29rbq-G4g-1.jpg";
@@ -59,12 +59,14 @@ export const useMetaTags = (myth: MythData | undefined, mythId: string | undefin
         'description': defaultDescription,
         'og:title': defaultTitle,
         'og:description': defaultDescription,
+        'og:url': window.location.origin,
         'og:image': defaultImage,
         'og:image:width': '1200',
         'og:image:height': '630',
         'og:type': 'website',
         'twitter:title': defaultTitle,
         'twitter:description': defaultDescription,
+        'twitter:url': window.location.origin,
         'twitter:image': defaultImage,
         'twitter:card': 'summary_large_image'
       };
@@ -74,6 +76,6 @@ export const useMetaTags = (myth: MythData | undefined, mythId: string | undefin
                    document.querySelector(`meta[property="${name}"]`);
         if (tag) tag.setAttribute('content', content);
       });
-    };
+    }
   }, [myth, mythId]);
 };
