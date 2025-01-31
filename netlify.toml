@@ -26,7 +26,20 @@
   to = "/index.html"
   status = 200
 
-# Headers to ensure proper indexing
+# Headers to ensure proper indexing and no caching for dynamic routes
+[[headers]]
+  for = "/kaspa/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Robots-Tag = "all"
+    Cache-Control = "no-store, must-revalidate"
+    Pragma = "no-cache"
+    Expires = "0"
+
+# Default headers for other routes
 [[headers]]
   for = "/*"
   [headers.values]
