@@ -7,13 +7,15 @@ export const useMetaTags = (myth: MythData | undefined, mythId: string | undefin
     const existingMetaTags = document.querySelectorAll('meta[data-dynamic="true"]');
     existingMetaTags.forEach(tag => tag.remove());
 
+    // Define the shared image URL that will be used for all pages
+    const sharedImage = 'https://i.postimg.cc/j5xrhTvm/MXOm-Sp-Te-S0yia29rbq-G4g-1.jpg';
+
     if (myth) {
       // For individual myth pages
       const mythNumber = mythId ? mythId.replace('fud-', '') : '';
       const shareTitle = `FUD #${mythNumber}: ${myth.title} - KaspArchive`;
       const shareDescription = `Learn the truth about "${myth.claim}" - Get the facts about this Kaspa myth.`;
       const shareUrl = `${window.location.origin}/kaspa/${mythNumber}`;
-      const shareImage = 'https://i.postimg.cc/j5xrhTvm/MXOm-Sp-Te-S0yia29rbq-G4g-1.jpg';
 
       document.title = shareTitle;
 
@@ -22,14 +24,14 @@ export const useMetaTags = (myth: MythData | undefined, mythId: string | undefin
         'og:title': shareTitle,
         'og:description': shareDescription,
         'og:url': shareUrl,
-        'og:image': shareImage,
+        'og:image': sharedImage,
         'og:image:width': '1200',
         'og:image:height': '630',
         'og:type': 'article',
         'twitter:title': shareTitle,
         'twitter:description': shareDescription,
         'twitter:url': shareUrl,
-        'twitter:image': shareImage,
+        'twitter:image': sharedImage,
         'twitter:card': 'summary_large_image'
       };
 
@@ -52,7 +54,6 @@ export const useMetaTags = (myth: MythData | undefined, mythId: string | undefin
       // For index page or when no myth is found
       const defaultTitle = "KaspArchive - Your Guide to Kaspa Facts";
       const defaultDescription = "Learn the truth about Kaspa. Simple facts that clear up common myths about this fast and scalable cryptocurrency.";
-      const defaultImage = "https://i.postimg.cc/j5xrhTvm/MXOm-Sp-Te-S0yia29rbq-G4g-1.jpg";
       
       document.title = defaultTitle;
       
@@ -61,14 +62,14 @@ export const useMetaTags = (myth: MythData | undefined, mythId: string | undefin
         'og:title': defaultTitle,
         'og:description': defaultDescription,
         'og:url': window.location.origin,
-        'og:image': defaultImage,
+        'og:image': sharedImage,
         'og:image:width': '1200',
         'og:image:height': '630',
         'og:type': 'website',
         'twitter:title': defaultTitle,
         'twitter:description': defaultDescription,
         'twitter:url': window.location.origin,
-        'twitter:image': defaultImage,
+        'twitter:image': sharedImage,
         'twitter:card': 'summary_large_image'
       };
 
