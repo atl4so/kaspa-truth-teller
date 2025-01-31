@@ -9,8 +9,8 @@ interface MetaContent {
 
 export const metaContent: MetaContent = {
   '1': {
-    title: 'KaspArchive #1: Understanding DAGLabs\' Role',
-    description: 'Learn the truth about DAGLabs and Kaspa\'s fair launch. Discover how DAGLabs transitioned from initial development to community ownership, with transparent documentation of their $8M funding and mining activities.',
+    title: 'KaspArchive #1',
+    description: 'True Facts About Fair Launch',
   },
   '2': {
     title: 'KaspArchive #2: Understanding PoW Security',

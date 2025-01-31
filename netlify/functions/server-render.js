@@ -14,6 +14,9 @@ exports.handler = async (event) => {
   }
 
   const fullUrl = `https://kasparchive.com/kaspa/${articleId}`;
+  const imageUrl = articleId === '1' 
+    ? 'https://i.postimg.cc/HxDZDmnh/Circle-sign-1-svg.png'
+    : 'https://i.postimg.cc/hPVwjmgx/images-1.png';
 
   const html = `
     <!DOCTYPE html>
@@ -32,7 +35,7 @@ exports.handler = async (event) => {
         <meta property="og:url" content="${fullUrl}" />
         <meta property="og:title" content="${article.title}" />
         <meta property="og:description" content="${article.description}" />
-        <meta property="og:image" content="https://i.postimg.cc/hPVwjmgx/images-1.png" />
+        <meta property="og:image" content="${imageUrl}" />
         <meta property="og:site_name" content="KaspArchive" />
         
         <!-- Twitter -->
@@ -40,7 +43,7 @@ exports.handler = async (event) => {
         <meta name="twitter:url" content="${fullUrl}" />
         <meta name="twitter:title" content="${article.title}" />
         <meta name="twitter:description" content="${article.description}" />
-        <meta name="twitter:image" content="https://i.postimg.cc/hPVwjmgx/images-1.png" />
+        <meta name="twitter:image" content="${imageUrl}" />
         
         <link rel="icon" type="image/png" href="https://i.postimg.cc/hPVwjmgx/images-1.png" />
       </head>
