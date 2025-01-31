@@ -4,10 +4,14 @@ import { myths } from "@/data/myths";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 const Myth = () => {
   const { mythId } = useParams();
   const myth = myths.find((m) => m.id === `fud-${mythId}`);
+
+  // Use the custom hook to manage meta tags
+  useMetaTags(myth, mythId);
 
   if (!myth) {
     return (
@@ -19,11 +23,6 @@ const Myth = () => {
 
   return (
     <>
-      <Helmet>
-        <title>KaspArchive #{mythId}</title>
-        <meta name="title" content={`KaspArchive #${mythId}`} />
-        <meta name="description" content={myth.claim} />
-      </Helmet>
       <div className="min-h-screen bg-[#f3f3f3]">
         <div className="container mx-auto px-4 py-8">
           <Link to="/">
