@@ -5,41 +5,11 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Headers to ensure proper XML content type for sitemap
-[[headers]]
-  for = "/sitemap.xml"
-  [headers.values]
-    Content-Type = "application/xml"
-    Cache-Control = "public, max-age=0, must-revalidate"
-    X-Content-Type-Options = "nosniff"
-
-# Static page rules with proper server-side rendering
-[[redirects]]
-  from = "/kaspa/*"
-  to = "/.netlify/functions/server-render"
-  status = 200
-  force = true
-
-# Fallback for other routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Headers to ensure proper indexing and no caching for dynamic routes
-[[headers]]
-  for = "/kaspa/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Robots-Tag = "all"
-    Cache-Control = "no-store, must-revalidate"
-    Pragma = "no-cache"
-    Expires = "0"
-
-# Default headers for other routes
 [[headers]]
   for = "/*"
   [headers.values]
@@ -47,5 +17,4 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Robots-Tag = "all"
     Cache-Control = "public, max-age=0, must-revalidate"
