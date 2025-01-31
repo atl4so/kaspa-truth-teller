@@ -212,7 +212,8 @@ export const myths: MythData[] = [
       "https://t.co/J3RaAGxcG6",
       "https://eprint.iacr.org/2021/772",
       "https://eprint.iacr.org/2023/362",
-      "https://arxiv.org/abs/1804.08118"
+      "https://arxiv.org/abs/1804.08118",
+      "https://chatgpt.com/share/679c810d-bd84-800e-b181-76ff3c6e7a9a"
     ]
   }
 ];
