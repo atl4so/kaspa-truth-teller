@@ -3,6 +3,10 @@ import { MythData } from '@/data/myths';
 
 export const useMetaTags = (myth: MythData | undefined, mythId: string | undefined) => {
   useEffect(() => {
+    // Remove any existing meta tags first
+    const existingMetaTags = document.querySelectorAll('meta[data-dynamic="true"]');
+    existingMetaTags.forEach(tag => tag.remove());
+
     if (myth) {
       // For individual myth pages
       const mythNumber = mythId ? mythId.replace('fud-', '') : '';
@@ -30,23 +34,20 @@ export const useMetaTags = (myth: MythData | undefined, mythId: string | undefin
       };
 
       Object.entries(metaTags).forEach(([name, content]) => {
-        // Handle both name and property attributes
-        let tag = document.querySelector(`meta[name="${name}"]`) || 
-                  document.querySelector(`meta[property="${name}"]`);
+        const tag = document.createElement('meta');
+        tag.setAttribute('data-dynamic', 'true');
         
-        if (!tag) {
-          tag = document.createElement('meta');
-          if (name.startsWith('og:')) {
-            tag.setAttribute('property', name);
-          } else {
-            tag.setAttribute('name', name);
-          }
-          document.head.appendChild(tag);
+        if (name.startsWith('og:')) {
+          tag.setAttribute('property', name);
+        } else {
+          tag.setAttribute('name', name);
         }
+        
         tag.setAttribute('content', content);
+        document.head.appendChild(tag);
       });
 
-      console.log('Meta tags updated successfully:', metaTags);
+      console.log('Meta tags updated for myth page:', metaTags);
     } else {
       // For index page or when no myth is found
       const defaultTitle = "KaspArchive - Your Guide to Kaspa Facts";
@@ -72,10 +73,26 @@ export const useMetaTags = (myth: MythData | undefined, mythId: string | undefin
       };
 
       Object.entries(defaultMetaTags).forEach(([name, content]) => {
-        const tag = document.querySelector(`meta[name="${name}"]`) || 
-                   document.querySelector(`meta[property="${name}"]`);
-        if (tag) tag.setAttribute('content', content);
+        const tag = document.createElement('meta');
+        tag.setAttribute('data-dynamic', 'true');
+        
+        if (name.startsWith('og:')) {
+          tag.setAttribute('property', name);
+        } else {
+          tag.setAttribute('name', name);
+        }
+        
+        tag.setAttribute('content', content);
+        document.head.appendChild(tag);
       });
+
+      console.log('Meta tags updated for index page:', defaultMetaTags);
     }
+
+    // Cleanup function to remove dynamic meta tags when component unmounts
+    return () => {
+      const dynamicMetaTags = document.querySelectorAll('meta[data-dynamic="true"]');
+      dynamicMetaTags.forEach(tag => tag.remove());
+    };
   }, [myth, mythId]);
 };
