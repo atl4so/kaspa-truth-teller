@@ -35,14 +35,14 @@ exports.handler = async (event) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         <!-- Primary Meta Tags -->
-        <title>${article.title}</title>
-        <meta name="title" content="${article.title}" />
+        <title>${article.title} | KaspArchive</title>
+        <meta name="title" content="${article.title} | KaspArchive" />
         <meta name="description" content="${article.description}" />
         
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="article" />
         <meta property="og:url" content="${fullUrl}" />
-        <meta property="og:title" content="${article.title}" />
+        <meta property="og:title" content="${article.title} | KaspArchive" />
         <meta property="og:description" content="${article.description}" />
         <meta property="og:image" content="${imageUrl}" />
         <meta property="og:site_name" content="KaspArchive" />
@@ -50,9 +50,15 @@ exports.handler = async (event) => {
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="${fullUrl}" />
-        <meta name="twitter:title" content="${article.title}" />
+        <meta name="twitter:title" content="${article.title} | KaspArchive" />
         <meta name="twitter:description" content="${article.description}" />
         <meta name="twitter:image" content="${imageUrl}" />
+        
+        <!-- Keywords and other meta -->
+        <meta name="keywords" content="Kaspa, KAS, cryptocurrency, BlockDAG, GHOSTDAG, DagKnight, proof of work, PoW mining, fair launch, Layer 2 scaling, smart contracts, blockchain myths" />
+        <meta name="author" content="Kaspa Community" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
         
         <link rel="icon" type="image/png" href="https://i.postimg.cc/hPVwjmgx/images-1.png" />
       </head>
