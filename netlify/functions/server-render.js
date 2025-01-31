@@ -44,6 +44,8 @@ exports.handler = async (event) => {
         <meta property="og:description" content="${article.description}" />
         <meta property="og:image" content="${imageUrl}" />
         <meta property="og:site_name" content="KaspArchive" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image" />
