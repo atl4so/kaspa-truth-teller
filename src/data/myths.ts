@@ -109,7 +109,7 @@ export const myths: MythData[] = [
     references: [
       "https://hashdag.medium.com/kaspa-black-tuesday-8c7f4fa35834",
       "https://x.com/DesheShai/status/1808177677674684772",
-      "https://github.com/kaspangang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb",
+      "https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb",
       "https://discord.com/channels/599153230659846165/844142778232864809/912831900287131649",
       "https://chatgpt.com/share/679b9742-c9d0-800e-98dd-a428d85e50e5"
     ]
