@@ -34,8 +34,7 @@ export const myths: MythData[] = [
     ],
     references: [
       "https://wiki.kaspa.org/en/prehistory",
-      "https://x.com/DesheShai/status/1680899017708912640?t=JZWXtwwc3yVkdCdY69rTBQ&s=19",
-      "https://chatgpt.com/share/679b8e8a-1cd8-800e-8e2a-4c74bcd637b4"
+      "https://x.com/DesheShai/status/1680899017708912640?t=JZWXtwwc3yVkdCdY69rTBQ&s=19"
     ]
   },
   {
@@ -59,8 +58,7 @@ export const myths: MythData[] = [
       "https://kasmedia.com/article/understanding-ghostdag-intro",
       "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3",
       "https://x.com/DesheShai/status/1883191027869065654",
-      "https://eprint.iacr.org/2021/623.pdf",
-      "https://chatgpt.com/share/679b8f7d-b810-800e-af56-92ea3af8c824"
+      "https://eprint.iacr.org/2021/623.pdf"
     ]
   },
   {
@@ -85,7 +83,6 @@ export const myths: MythData[] = [
       "https://x.com/DesheShai/status/1883191027869065654?t=u7MUoJdpISqZ0vwCG4Xv1A&s=19",
       "https://github.com/kaspanet/kips/blob/master/kip-0009.md",
       "https://eprint.iacr.org/2021/623.pdf",
-      "https://chatgpt.com/share/679b9139-4e88-800e-bb1a-59de34e83ff8",
       "https://x.com/coinathlete/status/1858091797710319622?t=wLv0DwDpfilQs6O_OpkkXw&s=09"
     ]
   },
@@ -110,8 +107,7 @@ export const myths: MythData[] = [
       "https://hashdag.medium.com/kaspa-black-tuesday-8c7f4fa35834",
       "https://x.com/DesheShai/status/1808177677674684772",
       "https://github.com/kaspagang/kaspad-py-explorer/blob/main/src/genesis_proof.ipynb",
-      "https://discord.com/channels/599153230659846165/844142778232864809/912831900287131649",
-      "https://chatgpt.com/share/679b9742-c9d0-800e-98dd-a428d85e50e5"
+      "https://discord.com/channels/599153230659846165/844142778232864809/912831900287131649"
     ]
   },
   {
@@ -134,7 +130,6 @@ export const myths: MythData[] = [
       "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3",
       "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3",
       "https://x.com/DesheShai/status/1883191027869065654",
-      "https://chatgpt.com/share/679b91ea-6950-800e-aac5-bdd8b8805b96",
       "https://x.com/coinathlete/status/1639989498384732160?t=P5lsgxgUo5yz7JJ5k9ht2w&s=19"
     ]
   },
@@ -155,8 +150,7 @@ export const myths: MythData[] = [
     ],
     references: [
       "https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3",
-      "https://x.com/DesheShai/status/1883191027869065654",
-      "https://chatgpt.com/share/679b9253-ff50-800e-b4a6-8a78338f3252"
+      "https://x.com/DesheShai/status/1883191027869065654"
     ]
   },
   {
@@ -175,8 +169,7 @@ export const myths: MythData[] = [
     ],
     references: [
       "https://medium.com/@kaspanet/kaspa-roadmap-2024-25-d9ce5f0aa19c",
-      "https://x.com/DesheShai/status/1883191027869065654",
-      "https://chatgpt.com/share/679b92c2-1314-800e-ad34-d2a83ac85400"
+      "https://x.com/DesheShai/status/1883191027869065654"
     ]
   },
   {
@@ -190,8 +183,7 @@ export const myths: MythData[] = [
       "Kaspa directly tackles and solves critical limitations of existing blockchains, such as state bloat and slow transaction finality, with novel and sophisticated technical solutions. Kaspa is pushing the boundaries of blockchain technology. To claim it lacks innovation is to ignore the substantial technical breakthroughs it represents."
     ],
     references: [
-      "https://youtu.be/MugsziO0OYY?si=P5X4ULsQbEEI3Fsj",
-      "https://chatgpt.com/share/679b9324-c478-800e-bff8-e930222fa096"
+      "https://youtu.be/MugsziO0OYY?si=P5X4ULsQbEEI3Fsj"
     ]
   },
   {
@@ -212,8 +204,7 @@ export const myths: MythData[] = [
       "https://t.co/J3RaAGxcG6",
       "https://eprint.iacr.org/2021/772",
       "https://eprint.iacr.org/2023/362",
-      "https://arxiv.org/abs/1804.08118",
-      "https://chatgpt.com/share/679c810d-bd84-800e-b181-76ff3c6e7a9a"
+      "https://arxiv.org/abs/1804.08118"
     ]
   }
 ];
